@@ -22,13 +22,13 @@ website:
         text: Tutoriels
       - href: about.qmd
         text: À propos
-
-
+  back-to-top-navigation: true
+  reader-mode: true
+  repo-url: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
+  repo-actions: [edit, source, issue]
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: [flatly, darkly]
     css: styles.css
     toc: true
 

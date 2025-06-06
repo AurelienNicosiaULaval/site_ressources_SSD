@@ -105,3 +105,53 @@ a:hover {
   margin-right: 12px;
 }
 
+
+/* === Mode sombre === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: var(--ulaval-light-grey);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--ulaval-yellow);
+  }
+
+  a {
+    color: var(--ulaval-blue);
+  }
+
+  code, pre {
+    background-color: #2b2b2b;
+    color: var(--ulaval-yellow);
+  }
+
+  blockquote {
+    background-color: #1e1e1e;
+    color: var(--ulaval-light-grey);
+    border-left-color: var(--ulaval-red);
+  }
+
+  table th {
+    background-color: #2c2c2c;
+    color: var(--ulaval-yellow);
+  }
+
+  table td, table th {
+    border-color: #3a3a3a;
+  }
+
+  .appearance-toggle svg {
+    fill: var(--ulaval-yellow);
+  }
+
+  .navbar, .nav-item {
+    background-color: #1a1a1a;
+    color: var(--ulaval-light-grey);
+  }
+
+  .navbar-logo {
+    filter: brightness(0.9);
+  }
+}
+
