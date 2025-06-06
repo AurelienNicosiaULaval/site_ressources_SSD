@@ -1,0 +1,10 @@
+name: ssd-website
+title: "Site Web Quarto - Gabarit"
+version: "1.0.0"
+description: |
+  Gabarit minimal de site web Quarto inspiré du site Ressources SSD.
+  Utilisez ce modèle pour démarrer rapidement un site destiné aux enseignants.
+authors:
+  - name: "Aurélien Nicosia"
+    email: "aurelien.nicosia@mat.ulaval.ca"
+quarto-required: ">=1.4.0"
