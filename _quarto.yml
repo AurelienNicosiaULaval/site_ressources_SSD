@@ -1,10 +1,16 @@
 project:
   type: website
-  output-dir: docs  # ← nécessaire pour GitHub Pages
+  output-dir: docs
 
 website:
-  title: "Ressources SSD"
+  title: ""  # On cache le titre textuel
   navbar:
+    logo: img/logo-ulaval.png
+    tools:
+      - icon: github
+        href: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
+        aria-label: GitHub
+      - toggle-appearance: true
     left:
       - href: index.qmd
         text: Accueil
@@ -16,6 +22,7 @@ website:
         text: Tutoriels
       - href: about.qmd
         text: À propos
+
 
 format:
   html:

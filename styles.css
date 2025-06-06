@@ -6,6 +6,8 @@
   --ulaval-medium-grey:#7f7f7f;
   --ulaval-dark-grey:  #515151;
   --ulaval-black:      #000000;
+  --ulaval-blue: #0099ff;
+
 }
 
 body {
@@ -96,3 +98,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.navbar-logo {
+  height: 50px;      
+  max-height: 100%;
+  margin-right: 12px;
+}
+
