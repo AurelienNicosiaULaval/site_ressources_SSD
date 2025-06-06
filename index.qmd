@@ -15,7 +15,7 @@ site:
     left:
       - href: index.qmd
         text: Accueil
-      - href: templates.qmd
+      - href: templates/quarto.qmd
         text: Modèles
       - href: outils.qmd
         text: Outils
@@ -58,7 +58,7 @@ Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits Git
 
 ## 🚀 Démarrage rapide
 
-1. Explorez les modèles disponibles dans la section [Modèles](templates.qmd).
+1. Explorez les modèles disponibles dans la section [Modèles](templates/quarto.qmd).
 2. Consultez les outils proposés dans [Outils](outils.qmd).
 3. Apprenez avec nos [Tutoriels](tutoriels.qmd).
 

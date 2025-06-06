@@ -1,0 +1,52 @@
+---
+title: "Gabarit de site web Quarto"
+format:
+  html:
+    toc: true
+    toc-title: "Contenu de la page"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+---
+
+# 🔸 Créer un site web Quarto
+
+Le dépôt contient un **gabarit minimal** pour concevoir un site web similaire à celui-ci.
+Il se trouve dans le dossier `quarto-site-template` et peut être utilisé pour
+initialiser rapidement un nouveau projet.
+
+## 🔧 Installation du gabarit
+
+```bash
+quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template
+```
+
+Cette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd,
+styles.css…) dans un nouveau répertoire.
+
+## 🔨 Développement local
+
+- Modifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).
+- Générez le site une première fois avec :
+
+```bash
+quarto render
+```
+
+- Lancez l’aperçu en direct pour visualiser les changements :
+
+```bash
+quarto preview
+```
+
+## 💾 Publication automatique sur GitHub Pages
+
+1. Poussez votre projet sur GitHub.
+2. Dans la page **Settings → Pages** de votre dépôt, choisissez
+   *Deploy from a branch*.
+3. Sélectionnez la branche `main` et le dossier `/docs` comme source.
+4. À chaque `git push`, GitHub publiera automatiquement le contenu généré dans
+   le dossier `docs`.
+
+Ainsi, il suffit de rendre le site localement puis de pousser les fichiers pour
+mettre à jour la version en ligne.
