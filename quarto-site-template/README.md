@@ -9,7 +9,7 @@ Ce dossier contient un **template minimal** pour créer un site web Quarto inspi
    ```bash
    quarto use template <chemin-vers-ce-repertoire>
    ```
-3. Personnalisez les fichiers `index.qmd`, `about.qmd` et `styles.css` selon vos besoins.
+3. Personnalisez les fichiers `index.qmd`, `about.qmd`, `page1.qmd` et `styles.css` selon vos besoins.
 4. Lancez l'aperçu du site :
    ```bash
    quarto preview
@@ -23,4 +23,5 @@ Ce dossier contient un **template minimal** pour créer un site web Quarto inspi
   - `_quarto.yml` définit la configuration du site.
   - `index.qmd` page d'accueil.
   - `about.qmd` page d'exemple.
-  - `styles.css` feuille de style simple.
+  - `page1.qmd` seconde page pour illustrer la navigation.
+  - `styles.css` feuille de style inspirée du site d'origine (sans logo).

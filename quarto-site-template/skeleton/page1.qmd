@@ -1,0 +1,13 @@
+---
+title: "Page 1"
+---
+
+# Page d'exemple
+
+Utilisez cette page pour ajouter du contenu supplémentaire.
+
+```{r}
+# Exemple de graphique R
+plot(cars)
+```
+

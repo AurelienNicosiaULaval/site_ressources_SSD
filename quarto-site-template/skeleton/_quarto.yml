@@ -10,6 +10,8 @@ website:
         text: Accueil
       - href: about.qmd
         text: À propos
+      - href: page1.qmd
+        text: Page 1
   page-navigation: true
   back-to-top-navigation: true
 
