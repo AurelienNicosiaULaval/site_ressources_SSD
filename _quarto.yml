@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs  # ← nécessaire pour GitHub Pages
 
 website:
   title: "Ressources SSD"
@@ -15,6 +16,7 @@ website:
         text: Tutoriels
       - href: about.qmd
         text: À propos
+
 format:
   html:
     theme:
@@ -24,4 +26,3 @@ format:
     toc: true
 
 editor: visual
-
