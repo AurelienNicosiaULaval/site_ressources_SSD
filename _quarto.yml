@@ -15,6 +15,7 @@ website:
     - href: index.qmd
       text: Accueil
     - text: Modèles
+      href: templates/index.qmd
       menu:
         - href: templates/quarto.qmd
           text: Gabarits Quarto
