@@ -15,12 +15,14 @@ website:
     - href: index.qmd
       text: Accueil
     - text: Modèles
-      href: templates/index.qmd
       menu:
+        - href: templates/index.qmd
+          text: Vue d’ensemble
         - href: templates/quarto.qmd
           text: Gabarits Quarto
         - href: templates/site-web.qmd
           text: Modèle de site web
+
     - href: outils.qmd
       text: Outils
     - href: tutoriels.qmd

@@ -21,32 +21,81 @@
     "text": "Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une issue ou un pull request sur le dépôt GitHub !"
   },
   {
-    "objectID": "templates/site-web.html",
-    "href": "templates/site-web.html",
-    "title": "Gabarit de site web Quarto",
+    "objectID": "templates/index.html",
+    "href": "templates/index.html",
+    "title": "Accueil des modèles",
     "section": "",
-    "text": "Le dépôt contient un gabarit minimal pour concevoir un site web similaire à celui-ci. Il se trouve dans le dossier quarto-site-template et peut être utilisé pour initialiser rapidement un nouveau projet.\n\n\nquarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire.\n\n\n\n\nModifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview\n\n\n\n\nPoussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
+    "text": "Cette section du site regroupe plusieurs gabarits prêts à l’emploi. Utilisez le menu déroulant Modèles en haut de la page pour accéder rapidement aux différentes catégories.\n\nGabarits Quarto : présentations, rapports, devoirs ou examens.\nSite web Quarto : structure de base pour créer votre propre site.\n\n\n\n\nDans RStudio, ouvrez l’onglet Terminal (et non la console R).\nExécutez la commande correspondant au modèle souhaité :\nquarto use template &lt;utilisateur&gt;/&lt;repo&gt;/&lt;modele&gt;\nUn nouveau dossier est créé avec tous les fichiers nécessaires (*.qmd, css, images…).\nOuvrez ce dossier comme projet et personnalisez les fichiers selon vos besoins.\n\nAinsi, chaque modèle peut être cloné localement en quelques secondes puis adapté à vos cours."
   },
   {
-    "objectID": "templates/site-web.html#installation-du-gabarit",
-    "href": "templates/site-web.html#installation-du-gabarit",
-    "title": "Gabarit de site web Quarto",
+    "objectID": "templates/index.html#comment-dupliquer-un-modèle",
+    "href": "templates/index.html#comment-dupliquer-un-modèle",
+    "title": "Accueil des modèles",
     "section": "",
-    "text": "quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire."
+    "text": "Dans RStudio, ouvrez l’onglet Terminal (et non la console R).\nExécutez la commande correspondant au modèle souhaité :\nquarto use template &lt;utilisateur&gt;/&lt;repo&gt;/&lt;modele&gt;\nUn nouveau dossier est créé avec tous les fichiers nécessaires (*.qmd, css, images…).\nOuvrez ce dossier comme projet et personnalisez les fichiers selon vos besoins.\n\nAinsi, chaque modèle peut être cloné localement en quelques secondes puis adapté à vos cours."
   },
   {
-    "objectID": "templates/site-web.html#développement-local",
-    "href": "templates/site-web.html#développement-local",
-    "title": "Gabarit de site web Quarto",
+    "objectID": "tutoriels.html",
+    "href": "tutoriels.html",
+    "title": "Tutoriels et études de cas",
     "section": "",
-    "text": "Modifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview"
+    "text": "Cette section rassemble des études de cas pédagogiques conçues pour initier les étudiant·es à la science des données à travers des situations concrètes, reproductibles et interactives.\nLes tutoriels sont construits sous forme de documents Quarto intégrant code, visualisations et questions de réflexion.\n\n\n\nDépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
   },
   {
-    "objectID": "templates/site-web.html#publication-automatique-sur-github-pages",
-    "href": "templates/site-web.html#publication-automatique-sur-github-pages",
-    "title": "Gabarit de site web Quarto",
+    "objectID": "tutoriels.html#étude-de-cas-gabarit-interactif",
+    "href": "tutoriels.html#étude-de-cas-gabarit-interactif",
+    "title": "Tutoriels et études de cas",
     "section": "",
-    "text": "Poussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
+    "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.\n\n\n\nOffrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.\n\n\n\n\n\nModèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.\n\n\n\n\n\n\nExplorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+  },
+  {
+    "objectID": "index.html#objectifs-du-site",
+    "href": "index.html#objectifs-du-site",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique."
+  },
+  {
+    "objectID": "index.html#structure-du-site",
+    "href": "index.html#structure-du-site",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Modèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc."
+  },
+  {
+    "objectID": "index.html#démarrage-rapide",
+    "href": "index.html#démarrage-rapide",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Explorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/about.html",
+    "href": "quarto-site-template/skeleton/about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "À propos\nCette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.\n\n# Exemples de code R\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/index.html",
+    "href": "quarto-site-template/skeleton/index.html",
+    "title": "Page d’accueil",
+    "section": "",
+    "text": "Bienvenue\nCe gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page index.qmd pour présenter votre projet ou vos ressources.\n\nAjoutez des sections avec du texte et du code.\nModifiez la navigation dans _quarto.yml selon vos besoins.\n\nConsultez about.qmd pour un exemple de page supplémentaire.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/page1.html",
+    "href": "quarto-site-template/skeleton/page1.html",
+    "title": "Page 1",
+    "section": "",
+    "text": "Page d’exemple\nUtilisez cette page pour ajouter du contenu supplémentaire.\n\n# Exemple de graphique R\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -91,67 +140,32 @@
     "text": "Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources."
   },
   {
-    "objectID": "quarto-site-template/skeleton/page1.html",
-    "href": "quarto-site-template/skeleton/page1.html",
-    "title": "Page 1",
+    "objectID": "templates/site-web.html",
+    "href": "templates/site-web.html",
+    "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "Page d’exemple\nUtilisez cette page pour ajouter du contenu supplémentaire.\n\n# Exemple de graphique R\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "Le dépôt contient un gabarit minimal pour concevoir un site web similaire à celui-ci. Il se trouve dans le dossier quarto-site-template et peut être utilisé pour initialiser rapidement un nouveau projet.\n\n\nquarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire.\n\n\n\n\nModifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview\n\n\n\n\nPoussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
   },
   {
-    "objectID": "quarto-site-template/skeleton/index.html",
-    "href": "quarto-site-template/skeleton/index.html",
-    "title": "Page d’accueil",
+    "objectID": "templates/site-web.html#installation-du-gabarit",
+    "href": "templates/site-web.html#installation-du-gabarit",
+    "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "Bienvenue\nCe gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page index.qmd pour présenter votre projet ou vos ressources.\n\nAjoutez des sections avec du texte et du code.\nModifiez la navigation dans _quarto.yml selon vos besoins.\n\nConsultez about.qmd pour un exemple de page supplémentaire.\n\n\n\n\n Back to top"
+    "text": "quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire."
   },
   {
-    "objectID": "quarto-site-template/skeleton/about.html",
-    "href": "quarto-site-template/skeleton/about.html",
-    "title": "À propos",
+    "objectID": "templates/site-web.html#développement-local",
+    "href": "templates/site-web.html#développement-local",
+    "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "À propos\nCette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.\n\n# Exemples de code R\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\n\n\n\n\n Back to top"
+    "text": "Modifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "objectID": "templates/site-web.html#publication-automatique-sur-github-pages",
+    "href": "templates/site-web.html#publication-automatique-sur-github-pages",
+    "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.\n\n\n\nOffrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.\n\n\n\n\n\nModèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.\n\n\n\n\n\n\nExplorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
-  },
-  {
-    "objectID": "index.html#objectifs-du-site",
-    "href": "index.html#objectifs-du-site",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
-    "section": "",
-    "text": "Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique."
-  },
-  {
-    "objectID": "index.html#structure-du-site",
-    "href": "index.html#structure-du-site",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
-    "section": "",
-    "text": "Modèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc."
-  },
-  {
-    "objectID": "index.html#démarrage-rapide",
-    "href": "index.html#démarrage-rapide",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
-    "section": "",
-    "text": "Explorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
-  },
-  {
-    "objectID": "tutoriels.html",
-    "href": "tutoriels.html",
-    "title": "Tutoriels et études de cas",
-    "section": "",
-    "text": "Cette section rassemble des études de cas pédagogiques conçues pour initier les étudiant·es à la science des données à travers des situations concrètes, reproductibles et interactives.\nLes tutoriels sont construits sous forme de documents Quarto intégrant code, visualisations et questions de réflexion.\n\n\n\nDépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
-  },
-  {
-    "objectID": "tutoriels.html#étude-de-cas-gabarit-interactif",
-    "href": "tutoriels.html#étude-de-cas-gabarit-interactif",
-    "title": "Tutoriels et études de cas",
-    "section": "",
-    "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+    "text": "Poussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
   },
   {
     "objectID": "templates/quarto.html",

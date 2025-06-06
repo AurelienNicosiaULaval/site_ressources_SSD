@@ -39,3 +39,8 @@ Ce modèle est parfait pour :
 ---
 
 Vous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques.
+
+# 📖 Exemples de tutoriels R interactifs
+
+https://aureliennicosia.shinyapps.io/TutorielGGplot/ 
+
