@@ -14,7 +14,7 @@ website:
     left:
       - href: index.qmd
         text: Accueil
-      - href: templates.qmd
+      - href: templates/quarto.qmd
         text: Modèles
       - href: outils.qmd
         text: Outils
