@@ -2,6 +2,8 @@ website:
   sidebar:
     style: "floating"
     contents:
+      - href: index.qmd
+        text: "Accueil des modèles"
       - href: quarto.qmd
         text: "Modèles Quarto"
       - href: site-web.qmd

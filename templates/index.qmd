@@ -1,0 +1,29 @@
+---
+title: "Accueil des modèles"
+format:
+  html:
+    toc: true
+    toc-title: "Contenu de la page"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+---
+
+# 🧰 Nos modèles disponibles
+
+Cette section du site regroupe plusieurs gabarits prêts à l'emploi. Utilisez le menu déroulant **Modèles** en haut de la page pour accéder rapidement aux différentes catégories.
+
+- [Gabarits Quarto](quarto.qmd) : présentations, rapports, devoirs ou examens.
+- [Site web Quarto](site-web.qmd) : structure de base pour créer votre propre site.
+
+## 📥 Comment dupliquer un modèle
+
+1. Dans RStudio, ouvrez l'onglet **Terminal** (et non la console R).
+2. Exécutez la commande correspondant au modèle souhaité :
+   ```bash
+   quarto use template <utilisateur>/<repo>/<modele>
+   ```
+3. Un nouveau dossier est créé avec tous les fichiers nécessaires (\*.qmd, css, images…).
+4. Ouvrez ce dossier comme projet et personnalisez les fichiers selon vos besoins.
+
+Ainsi, chaque modèle peut être cloné localement en quelques secondes puis adapté à vos cours.
