@@ -1,0 +1,67 @@
+---
+title: "Ressources pédagogiques pour l'enseignement en statistique et en sciences des données"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Contenu"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+    css: styles.css
+site:
+  title: "Ressources en statistique"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: templates.qmd
+        text: Modèles
+      - href: outils.qmd
+        text: Outils
+      - href: tutoriels.qmd
+        text: Tutoriels
+      - href: about.qmd
+        text: À propos
+      - icon: github
+        href: https://github.com/AurelienNicosiaULaval
+        aria-label: GitHub
+        css: styles.css
+        tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://github.com/AurelienNicosiaULaval
+          - text: Report a Bug
+            href:  https://github.com/AurelienNicosiaULaval
+  page-navigation: true
+
+---
+
+# Bienvenue
+
+Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.
+
+## Objectifs du site
+
+- Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.
+- Favoriser le partage entre enseignant·es du département.
+- Illustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.
+
+## Structure du site
+
+- **Modèles** : documents `.qmd`, présentations, devoirs, examens.
+- **Outils** : bibliothèques R utiles, extensions Quarto, automatisations.
+- **Tutoriels** : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.
+
+---
+
+## 🚀 Démarrage rapide
+
+1. Explorez les modèles disponibles dans la section [Modèles](templates.qmd).
+2. Consultez les outils proposés dans [Outils](outils.qmd).
+3. Apprenez avec nos [Tutoriels](tutoriels.qmd).
+
+---
+
+Si vous souhaitez contribuer ou avez des questions, n’hésitez pas à [ouvrir une issue sur GitHub](https://github.com/ton-utilisateur/ton-repo/issues).

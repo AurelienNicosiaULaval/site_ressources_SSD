@@ -1,0 +1,77 @@
+---
+title: "Modèles Quarto pour l’enseignement"
+format:
+  html:
+    toc: true
+    toc-title: "Contenu de la page"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+---
+
+# 📦 Modèles disponibles
+
+Voici une sélection de modèles Quarto développés pour l’enseignement de la statistique à l’Université Laval. Ces modèles sont conçus pour être faciles à adapter et intégrer dans vos cours.
+
+---
+
+## 🎓 Modèle Quarto — Université Laval
+
+**Dépôt GitHub** : [ulaval-template](https://github.com/AurelienNicosiaULaval/ulaval-template)
+
+Ces modèles propose une structure de base professionnelle pour :
+
+- des présentations (type *slides*) personnalisées aux couleurs de l’Université Laval ;
+
+- des rapports de projets ou devoirs étudiants ;
+
+Ce modèle est pensé pour fonctionner directement avec RStudio. Il inclut :
+
+- Un thème adapté au département de mathématiques et statistique ;
+
+- Un fichier `.css` pour l’uniformité visuelle ;
+
+- Une page de titre et une structure claire des sections.
+
+
+## 🎓 1. Rapport étudiant — STT-1100
+
+Un modèle de rapport HTML pour les travaux pratiques.
+
+### 🔧 Installation
+
+```bash
+quarto use template AurelienNicosiaULaval/ulaval-template/stt1100
+```
+
+### 🎨 Caractéristiques
+
+- Feuille de style Ulaval (`ulaval.css`)
+- Table des matières
+- Mise en page professionnelle
+- Entièrement personnalisable
+
+---
+
+## 🖥️ 2. Notes de cours (Slides Reveal.js)
+
+Un template de présentation pour les enseignants, basé sur **Reveal.js**, avec des couleurs et une typographie adaptées à la projection.
+
+### 🔧 Installation
+
+```bash
+quarto use template AurelienNicosiaULaval/ulaval-template/slides
+```
+
+### 🎨 Caractéristiques
+
+- Thème Reveal.js personnalisé (`ulaval.css`)
+- Intégration du logo Ulaval
+- Support de l’ardoise interactive (`chalkboard: true`)
+- Police lisible, contrastes adaptés
+
+
+---
+
+## 💬 Besoin d’un nouveau modèle ?
+N’hésitez pas à [ouvrir une *issue*](https://github.com/AurelienNicosiaULaval/ulaval-template/issues) pour suggérer des améliorations ou proposer de nouveaux gabarits !

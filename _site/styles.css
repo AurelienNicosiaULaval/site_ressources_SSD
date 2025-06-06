@@ -1,0 +1,98 @@
+/* === Palette officielle Université Laval === */
+:root {
+  --ulaval-red:        #e30513;
+  --ulaval-yellow:     #ffc103;
+  --ulaval-light-grey: #d9d9d9;
+  --ulaval-medium-grey:#7f7f7f;
+  --ulaval-dark-grey:  #515151;
+  --ulaval-black:      #000000;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: var(--ulaval-dark-grey);
+  background-color: white;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ulaval-red);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  border-bottom: 2px solid var(--ulaval-light-grey);
+  padding-bottom: 0.2em;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: var(--ulaval-medium-grey);
+  margin-top: 1em;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: var(--ulaval-medium-grey);
+}
+
+p, li {
+  font-size: 1em;
+  color: var(--ulaval-dark-grey);
+}
+
+ul, ol {
+  padding-left: 1.5em;
+}
+
+code, pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  background-color: var(--ulaval-light-grey);
+  color: var(--ulaval-black);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 6px solid var(--ulaval-red);
+  padding-left: 1em;
+  color: var(--ulaval-dark-grey);
+  background-color: var(--ulaval-light-grey);
+  margin: 1em 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+table th {
+  background: var(--ulaval-yellow);
+  color: var(--ulaval-black);
+  padding: 0.5em;
+  text-align: left;
+}
+
+table td, table th {
+  border: 1px solid var(--ulaval-light-grey);
+  padding: 0.5em;
+}
+
+a {
+  color: var(--ulaval-red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

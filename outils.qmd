@@ -1,0 +1,55 @@
+---
+title: "Outils pour la science des données"
+format:
+  html:
+    toc: true
+    toc-title: "Contenu de la page"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+---
+
+# 🛠️ Outils développés
+
+Voici des outils conçus pour soutenir l’enseignement et la pratique de la science des données, en particulier dans le contexte des cours offerts au département de mathématiques et de statistique.
+
+---
+
+## 📦 Package `UlavalSSD`
+
+**Dépôt GitHub** : [AurelienNicosiaULaval/UlavalSSD](https://github.com/AurelienNicosiaULaval/UlavalSSD)
+
+Le package `UlavalSSD` (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :
+
+- Centraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;
+- Fournir des fonctions utilitaires pour les cours;
+<!-- - Faciliter la mise en page de documents `.qmd` et l’usage pédagogique de `Quarto` ; -->
+<!-- - Intégrer facilement des palettes de couleurs, icônes, logos, styles et éléments visuels adaptés au branding ULaval. -->
+
+### 📚 Fonctions clés
+
+<!-- - `get_students_data()` : jeu de données simulé d'étudiants du bac en statistiques et science des données. -->
+<!-- - `use_template()` : fonction pour initialiser un fichier `.qmd` à partir d’un gabarit standard. -->
+<!-- - `add_ulaval_style()` : applique les styles CSS de l’Université Laval dans un projet Quarto. -->
+
+### 🚀 Installation
+
+```r
+# installation depuis GitHub
+remotes::install_github("AurelienNicosiaULaval/UlavalSSD")
+```
+
+### 🎯 Utilisation de base
+
+```r
+library(UlavalSSD)
+data("listecondamnation") 
+head(listecondamnation)
+```
+
+---
+
+## 🤝 Contribuer
+
+Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ?
+N'hésitez pas à proposer une *issue* ou un *pull request* sur le dépôt GitHub !

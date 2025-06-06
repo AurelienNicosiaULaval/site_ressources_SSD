@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.\n\n\n\nOffrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.\n\n\n\n\n\nModèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.\n\n\n\n\n\n\nExplorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+  },
+  {
+    "objectID": "index.html#objectifs-du-site",
+    "href": "index.html#objectifs-du-site",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique."
+  },
+  {
+    "objectID": "index.html#structure-du-site",
+    "href": "index.html#structure-du-site",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Modèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc."
+  },
+  {
+    "objectID": "index.html#démarrage-rapide",
+    "href": "index.html#démarrage-rapide",
+    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "section": "",
+    "text": "Explorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "Ce site regroupe les ressources pédagogiques, outils et modèles développés pour soutenir l’enseignement de la science des données et des statistiques au département de mathématiques et de statistique de l’Université Laval.\n\n\n\nCentraliser les ressources pour les enseignant·es du département ;\nFavoriser l’adoption de bonnes pratiques (reproductibilité, versionnage, documentation) ;\nFaciliter le démarrage d’un nouveau cours, projet ou devoir avec des modèles et des jeux de données prêts à l’emploi.\n\n\n\n\nCe site s’adresse principalement :\n\naux chargé·es de cours et d’enseignement et professeur·es du DMS ;\naux auxiliaires d’enseignements (dépannages, laboratoires) ;\naux étudiant·es qui souhaitent réutiliser ou explorer les ressources proposées.\n\n\n\n\nLe site a été conçu avec Quarto et les ressources sont hébergées sur GitHub.\nLes outils, templates et jeux de données sont développés dans une logique de collaboration ouverte et peuvent évoluer au fil du temps.\n\n\n\nPour toute question, contribution ou demande, vous pouvez :\n\nÉcrire à Aurélien Nicosia (aurelien.nicosia@mat.ulaval.ca) ;\nOuvrir une issue sur l’un des dépôts GitHub ;\nProposer une nouvelle ressource via un pull request.\n\nMerci de faire vivre cette initiative !\n\n\n\nUn grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources."
+  },
+  {
+    "objectID": "templates.html",
+    "href": "templates.html",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Voici une sélection de modèles Quarto développés pour l’enseignement de la statistique à l’Université Laval. Ces modèles sont conçus pour être faciles à adapter et intégrer dans vos cours.\n\n\n\nDépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections.\n\n\n\n\nUn modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable\n\n\n\n\n\n\nUn template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés\n\n\n\n\n\n\nN’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
+  },
+  {
+    "objectID": "templates.html#modèle-général-université-laval",
+    "href": "templates.html#modèle-général-université-laval",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Dépôt GitHub : ulaval-template\nCe modèle propose une structure de base professionnelle pour : - des présentations (type slides) personnalisées aux couleurs de l’Université Laval ; - des rapports de projets ou devoirs étudiants ;\n👉 Utilisation :\nquarto use template AurelienNicosiaULaval/ulaval-template\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut : - Un thème adapté au département de mathématiques et statistique ; - Un fichier .css pour l’uniformité visuelle ; - Une page de titre et une structure claire des sections."
+  },
+  {
+    "objectID": "templates.html#étude-de-cas-gabarit-interactif",
+    "href": "templates.html#étude-de-cas-gabarit-interactif",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant : - Mise en contexte ; - Analyse des données avec visualisations interactives ; - Questions de réflexion ; - Grille d’évaluation ; - Export HTML interactif.\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections qmd pour votre propre cas.\nCe modèle est parfait pour : - des projets de session ; - des mini-cas interactifs en classe ;"
+  },
+  {
+    "objectID": "templates.html#besoin-dun-nouveau-modèle",
+    "href": "templates.html#besoin-dun-nouveau-modèle",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "N’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
+  },
+  {
+    "objectID": "outils.html",
+    "href": "outils.html",
+    "title": "Outils pour la science des données",
+    "section": "",
+    "text": "Voici des outils conçus pour soutenir l’enseignement et la pratique de la science des données, en particulier dans le contexte des cours offerts au département de mathématiques et de statistique.\n\n\n\nDépôt GitHub : AurelienNicosiaULaval/UlavalSSD\nLe package UlavalSSD (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :\n\nCentraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;\nFournir des fonctions utilitaires pour les cours;  \n\n\n\n\n\n\n\n\n\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")\n\n\n\nlibrary(UlavalSSD)\ndata(\"listecondamnation\") \nhead(listecondamnation)\n\n\n\n\n\nVous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une issue ou un pull request sur le dépôt GitHub !"
+  },
+  {
+    "objectID": "outils.html#package-ulavalssd",
+    "href": "outils.html#package-ulavalssd",
+    "title": "Outils pour la science des données",
+    "section": "",
+    "text": "Dépôt GitHub : AurelienNicosiaULaval/UlavalSSD\nLe package UlavalSSD (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :\n\nCentraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;\nFournir des fonctions utilitaires pour les cours;  \n\n\n\n\n\n\n\n\n\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")\n\n\n\nlibrary(UlavalSSD)\ndata(\"listecondamnation\") \nhead(listecondamnation)"
+  },
+  {
+    "objectID": "outils.html#contribuer",
+    "href": "outils.html#contribuer",
+    "title": "Outils pour la science des données",
+    "section": "",
+    "text": "Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une issue ou un pull request sur le dépôt GitHub !"
+  },
+  {
+    "objectID": "about.html#objectifs",
+    "href": "about.html#objectifs",
+    "title": "À propos",
+    "section": "",
+    "text": "Centraliser les ressources pour les enseignant·es du département ;\nFavoriser l’adoption de bonnes pratiques (reproductibilité, versionnage, documentation) ;\nFaciliter le démarrage d’un nouveau cours, projet ou devoir avec des modèles et des jeux de données prêts à l’emploi."
+  },
+  {
+    "objectID": "about.html#pour-qui",
+    "href": "about.html#pour-qui",
+    "title": "À propos",
+    "section": "",
+    "text": "Ce site s’adresse principalement :\n\naux chargé·es de cours et d’enseignement et professeur·es du DMS ;\naux auxiliaires d’enseignements (dépannages, laboratoires) ;\naux étudiant·es qui souhaitent réutiliser ou explorer les ressources proposées."
+  },
+  {
+    "objectID": "about.html#développement",
+    "href": "about.html#développement",
+    "title": "À propos",
+    "section": "",
+    "text": "Le site a été conçu avec Quarto et les ressources sont hébergées sur GitHub.\nLes outils, templates et jeux de données sont développés dans une logique de collaboration ouverte et peuvent évoluer au fil du temps."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "À propos",
+    "section": "",
+    "text": "Pour toute question, contribution ou demande, vous pouvez :\n\nÉcrire à Aurélien Nicosia (aurelien.nicosia@mat.ulaval.ca) ;\nOuvrir une issue sur l’un des dépôts GitHub ;\nProposer une nouvelle ressource via un pull request.\n\nMerci de faire vivre cette initiative !"
+  },
+  {
+    "objectID": "tutoriels.html",
+    "href": "tutoriels.html",
+    "title": "Tutoriels et études de cas",
+    "section": "",
+    "text": "Cette section rassemble des études de cas pédagogiques conçues pour initier les étudiant·es à la science des données à travers des situations concrètes, reproductibles et interactives.\nLes tutoriels sont construits sous forme de documents Quarto intégrant code, visualisations et questions de réflexion.\n\n\n\nDépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+  },
+  {
+    "objectID": "tutoriels.html#étude-de-cas-gabarit-interactif",
+    "href": "tutoriels.html#étude-de-cas-gabarit-interactif",
+    "title": "Tutoriels et études de cas",
+    "section": "",
+    "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+  },
+  {
+    "objectID": "templates.html#modèle-quarto-université-laval",
+    "href": "templates.html#modèle-quarto-université-laval",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Dépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections."
+  },
+  {
+    "objectID": "templates.html#rapport-étudiant-stt-1100",
+    "href": "templates.html#rapport-étudiant-stt-1100",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Un modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable"
+  },
+  {
+    "objectID": "templates.html#notes-de-cours-slides-reveal.js",
+    "href": "templates.html#notes-de-cours-slides-reveal.js",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Un template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés"
+  },
+  {
+    "objectID": "about.html#remerciements",
+    "href": "about.html#remerciements",
+    "title": "À propos",
+    "section": "",
+    "text": "Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources."
+  }
+]

@@ -1,0 +1,41 @@
+---
+title: "Tutoriels et études de cas"
+format:
+  html:
+    toc: true
+    toc-title: "Contenu de la page"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+---
+
+# 📚 Tutoriels interactifs
+
+Cette section rassemble des **études de cas pédagogiques** conçues pour initier les étudiant·es à la science des données à travers des situations concrètes, reproductibles et interactives. 
+
+Les tutoriels sont construits sous forme de documents `Quarto` intégrant code, visualisations et questions de réflexion.
+
+---
+
+## 📁 Étude de cas — Gabarit interactif
+
+**Dépôt GitHub** : [Modele_etude_de_cas](https://github.com/AurelienNicosiaULaval/Modele_etude_de_cas)
+
+Ce modèle propose une structure complète pour une étude de cas pédagogique incluant :
+
+- Mise en contexte ;
+- Analyse des données avec visualisations interactives ;
+- Questions de réflexion ;
+- Grille d’évaluation ;
+- Export HTML interactif.
+
+👉 **Utilisation** : clonez ou téléchargez le dépôt, puis modifiez les sections `.qmd` pour votre propre cas.
+
+Ce modèle est parfait pour :
+
+- des projets de session ;
+- des mini-cas interactifs en classe.
+
+---
+
+Vous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques.

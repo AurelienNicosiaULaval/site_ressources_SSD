@@ -1,0 +1,52 @@
+---
+title: "À propos"
+format:
+  html:
+    toc: true
+    toc-title: "Contenu de la page"
+    embed-resources: true
+    link-external-newwindow: true
+    code-link: true
+---
+
+# 👋 À propos de ce site
+
+Ce site regroupe les ressources pédagogiques, outils et modèles développés pour soutenir l’enseignement de la **science des données et des statistiques** au **département de mathématiques et de statistique de l’Université Laval**.
+
+## 🎯 Objectifs
+
+- Centraliser les ressources pour les enseignant·es du département ;
+- Favoriser l’adoption de bonnes pratiques (reproductibilité, versionnage, documentation) ;
+- Faciliter le démarrage d’un nouveau cours, projet ou devoir avec des modèles et des jeux de données prêts à l’emploi.
+
+## 👨‍🏫 Pour qui ?
+
+Ce site s’adresse principalement :
+
+- aux chargé·es de cours et d’enseignement et professeur·es du DMS ;
+
+- aux auxiliaires d'enseignements (dépannages, laboratoires) ;
+
+- aux étudiant·es qui souhaitent réutiliser ou explorer les ressources proposées.
+
+## 🧑‍💻 Développement
+
+Le site a été conçu avec **[Quarto](https://quarto.org)** et les ressources sont hébergées sur **[GitHub](https://github.com/AurelienNicosiaULaval)**. 
+
+Les outils, templates et jeux de données sont développés dans une logique de **collaboration ouverte** et peuvent évoluer au fil du temps.
+
+## 📬 Contact
+
+Pour toute question, contribution ou demande, vous pouvez :
+
+- Écrire à Aurélien Nicosia (<aurelien.nicosia@mat.ulaval.ca>) ;
+
+- Ouvrir une *issue* sur l’un des dépôts GitHub ;
+
+- Proposer une nouvelle ressource via un *pull request*.
+
+Merci de faire vivre cette initiative !
+
+## remerciements
+
+Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources.
