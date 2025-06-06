@@ -1,3 +1,5 @@
+[![Voir le site](https://img.shields.io/badge/Site%20web-en%20ligne-success?style=for-the-badge&logo=github)](https://AurelienNicosiaULaval.github.io/site_ressources_SSD/)
+
 # 📚 Site — Ressources pédagogiques SSD
 
 Ce dépôt contient le site **Ressources SSD**, un site Quarto développé pour centraliser les modèles, tutoriels, outils et jeux de données pédagogiques utilisés dans les cours de **science des données** et de **statistiques** à l’Université Laval.
