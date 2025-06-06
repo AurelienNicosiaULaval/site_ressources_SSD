@@ -21,6 +21,34 @@
     "text": "Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une issue ou un pull request sur le dépôt GitHub !"
   },
   {
+    "objectID": "templates/site-web.html",
+    "href": "templates/site-web.html",
+    "title": "Gabarit de site web Quarto",
+    "section": "",
+    "text": "Le dépôt contient un gabarit minimal pour concevoir un site web similaire à celui-ci. Il se trouve dans le dossier quarto-site-template et peut être utilisé pour initialiser rapidement un nouveau projet.\n\n\nquarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire.\n\n\n\n\nModifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview\n\n\n\n\nPoussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
+  },
+  {
+    "objectID": "templates/site-web.html#installation-du-gabarit",
+    "href": "templates/site-web.html#installation-du-gabarit",
+    "title": "Gabarit de site web Quarto",
+    "section": "",
+    "text": "quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire."
+  },
+  {
+    "objectID": "templates/site-web.html#développement-local",
+    "href": "templates/site-web.html#développement-local",
+    "title": "Gabarit de site web Quarto",
+    "section": "",
+    "text": "Modifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview"
+  },
+  {
+    "objectID": "templates/site-web.html#publication-automatique-sur-github-pages",
+    "href": "templates/site-web.html#publication-automatique-sur-github-pages",
+    "title": "Gabarit de site web Quarto",
+    "section": "",
+    "text": "Poussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "À propos",
@@ -63,6 +91,27 @@
     "text": "Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources."
   },
   {
+    "objectID": "quarto-site-template/skeleton/page1.html",
+    "href": "quarto-site-template/skeleton/page1.html",
+    "title": "Page 1",
+    "section": "",
+    "text": "Page d’exemple\nUtilisez cette page pour ajouter du contenu supplémentaire.\n\n# Exemple de graphique R\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/index.html",
+    "href": "quarto-site-template/skeleton/index.html",
+    "title": "Page d’accueil",
+    "section": "",
+    "text": "Bienvenue\nCe gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page index.qmd pour présenter votre projet ou vos ressources.\n\nAjoutez des sections avec du texte et du code.\nModifiez la navigation dans _quarto.yml selon vos besoins.\n\nConsultez about.qmd pour un exemple de page supplémentaire.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/about.html",
+    "href": "quarto-site-template/skeleton/about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "À propos\nCette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.\n\n# Exemples de code R\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
@@ -91,41 +140,6 @@
     "text": "Explorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
   },
   {
-    "objectID": "templates.html",
-    "href": "templates.html",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Voici une sélection de modèles Quarto développés pour l’enseignement de la statistique à l’Université Laval. Ces modèles sont conçus pour être faciles à adapter et intégrer dans vos cours.\n\n\n\nDépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections.\n\n\n\n\nUn modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable\n\n\n\n\n\n\nUn template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés\n\n\n\n\n\n\nN’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
-  },
-  {
-    "objectID": "templates.html#modèle-quarto-université-laval",
-    "href": "templates.html#modèle-quarto-université-laval",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Dépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections."
-  },
-  {
-    "objectID": "templates.html#rapport-étudiant-stt-1100",
-    "href": "templates.html#rapport-étudiant-stt-1100",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Un modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable"
-  },
-  {
-    "objectID": "templates.html#notes-de-cours-slides-reveal.js",
-    "href": "templates.html#notes-de-cours-slides-reveal.js",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Un template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés"
-  },
-  {
-    "objectID": "templates.html#besoin-dun-nouveau-modèle",
-    "href": "templates.html#besoin-dun-nouveau-modèle",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "N’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
-  },
-  {
     "objectID": "tutoriels.html",
     "href": "tutoriels.html",
     "title": "Tutoriels et études de cas",
@@ -138,5 +152,40 @@
     "title": "Tutoriels et études de cas",
     "section": "",
     "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+  },
+  {
+    "objectID": "templates/quarto.html",
+    "href": "templates/quarto.html",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Voici une sélection de modèles Quarto développés pour l’enseignement de la statistique à l’Université Laval. Ces modèles sont conçus pour être faciles à adapter et intégrer dans vos cours.\n\n\n\nDépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections.\n\n\n\n\nUn modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable\n\n\n\n\n\n\nUn template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés\n\n\n\n\n\n\nN’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
+  },
+  {
+    "objectID": "templates/quarto.html#modèle-quarto-université-laval",
+    "href": "templates/quarto.html#modèle-quarto-université-laval",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Dépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections."
+  },
+  {
+    "objectID": "templates/quarto.html#rapport-étudiant-stt-1100",
+    "href": "templates/quarto.html#rapport-étudiant-stt-1100",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Un modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable"
+  },
+  {
+    "objectID": "templates/quarto.html#notes-de-cours-slides-reveal.js",
+    "href": "templates/quarto.html#notes-de-cours-slides-reveal.js",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "Un template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés"
+  },
+  {
+    "objectID": "templates/quarto.html#besoin-dun-nouveau-modèle",
+    "href": "templates/quarto.html#besoin-dun-nouveau-modèle",
+    "title": "Modèles Quarto pour l’enseignement",
+    "section": "",
+    "text": "N’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
   }
 ]

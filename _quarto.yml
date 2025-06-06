@@ -7,21 +7,25 @@ website:
   navbar:
     logo: img/logo-ulaval.png
     tools:
-      - icon: github
-        href: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
-        aria-label: GitHub
-      - toggle-appearance: true
+    - icon: github
+      href: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
+      aria-label: GitHub
+    - toggle-appearance: true
     left:
-      - href: index.qmd
-        text: Accueil
-      - href: templates/quarto.qmd
-        text: Modèles
-      - href: outils.qmd
-        text: Outils
-      - href: tutoriels.qmd
-        text: Tutoriels
-      - href: about.qmd
-        text: À propos
+    - href: index.qmd
+      text: Accueil
+    - text: Modèles
+      menu:
+        - href: templates/quarto.qmd
+          text: Gabarits Quarto
+        - href: templates/site-web.qmd
+          text: Modèle de site web
+    - href: outils.qmd
+      text: Outils
+    - href: tutoriels.qmd
+      text: Tutoriels
+    - href: about.qmd
+      text: À propos
   back-to-top-navigation: true
   reader-mode: true
   repo-url: https://github.com/AurelienNicosiaULaval/site_ressources_SSD

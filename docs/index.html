@@ -3950,10 +3950,21 @@ filter: brightness(0.9);
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./templates.html"> 
-<span class="menu-text">Modèles</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modèles" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modèles</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modèles">    
+        <li>
+    <a class="dropdown-item" href="./templates/quarto.html">
+ <span class="dropdown-text">Gabarits Quarto</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./templates/site-web.html">
+ <span class="dropdown-text">Modèle de site web</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./outils.html"> 
 <span class="menu-text">Outils</span></a>
@@ -4043,7 +4054,7 @@ filter: brightness(0.9);
 <section id="démarrage-rapide" class="level2">
 <h2 class="anchored" data-anchor-id="démarrage-rapide">🚀 Démarrage rapide</h2>
 <ol type="1">
-<li>Explorez les modèles disponibles dans la section <a href="./templates.html">Modèles</a>.</li>
+<li>Explorez les modèles disponibles dans la section <a href="./templates/quarto.html">Modèles</a>.</li>
 <li>Consultez les outils proposés dans <a href="./outils.html">Outils</a>.</li>
 <li>Apprenez avec nos <a href="./tutoriels.html">Tutoriels</a>.</li>
 </ol>
