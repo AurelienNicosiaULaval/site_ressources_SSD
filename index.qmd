@@ -2,7 +2,7 @@
 title: "Ressources pédagogiques pour l'enseignement en statistique et en sciences des données"
 format:
   html:
-    theme: cosmo
+#    theme: cosmo
     toc: true
     toc-title: "Contenu"
     embed-resources: true
