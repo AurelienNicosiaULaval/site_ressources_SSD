@@ -144,28 +144,35 @@
     "href": "templates/site-web.html",
     "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "Le dépôt contient un gabarit minimal pour concevoir un site web similaire à celui-ci. Il se trouve dans le dossier quarto-site-template et peut être utilisé pour initialiser rapidement un nouveau projet.\n\n\nquarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire.\n\n\n\n\nModifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview\n\n\n\n\nPoussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
+    "text": "Ce modèle propose une base complète pour créer un site web Quarto. Il inclut les fichiers essentiels, un style aux couleurs de l’Université Laval, une navigation cohérente et un support du mode sombre.\nLe gabarit se trouve dans le dossier quarto-site-template du dépôt, et peut être utilisé avec :\n\n\nquarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base dans un nouveau dossier local.\n\n\n\n\n\n\n\n\n\nFichier\nRôle\n\n\n\n\n_quarto.yml\nConfiguration principale du site (titre, thème, barre de navigation)\n\n\nindex.qmd\nPage d’accueil\n\n\nabout.qmd\nPage “À propos” du site\n\n\npage1.qmd\nPage “page1” du menu (vous pouvez ajoutez plusieurs pages)\n\n\nstyles.css\nStyles personnalisés ULaval, incluant support du mode sombre\n\n\nimg/logo-ulaval.png\nLogo utilisé dans la barre de navigation\n\n\ndocs/\nRépertoire de sortie pour GitHub Pages (généré automatiquement)\n\n\n\n\n\n\n\n\nModifiez les fichiers .qmd selon vos besoins (contenu, titres, sections).\nAdaptez le thème et les couleurs via le fichier styles.css.\nPour générer le site :\n\nquarto render\n\nPour voir votre site avec rechargement automatique :\n\nquarto preview\n\n\n\n\nPoussez votre projet sur GitHub.\nAllez dans Settings → Pages de votre dépôt.\nChoisissez Deploy from a branch.\nBranche : main / Dossier : /docs\nActivez la publication.\n\nÀ chaque git push, GitHub Pages publiera la dernière version de votre site.\n\n\n\n\nCe gabarit peut être adapté pour créer : - un site de cours (STT-XXXX) - un site de documentation de projet ou laboratoire - une vitrine pour présenter du matériel pédagogique\nN’hésitez pas à ouvrir une issue pour proposer des améliorations."
   },
   {
     "objectID": "templates/site-web.html#installation-du-gabarit",
     "href": "templates/site-web.html#installation-du-gabarit",
     "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire."
+    "text": "quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base dans un nouveau dossier local.\n\n\n\n\n\n\n\n\n\nFichier\nRôle\n\n\n\n\n_quarto.yml\nConfiguration principale du site (titre, thème, barre de navigation)\n\n\nindex.qmd\nPage d’accueil\n\n\nabout.qmd\nPage “À propos” du site\n\n\npage1.qmd\nPage “page1” du menu (vous pouvez ajoutez plusieurs pages)\n\n\nstyles.css\nStyles personnalisés ULaval, incluant support du mode sombre\n\n\nimg/logo-ulaval.png\nLogo utilisé dans la barre de navigation\n\n\ndocs/\nRépertoire de sortie pour GitHub Pages (généré automatiquement)"
   },
   {
     "objectID": "templates/site-web.html#développement-local",
     "href": "templates/site-web.html#développement-local",
     "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "Modifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).\nGénérez le site une première fois avec :\n\nquarto render\n\nLancez l’aperçu en direct pour visualiser les changements :\n\nquarto preview"
+    "text": "Modifiez les fichiers .qmd selon vos besoins (contenu, titres, sections).\nAdaptez le thème et les couleurs via le fichier styles.css.\nPour générer le site :\n\nquarto render\n\nPour voir votre site avec rechargement automatique :\n\nquarto preview"
   },
   {
     "objectID": "templates/site-web.html#publication-automatique-sur-github-pages",
     "href": "templates/site-web.html#publication-automatique-sur-github-pages",
     "title": "Gabarit de site web Quarto",
     "section": "",
-    "text": "Poussez votre projet sur GitHub.\nDans la page Settings → Pages de votre dépôt, choisissez Deploy from a branch.\nSélectionnez la branche main et le dossier /docs comme source.\nÀ chaque git push, GitHub publiera automatiquement le contenu généré dans le dossier docs.\n\nAinsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne."
+    "text": "Poussez votre projet sur GitHub.\nAllez dans Settings → Pages de votre dépôt.\nChoisissez Deploy from a branch.\nBranche : main / Dossier : /docs\nActivez la publication.\n\nÀ chaque git push, GitHub Pages publiera la dernière version de votre site."
+  },
+  {
+    "objectID": "templates/site-web.html#besoin-daide",
+    "href": "templates/site-web.html#besoin-daide",
+    "title": "Gabarit de site web Quarto",
+    "section": "",
+    "text": "Ce gabarit peut être adapté pour créer : - un site de cours (STT-XXXX) - un site de documentation de projet ou laboratoire - une vitrine pour présenter du matériel pédagogique\nN’hésitez pas à ouvrir une issue pour proposer des améliorations."
   },
   {
     "objectID": "templates/quarto.html",

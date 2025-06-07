@@ -3985,10 +3985,25 @@ filter: brightness(0.9);
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../templates/index.html"> 
-<span class="menu-text">Modèles</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modèles" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modèles</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modèles">    
+        <li>
+    <a class="dropdown-item" href="../templates/index.html">
+ <span class="dropdown-text">Vue d’ensemble</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../templates/quarto.html">
+ <span class="dropdown-text">Gabarits Quarto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../templates/site-web.html">
+ <span class="dropdown-text">Modèle de site web</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../outils.html"> 
 <span class="menu-text">Outils</span></a>
@@ -4026,9 +4041,13 @@ filter: brightness(0.9);
   <ul>
   <li><a href="#créer-un-site-web-quarto" id="toc-créer-un-site-web-quarto" class="nav-link active" data-scroll-target="#créer-un-site-web-quarto">🔸 Créer un site web Quarto</a>
   <ul class="collapse">
-  <li><a href="#installation-du-gabarit" id="toc-installation-du-gabarit" class="nav-link" data-scroll-target="#installation-du-gabarit">🔧 Installation du gabarit</a></li>
+  <li><a href="#installation-du-gabarit" id="toc-installation-du-gabarit" class="nav-link" data-scroll-target="#installation-du-gabarit">🔧 Installation du gabarit</a>
+  <ul class="collapse">
+  <li><a href="#contenu-du-gabarit" id="toc-contenu-du-gabarit" class="nav-link" data-scroll-target="#contenu-du-gabarit">📂 Contenu du gabarit</a></li>
+  </ul></li>
   <li><a href="#développement-local" id="toc-développement-local" class="nav-link" data-scroll-target="#développement-local">🔨 Développement local</a></li>
   <li><a href="#publication-automatique-sur-github-pages" id="toc-publication-automatique-sur-github-pages" class="nav-link" data-scroll-target="#publication-automatique-sur-github-pages">💾 Publication automatique sur GitHub Pages</a></li>
+  <li><a href="#besoin-daide" id="toc-besoin-daide" class="nav-link" data-scroll-target="#besoin-daide">🙋‍♀️ Besoin d’aide ?</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/edit/main/templates/site-web.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/blob/main/templates/site-web.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -4057,21 +4076,68 @@ filter: brightness(0.9);
 
 <section id="créer-un-site-web-quarto" class="level1">
 <h1>🔸 Créer un site web Quarto</h1>
-<p>Le dépôt contient un <strong>gabarit minimal</strong> pour concevoir un site web similaire à celui-ci. Il se trouve dans le dossier <code>quarto-site-template</code> et peut être utilisé pour initialiser rapidement un nouveau projet.</p>
+<p>Ce modèle propose une base complète pour créer un site web Quarto. Il inclut les fichiers essentiels, un style aux couleurs de l’Université Laval, une navigation cohérente et un support du mode sombre.</p>
+<p>Le gabarit se trouve dans le dossier <code>quarto-site-template</code> du dépôt, et peut être utilisé avec :</p>
 <section id="installation-du-gabarit" class="level2">
 <h2 class="anchored" data-anchor-id="installation-du-gabarit">🔧 Installation du gabarit</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Cette commande copie les fichiers de base (_quarto.yml, index.qmd, about.qmd, styles.css…) dans un nouveau répertoire.</p>
+<p>Cette commande copie les fichiers de base dans un nouveau dossier local.</p>
+<section id="contenu-du-gabarit" class="level3">
+<h3 class="anchored" data-anchor-id="contenu-du-gabarit">📂 Contenu du gabarit</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fichier</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_quarto.yml</code></td>
+<td>Configuration principale du site (titre, thème, barre de navigation)</td>
+</tr>
+<tr class="even">
+<td><code>index.qmd</code></td>
+<td>Page d’accueil</td>
+</tr>
+<tr class="odd">
+<td><code>about.qmd</code></td>
+<td>Page “À propos” du site</td>
+</tr>
+<tr class="even">
+<td><code>page1.qmd</code></td>
+<td>Page “page1” du menu (vous pouvez ajoutez plusieurs pages)</td>
+</tr>
+<tr class="odd">
+<td><code>styles.css</code></td>
+<td>Styles personnalisés ULaval, incluant support du mode sombre</td>
+</tr>
+<tr class="even">
+<td><code>img/logo-ulaval.png</code></td>
+<td>Logo utilisé dans la barre de navigation</td>
+</tr>
+<tr class="odd">
+<td><code>docs/</code></td>
+<td>Répertoire de sortie pour GitHub Pages (généré automatiquement)</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="développement-local" class="level2">
 <h2 class="anchored" data-anchor-id="développement-local">🔨 Développement local</h2>
 <ul>
-<li>Modifiez les fichiers selon vos besoins (titre du site, couleurs, contenu).</li>
-<li>Générez le site une première fois avec :</li>
+<li>Modifiez les fichiers <code>.qmd</code> selon vos besoins (contenu, titres, sections).</li>
+<li>Adaptez le thème et les couleurs via le fichier <code>styles.css</code>.</li>
+<li>Pour générer le site :</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Lancez l’aperçu en direct pour visualiser les changements :</li>
+<li>Pour voir votre site avec rechargement automatique :</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
@@ -4079,11 +4145,18 @@ filter: brightness(0.9);
 <h2 class="anchored" data-anchor-id="publication-automatique-sur-github-pages">💾 Publication automatique sur GitHub Pages</h2>
 <ol type="1">
 <li>Poussez votre projet sur GitHub.</li>
-<li>Dans la page <strong>Settings → Pages</strong> de votre dépôt, choisissez <em>Deploy from a branch</em>.</li>
-<li>Sélectionnez la branche <code>main</code> et le dossier <code>/docs</code> comme source.</li>
-<li>À chaque <code>git push</code>, GitHub publiera automatiquement le contenu généré dans le dossier <code>docs</code>.</li>
+<li>Allez dans <strong>Settings → Pages</strong> de votre dépôt.</li>
+<li>Choisissez <strong>Deploy from a branch</strong>.</li>
+<li>Branche : <code>main</code> / Dossier : <code>/docs</code></li>
+<li>Activez la publication.</li>
 </ol>
-<p>Ainsi, il suffit de rendre le site localement puis de pousser les fichiers pour mettre à jour la version en ligne.</p>
+<p>À chaque <code>git push</code>, GitHub Pages publiera la dernière version de votre site.</p>
+<hr>
+</section>
+<section id="besoin-daide" class="level2">
+<h2 class="anchored" data-anchor-id="besoin-daide">🙋‍♀️ Besoin d’aide ?</h2>
+<p>Ce gabarit peut être adapté pour créer : - un site de cours (STT-XXXX) - un site de documentation de projet ou laboratoire - une vitrine pour présenter du matériel pédagogique</p>
+<p>N’hésitez pas à <a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues">ouvrir une <em>issue</em></a> pour proposer des améliorations.</p>
 
 
 </section>
