@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Outils pour la science des données</title>
+<title>Outils pour l’enseignement de la statistique et science des données</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4039,16 +4039,24 @@ filter: brightness(0.9);
     <h2 id="toc-title">Contenu de la page</h2>
    
   <ul>
-  <li><a href="#outils-développés" id="toc-outils-développés" class="nav-link active" data-scroll-target="#outils-développés">🛠️ Outils développés</a>
+  <li><a href="#package-ulavalssd" id="toc-package-ulavalssd" class="nav-link active" data-scroll-target="#package-ulavalssd">📦 Package <code>UlavalSSD</code></a>
   <ul class="collapse">
-  <li><a href="#package-ulavalssd" id="toc-package-ulavalssd" class="nav-link" data-scroll-target="#package-ulavalssd">📦 Package <code>UlavalSSD</code></a>
-  <ul class="collapse">
-  <li><a href="#fonctions-clés" id="toc-fonctions-clés" class="nav-link" data-scroll-target="#fonctions-clés">📚 Fonctions clés</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">🚀 Installation</a></li>
-  <li><a href="#utilisation-de-base" id="toc-utilisation-de-base" class="nav-link" data-scroll-target="#utilisation-de-base">🎯 Utilisation de base</a></li>
   </ul></li>
+  <li><a href="#utiliser-github-en-classe" id="toc-utiliser-github-en-classe" class="nav-link" data-scroll-target="#utiliser-github-en-classe">🐙 Utiliser GitHub en classe</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-utiliser-github-avec-vos-étudiantes" id="toc-pourquoi-utiliser-github-avec-vos-étudiantes" class="nav-link" data-scroll-target="#pourquoi-utiliser-github-avec-vos-étudiantes">Pourquoi utiliser GitHub avec vos étudiant·es ?</a></li>
+  <li><a href="#créer-une-organisation-github-pour-votre-cours" id="toc-créer-une-organisation-github-pour-votre-cours" class="nav-link" data-scroll-target="#créer-une-organisation-github-pour-votre-cours">Créer une organisation GitHub pour votre cours</a></li>
+  <li><a href="#mini-cours-la-librairie-ghclass" id="toc-mini-cours-la-librairie-ghclass" class="nav-link" data-scroll-target="#mini-cours-la-librairie-ghclass">📚 Mini cours : la librairie <code>ghclass</code></a>
+  <ul class="collapse">
+  <li><a href="#installation-1" id="toc-installation-1" class="nav-link" data-scroll-target="#installation-1">🔧 Installation</a></li>
+  <li><a href="#authentification" id="toc-authentification" class="nav-link" data-scroll-target="#authentification">🔐 Authentification</a></li>
+  <li><a href="#fonctions-essentielles-de-ghclass" id="toc-fonctions-essentielles-de-ghclass" class="nav-link" data-scroll-target="#fonctions-essentielles-de-ghclass">📂 Fonctions essentielles de <code>ghclass</code></a></li>
+  <li><a href="#ressources-supplémentaires" id="toc-ressources-supplémentaires" class="nav-link" data-scroll-target="#ressources-supplémentaires">📘 Ressources supplémentaires</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#besoin-daide-ou-daccompagnement" id="toc-besoin-daide-ou-daccompagnement" class="nav-link" data-scroll-target="#besoin-daide-ou-daccompagnement">👥 Besoin d’aide ou d’accompagnement ?</a></li>
   <li><a href="#contribuer" id="toc-contribuer" class="nav-link" data-scroll-target="#contribuer">🤝 Contribuer</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/edit/main/outils.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/blob/main/outils.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -4057,7 +4065,7 @@ filter: brightness(0.9);
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Outils pour la science des données</h1>
+<h1 class="title">Outils pour l’enseignement de la statistique et science des données</h1>
 </div>
 
 
@@ -4074,43 +4082,118 @@ filter: brightness(0.9);
 </header>
 
 
-<section id="outils-développés" class="level1">
-<h1>🛠️ Outils développés</h1>
-<p>Voici des outils conçus pour soutenir l’enseignement et la pratique de la science des données, en particulier dans le contexte des cours offerts au département de mathématiques et de statistique.</p>
+<p>Cette section rassemble divers outils conçus ou présentés pour soutenir l’enseignement de la statistique et de la science des données, en particulier dans un contexte universitaire. Vous y trouverez des packages R développés localement, des ressources utiles ainsi que des suggestions pour intégrer GitHub efficacement dans vos cours.</p>
 <hr>
-<section id="package-ulavalssd" class="level2">
-<h2 class="anchored" data-anchor-id="package-ulavalssd">📦 Package <code>UlavalSSD</code></h2>
+<section id="package-ulavalssd" class="level1">
+<h1>📦 Package <code>UlavalSSD</code></h1>
 <p><strong>Dépôt GitHub</strong> : <a href="https://github.com/AurelienNicosiaULaval/UlavalSSD">AurelienNicosiaULaval/UlavalSSD</a></p>
-<p>Le package <code>UlavalSSD</code> (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :</p>
+<p>Ce package a été conçu pour :</p>
 <ul>
-<li>Centraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;</li>
-<li>Fournir des fonctions utilitaires pour les cours; <!-- - Faciliter la mise en page de documents `.qmd` et l’usage pédagogique de `Quarto` ; --> <!-- - Intégrer facilement des palettes de couleurs, icônes, logos, styles et éléments visuels adaptés au branding ULaval. --></li>
+<li>Rassembler des jeux de données pédagogiques utilisés à l’Université Laval;</li>
+<li>Proposer des fonctions R utiles pour les enseignants;</li>
+<li>Faciliter l’adoption de bonnes pratiques de reproduction en enseignement avec R et Quarto.</li>
 </ul>
-<section id="fonctions-clés" class="level3">
-<h3 class="anchored" data-anchor-id="fonctions-clés">📚 Fonctions clés</h3>
-<!-- - `get_students_data()` : jeu de données simulé d'étudiants du bac en statistiques et science des données. -->
-<!-- - `use_template()` : fonction pour initialiser un fichier `.qmd` à partir d’un gabarit standard. -->
-<!-- - `add_ulaval_style()` : applique les styles CSS de l’Université Laval dans un projet Quarto. -->
-</section>
-<section id="installation" class="level3">
-<h3 class="anchored" data-anchor-id="installation">🚀 Installation</h3>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">🚀 Installation</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installation depuis GitHub</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;AurelienNicosiaULaval/UlavalSSD&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="utilisation-de-base" class="level3">
-<h3 class="anchored" data-anchor-id="utilisation-de-base">🎯 Utilisation de base</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(UlavalSSD)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;listecondamnation&quot;</span>) </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(listecondamnation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 </section>
-<section id="contribuer" class="level2">
-<h2 class="anchored" data-anchor-id="contribuer">🤝 Contribuer</h2>
+<section id="utiliser-github-en-classe" class="level1">
+<h1>🐙 Utiliser GitHub en classe</h1>
+<section id="pourquoi-utiliser-github-avec-vos-étudiantes" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-utiliser-github-avec-vos-étudiantes">Pourquoi utiliser GitHub avec vos étudiant·es ?</h3>
+<ul>
+<li>Pour initier vos étudiant·es aux bonnes pratiques de collaboration en science des données.</li>
+<li>Pour structurer le travail d’équipe dans un environnement réel.</li>
+<li>Pour suivre facilement les livrables, le code et les contributions de chacun.</li>
+</ul>
+</section>
+<section id="créer-une-organisation-github-pour-votre-cours" class="level3">
+<h3 class="anchored" data-anchor-id="créer-une-organisation-github-pour-votre-cours">Créer une organisation GitHub pour votre cours</h3>
+<p>Créer une organisation permet de centraliser et sécuriser les dépôts étudiants.</p>
+<p><strong>Étapes</strong> :</p>
+<ol type="1">
+<li>Connectez-vous à GitHub.</li>
+<li>Accédez à <a href="https://github.com/organizations/new">https://github.com/organizations/new</a></li>
+<li>Choisissez un nom d’organisation (ex : <code>Cours-STT-XXXX</code>).</li>
+<li>Sélectionnez un plan gratuit pour les projets open source ou éducatifs.</li>
+<li>Invitez des collaborateurs (autres enseignants ou étudiant·es).</li>
+</ol>
+<p>🔗 Documentation officielle : <a href="https://docs.github.com/fr/organizations/collaborating-with-groups-in-your-organization/about-organizations">Créer et gérer des organisations GitHub</a></p>
+<p>💡 Vous pouvez aussi demander l’accès au programme GitHub Education : <a href="https://education.github.com/">education.github.com</a></p>
+<hr>
+</section>
+<section id="mini-cours-la-librairie-ghclass" class="level2">
+<h2 class="anchored" data-anchor-id="mini-cours-la-librairie-ghclass">📚 Mini cours : la librairie <code>ghclass</code></h2>
+<p>La librairie <code>ghclass</code> en R permet de gérer efficacement une organisation GitHub, en particulier dans un contexte pédagogique.</p>
+<section id="installation-1" class="level3">
+<h3 class="anchored" data-anchor-id="installation-1">🔧 Installation</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ghclass&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="authentification" class="level3">
+<h3 class="anchored" data-anchor-id="authentification">🔐 Authentification</h3>
+<p>Il est recommandé d’utiliser une clé SSH ou un token GitHub avec les permissions appropriées. Pour cela :</p>
+<ul>
+<li><p><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Créer un token GitHub</a></p></li>
+<li><p>L’authentifier avec <code>ghclass::gh_auth()</code> ou configurer votre clé SSH avec <code>usethis::use_git_config()</code> et <code>usethis::create_github_token()</code></p></li>
+</ul>
+</section>
+<section id="fonctions-essentielles-de-ghclass" class="level3">
+<h3 class="anchored" data-anchor-id="fonctions-essentielles-de-ghclass">📂 Fonctions essentielles de <code>ghclass</code></h3>
+<section id="créer-des-dépôts-pour-les-étudiantes" class="level4">
+<h4 class="anchored" data-anchor-id="créer-des-dépôts-pour-les-étudiantes">🔹 Créer des dépôts pour les étudiant·es</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">org_create_repo</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">org =</span> <span class="st">&quot;Cours-STT-XXXX&quot;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo =</span> <span class="st">&quot;devoir1&quot;</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">private =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cloner-un-dépôt-dans-lorganisation" class="level4">
+<h4 class="anchored" data-anchor-id="cloner-un-dépôt-dans-lorganisation">🔹 Cloner un dépôt dans l’organisation</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">repo_clone</span>(<span class="st">&quot;Cours-STT-XXXX/devoir1&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ajouter-des-membres" class="level4">
+<h4 class="anchored" data-anchor-id="ajouter-des-membres">🔹 Ajouter des membres</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">org_invite</span>(<span class="st">&quot;Cours-STT-XXXX&quot;</span>, <span class="at">users =</span> <span class="fu">c</span>(<span class="st">&quot;etudiant1&quot;</span>, <span class="st">&quot;etudiant2&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ajouter-des-collaborateurs-à-un-dépôt" class="level4">
+<h4 class="anchored" data-anchor-id="ajouter-des-collaborateurs-à-un-dépôt">🔹 Ajouter des collaborateurs à un dépôt</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">repo_add_collaborator</span>(<span class="st">&quot;Cours-STT-XXXX/devoir1&quot;</span>, <span class="at">user =</span> <span class="st">&quot;etudiant1&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="gérer-des-équipes" class="level4">
+<h4 class="anchored" data-anchor-id="gérer-des-équipes">🔹 Gérer des équipes</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">org_create_team</span>(<span class="st">&quot;cours-stt-XXXX&quot;</span>, <span class="at">team =</span> <span class="st">&quot;groupe-A&quot;</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">org_add_team_member</span>(<span class="st">&quot;cours-stt-XXXX&quot;</span>, <span class="at">team =</span> <span class="st">&quot;groupe-A&quot;</span>, <span class="at">user =</span> <span class="st">&quot;etudiant1&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="suivre-lactivité-des-étudiantes" class="level4">
+<h4 class="anchored" data-anchor-id="suivre-lactivité-des-étudiantes">🔹 Suivre l’activité des étudiant·es</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">repo_commits</span>(<span class="st">&quot;Cours-STT-XXXX/devoir1&quot;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ghclass<span class="sc">::</span><span class="fu">repo_issues</span>(<span class="st">&quot;Cours-STT-XXXX/devoir1&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="ressources-supplémentaires" class="level3">
+<h3 class="anchored" data-anchor-id="ressources-supplémentaires">📘 Ressources supplémentaires</h3>
+<ul>
+<li><a href="https://github.com/rundel/ghclass">Documentation officielle ghclass</a></li>
+<li><a href="https://happygitwithr.com/">Guide complet pour l’enseignement avec GitHub</a></li>
+<li><a href="https://education.github.com/toolbox">Exemple d’organisation pédagogique avec RStudio</a></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="besoin-daide-ou-daccompagnement" class="level1">
+<h1>👥 Besoin d’aide ou d’accompagnement ?</h1>
+<p>Vous êtes enseignant·e et souhaitez intégrer GitHub dans votre cours ou utiliser les outils mentionnés ici ? N’hésitez pas à me contacter — je peux vous accompagner dans la mise en place ou proposer une formation rapide adaptée à vos besoins.</p>
+<hr>
+</section>
+<section id="contribuer" class="level1">
+<h1>🤝 Contribuer</h1>
 <p>Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une <em>issue</em> ou un <em>pull request</em> sur le dépôt GitHub !</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

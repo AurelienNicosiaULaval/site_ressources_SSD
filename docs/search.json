@@ -2,23 +2,23 @@
   {
     "objectID": "outils.html",
     "href": "outils.html",
-    "title": "Outils pour la science des données",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
     "section": "",
-    "text": "Voici des outils conçus pour soutenir l’enseignement et la pratique de la science des données, en particulier dans le contexte des cours offerts au département de mathématiques et de statistique.\n\n\n\nDépôt GitHub : AurelienNicosiaULaval/UlavalSSD\nLe package UlavalSSD (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :\n\nCentraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;\nFournir des fonctions utilitaires pour les cours;  \n\n\n\n\n\n\n\n\n\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")\n\n\n\nlibrary(UlavalSSD)\ndata(\"listecondamnation\") \nhead(listecondamnation)\n\n\n\n\n\nVous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une issue ou un pull request sur le dépôt GitHub !"
+    "text": "Cette section rassemble divers outils conçus ou présentés pour soutenir l’enseignement de la statistique et de la science des données, en particulier dans un contexte universitaire. Vous y trouverez des packages R développés localement, des ressources utiles ainsi que des suggestions pour intégrer GitHub efficacement dans vos cours."
   },
   {
-    "objectID": "outils.html#package-ulavalssd",
-    "href": "outils.html#package-ulavalssd",
-    "title": "Outils pour la science des données",
-    "section": "",
-    "text": "Dépôt GitHub : AurelienNicosiaULaval/UlavalSSD\nLe package UlavalSSD (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :\n\nCentraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;\nFournir des fonctions utilitaires pour les cours;  \n\n\n\n\n\n\n\n\n\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")\n\n\n\nlibrary(UlavalSSD)\ndata(\"listecondamnation\") \nhead(listecondamnation)"
+    "objectID": "outils.html#installation",
+    "href": "outils.html#installation",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "section": "🚀 Installation",
+    "text": "🚀 Installation\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")"
   },
   {
-    "objectID": "outils.html#contribuer",
-    "href": "outils.html#contribuer",
-    "title": "Outils pour la science des données",
-    "section": "",
-    "text": "Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ? N’hésitez pas à proposer une issue ou un pull request sur le dépôt GitHub !"
+    "objectID": "outils.html#mini-cours-la-librairie-ghclass",
+    "href": "outils.html#mini-cours-la-librairie-ghclass",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "section": "📚 Mini cours : la librairie ghclass",
+    "text": "📚 Mini cours : la librairie ghclass\nLa librairie ghclass en R permet de gérer efficacement une organisation GitHub, en particulier dans un contexte pédagogique.\n\n🔧 Installation\ninstall.packages(\"ghclass\")\n\n\n🔐 Authentification\nIl est recommandé d’utiliser une clé SSH ou un token GitHub avec les permissions appropriées. Pour cela :\n\nCréer un token GitHub\nL’authentifier avec ghclass::gh_auth() ou configurer votre clé SSH avec usethis::use_git_config() et usethis::create_github_token()\n\n\n\n📂 Fonctions essentielles de ghclass\n\n🔹 Créer des dépôts pour les étudiant·es\nghclass::org_create_repo(\n  org = \"Cours-STT-XXXX\",\n  repo = \"devoir1\",\n  private = TRUE\n)\n\n\n🔹 Cloner un dépôt dans l’organisation\nghclass::repo_clone(\"Cours-STT-XXXX/devoir1\")\n\n\n🔹 Ajouter des membres\nghclass::org_invite(\"Cours-STT-XXXX\", users = c(\"etudiant1\", \"etudiant2\"))\n\n\n🔹 Ajouter des collaborateurs à un dépôt\nghclass::repo_add_collaborator(\"Cours-STT-XXXX/devoir1\", user = \"etudiant1\")\n\n\n🔹 Gérer des équipes\nghclass::org_create_team(\"cours-stt-XXXX\", team = \"groupe-A\")\nghclass::org_add_team_member(\"cours-stt-XXXX\", team = \"groupe-A\", user = \"etudiant1\")\n\n\n🔹 Suivre l’activité des étudiant·es\nghclass::repo_commits(\"Cours-STT-XXXX/devoir1\")\nghclass::repo_issues(\"Cours-STT-XXXX/devoir1\")\n\n\n\n📘 Ressources supplémentaires\n\nDocumentation officielle ghclass\nGuide complet pour l’enseignement avec GitHub\nExemple d’organisation pédagogique avec RStudio"
   },
   {
     "objectID": "templates/index.html",
@@ -39,7 +39,7 @@
     "href": "tutoriels.html",
     "title": "Tutoriels et études de cas",
     "section": "",
-    "text": "Cette section rassemble des études de cas pédagogiques conçues pour initier les étudiant·es à la science des données à travers des situations concrètes, reproductibles et interactives.\nLes tutoriels sont construits sous forme de documents Quarto intégrant code, visualisations et questions de réflexion.\n\n\n\nDépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+    "text": "Les tutoriels interactifs reposent sur le package R learnr qui transforme un document Quarto ou R Markdown en application Shiny exécutable dans le navigateur. Ils combinent texte, blocs de code que l’étudiant·e peut exécuter, ainsi que des questions à choix multiple.\nUn tutoriel learnr contient généralement :\n\ndes exercices de code à modifier en ligne ;\ndes quiz ou zones de réponse ;\ndes messages de rétroaction automatiques.\n\nAinsi, aucune installation n’est nécessaire pour les apprenant·es et les enseignant·es peuvent proposer des activités interactives clés en main.\nPour en savoir plus, consultez la documentation de learnr et le guide Quarto Interactive Tutorials.\n\n\n\nDépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
   },
   {
     "objectID": "tutoriels.html#étude-de-cas-gabarit-interactif",

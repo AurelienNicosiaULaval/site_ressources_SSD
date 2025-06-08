@@ -1,5 +1,5 @@
 ---
-title: "Outils pour la science des données"
+title: "Outils pour l'enseignement de la statistique et science des données"
 format:
   html:
     toc: true
@@ -9,47 +9,132 @@ format:
     code-link: true
 ---
 
-# 🛠️ Outils développés
-
-Voici des outils conçus pour soutenir l’enseignement et la pratique de la science des données, en particulier dans le contexte des cours offerts au département de mathématiques et de statistique.
+Cette section rassemble divers outils conçus ou présentés pour soutenir l’enseignement de la statistique et de la science des données, en particulier dans un contexte universitaire. Vous y trouverez des packages R développés localement, des ressources utiles ainsi que des suggestions pour intégrer GitHub efficacement dans vos cours.
 
 ---
 
-## 📦 Package `UlavalSSD`
+# 📦 Package `UlavalSSD`
 
 **Dépôt GitHub** : [AurelienNicosiaULaval/UlavalSSD](https://github.com/AurelienNicosiaULaval/UlavalSSD)
 
-Le package `UlavalSSD` (Statistique et Science des données à l’Université Laval) est un ensemble d’outils R visant à :
+Ce package a été conçu pour :
 
-- Centraliser des ensembles de données pédagogiques (ex. : jeux de données pour les étudiants de STT-1100) ;
-- Fournir des fonctions utilitaires pour les cours;
-<!-- - Faciliter la mise en page de documents `.qmd` et l’usage pédagogique de `Quarto` ; -->
-<!-- - Intégrer facilement des palettes de couleurs, icônes, logos, styles et éléments visuels adaptés au branding ULaval. -->
+- Rassembler des jeux de données pédagogiques utilisés à l’Université Laval;
+- Proposer des fonctions R utiles pour les enseignants;
+- Faciliter l’adoption de bonnes pratiques de reproduction en enseignement avec R et Quarto.
 
-### 📚 Fonctions clés
-
-<!-- - `get_students_data()` : jeu de données simulé d'étudiants du bac en statistiques et science des données. -->
-<!-- - `use_template()` : fonction pour initialiser un fichier `.qmd` à partir d’un gabarit standard. -->
-<!-- - `add_ulaval_style()` : applique les styles CSS de l’Université Laval dans un projet Quarto. -->
-
-### 🚀 Installation
+## 🚀 Installation
 
 ```r
 # installation depuis GitHub
 remotes::install_github("AurelienNicosiaULaval/UlavalSSD")
 ```
 
-### 🎯 Utilisation de base
+---
 
-```r
-library(UlavalSSD)
-data("listecondamnation") 
-head(listecondamnation)
-```
+# 🐙 Utiliser GitHub en classe
+
+### Pourquoi utiliser GitHub avec vos étudiant·es ?
+
+- Pour initier vos étudiant·es aux bonnes pratiques de collaboration en science des données.
+- Pour structurer le travail d’équipe dans un environnement réel.
+- Pour suivre facilement les livrables, le code et les contributions de chacun.
+
+### Créer une organisation GitHub pour votre cours
+
+Créer une organisation permet de centraliser et sécuriser les dépôts étudiants.
+
+**Étapes** :
+
+1. Connectez-vous à GitHub.
+2. Accédez à [https://github.com/organizations/new](https://github.com/organizations/new)
+3. Choisissez un nom d’organisation (ex : `Cours-STT-XXXX`).
+4. Sélectionnez un plan gratuit pour les projets open source ou éducatifs.
+5. Invitez des collaborateurs (autres enseignants ou étudiant·es).
+
+🔗 Documentation officielle : [Créer et gérer des organisations GitHub](https://docs.github.com/fr/organizations/collaborating-with-groups-in-your-organization/about-organizations)
+
+💡 Vous pouvez aussi demander l’accès au programme GitHub Education : [education.github.com](https://education.github.com/)
 
 ---
 
-## 🤝 Contribuer
+## 📚 Mini cours : la librairie `ghclass`
+
+La librairie `ghclass` en R permet de gérer efficacement une organisation GitHub, en particulier dans un contexte pédagogique.
+
+### 🔧 Installation
+
+```r
+install.packages("ghclass")
+```
+
+### 🔐 Authentification
+
+Il est recommandé d’utiliser une clé SSH ou un token GitHub avec les permissions appropriées. Pour cela :
+
+- [Créer un token GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+- L’authentifier avec `ghclass::gh_auth()` ou configurer votre clé SSH avec `usethis::use_git_config()` et `usethis::create_github_token()`
+
+### 📂 Fonctions essentielles de `ghclass`
+
+#### 🔹 Créer des dépôts pour les étudiant·es
+
+```r
+ghclass::org_create_repo(
+  org = "Cours-STT-XXXX",
+  repo = "devoir1",
+  private = TRUE
+)
+```
+
+#### 🔹 Cloner un dépôt dans l’organisation
+
+```r
+ghclass::repo_clone("Cours-STT-XXXX/devoir1")
+```
+
+#### 🔹 Ajouter des membres
+
+```r
+ghclass::org_invite("Cours-STT-XXXX", users = c("etudiant1", "etudiant2"))
+```
+
+#### 🔹 Ajouter des collaborateurs à un dépôt
+
+```r
+ghclass::repo_add_collaborator("Cours-STT-XXXX/devoir1", user = "etudiant1")
+```
+
+#### 🔹 Gérer des équipes
+
+```r
+ghclass::org_create_team("cours-stt-XXXX", team = "groupe-A")
+ghclass::org_add_team_member("cours-stt-XXXX", team = "groupe-A", user = "etudiant1")
+```
+
+#### 🔹 Suivre l'activité des étudiant·es
+
+```r
+ghclass::repo_commits("Cours-STT-XXXX/devoir1")
+ghclass::repo_issues("Cours-STT-XXXX/devoir1")
+```
+
+### 📘 Ressources supplémentaires
+
+- [Documentation officielle ghclass](https://github.com/rundel/ghclass)
+- [Guide complet pour l’enseignement avec GitHub](https://happygitwithr.com/)
+- [Exemple d’organisation pédagogique avec RStudio](https://education.github.com/toolbox)
+
+---
+
+# 👥 Besoin d’aide ou d’accompagnement ?
+
+Vous êtes enseignant·e et souhaitez intégrer GitHub dans votre cours ou utiliser les outils mentionnés ici ? N’hésitez pas à me contacter — je peux vous accompagner dans la mise en place ou proposer une formation rapide adaptée à vos besoins.
+
+---
+
+# 🤝 Contribuer
 
 Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ?
 N'hésitez pas à proposer une *issue* ou un *pull request* sur le dépôt GitHub !
