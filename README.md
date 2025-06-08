@@ -25,7 +25,7 @@ Ce dépôt contient le site **Ressources SSD**, un site Quarto développé pour 
 Le site est structuré autour de plusieurs sections :
 
 -   `Accueil` — Présentation générale du projet
--   `Modèles` — Templates pour présentations, devoirs, examens
+-   `Modèles` — Templates pour présentations, devoirs et site web.
 -   `Outils` — Packages R, palettes, gabarits CSS
 -   `Tutoriels` — Études de cas interactives en Quarto
 -   `À propos` — Informations sur le projet et contact
