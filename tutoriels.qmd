@@ -11,9 +11,17 @@ format:
 
 # 📚 Tutoriels interactifs
 
-Cette section rassemble des **études de cas pédagogiques** conçues pour initier les étudiant·es à la science des données à travers des situations concrètes, reproductibles et interactives. 
+Les tutoriels interactifs reposent sur le package R `learnr` qui transforme un document Quarto ou R Markdown en application Shiny exécutable dans le navigateur. Ils combinent texte, blocs de code que l’étudiant·e peut exécuter, ainsi que des questions à choix multiple.
 
-Les tutoriels sont construits sous forme de documents `Quarto` intégrant code, visualisations et questions de réflexion.
+Un tutoriel `learnr` contient généralement :
+
+- des exercices de code à modifier en ligne ;
+- des quiz ou zones de réponse ;
+- des messages de rétroaction automatiques.
+
+Ainsi, aucune installation n’est nécessaire pour les apprenant·es et les enseignant·es peuvent proposer des activités interactives clés en main.
+
+Pour en savoir plus, consultez la [documentation de learnr](https://rstudio.github.io/learnr/) et le guide Quarto [Interactive Tutorials](https://quarto.org/docs/interactive-tutorials/).
 
 ---
 
@@ -42,5 +50,6 @@ Vous pouvez utiliser ce gabarit comme point de départ pour créer vos propres c
 
 # 📖 Exemples de tutoriels R interactifs
 
-https://aureliennicosia.shinyapps.io/TutorielGGplot/ 
+- [Analyse des trajets Bixi](https://aureliennicosia.shinyapps.io/TutorielBixi/)
+- [Introduction à ggplot2](https://aureliennicosia.shinyapps.io/TutorielGGplot/)
 
