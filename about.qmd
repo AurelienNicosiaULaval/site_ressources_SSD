@@ -47,6 +47,6 @@ Pour toute question, contribution ou demande, vous pouvez :
 
 Merci de faire vivre cette initiative !
 
-## remerciements
+## Remerciements
 
 Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources.

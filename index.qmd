@@ -51,7 +51,7 @@ Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits Git
 ## Structure du site
 
 - **Modèles** : documents `.qmd`, présentations, devoirs, examens.
-- **Outils** : bibliothèques R utiles, extensions Quarto, automatisations.
+- **Outils** : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.
 - **Tutoriels** : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.
 
 ---

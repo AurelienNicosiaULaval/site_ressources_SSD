@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ressources pédagogiques pour l’enseignement en statistique et en sciences des données</title>
+<title>Guide GitHub et RStudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +18,41 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -3947,7 +3982,7 @@ filter: brightness(0.9);
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -4001,24 +4036,45 @@ filter: brightness(0.9);
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contenu</h2>
+    <h2 id="toc-title">Plan du guide</h2>
    
   <ul>
-  <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a>
+  <li><a href="#connexion-de-rstudio-à-github" id="toc-connexion-de-rstudio-à-github" class="nav-link active" data-scroll-target="#connexion-de-rstudio-à-github">🔗 Connexion de RStudio à GitHub</a>
   <ul class="collapse">
-  <li><a href="#objectifs-du-site" id="toc-objectifs-du-site" class="nav-link" data-scroll-target="#objectifs-du-site">Objectifs du site</a></li>
-  <li><a href="#structure-du-site" id="toc-structure-du-site" class="nav-link" data-scroll-target="#structure-du-site">Structure du site</a></li>
-  <li><a href="#démarrage-rapide" id="toc-démarrage-rapide" class="nav-link" data-scroll-target="#démarrage-rapide">🚀 Démarrage rapide</a></li>
+  <li><a href="#créer-un-compte-github" id="toc-créer-un-compte-github" class="nav-link" data-scroll-target="#créer-un-compte-github">1. Créer un compte GitHub</a></li>
+  <li><a href="#configurer-git-dans-rstudio" id="toc-configurer-git-dans-rstudio" class="nav-link" data-scroll-target="#configurer-git-dans-rstudio">2. Configurer Git dans RStudio</a></li>
+  <li><a href="#générer-une-clé-ssh" id="toc-générer-une-clé-ssh" class="nav-link" data-scroll-target="#générer-une-clé-ssh">3. Générer une clé SSH</a></li>
+  <li><a href="#ajouter-la-clé-publique-à-github" id="toc-ajouter-la-clé-publique-à-github" class="nav-link" data-scroll-target="#ajouter-la-clé-publique-à-github">4. Ajouter la clé publique à GitHub</a></li>
+  <li><a href="#cloner-un-projet-depuis-github-ssh" id="toc-cloner-un-projet-depuis-github-ssh" class="nav-link" data-scroll-target="#cloner-un-projet-depuis-github-ssh">5. Cloner un projet depuis GitHub (SSH)</a></li>
+  <li><a href="#tester-la-connexion" id="toc-tester-la-connexion" class="nav-link" data-scroll-target="#tester-la-connexion">6. Tester la connexion</a></li>
+  </ul></li>
+  <li><a href="#travailler-individuellement-avec-git" id="toc-travailler-individuellement-avec-git" class="nav-link" data-scroll-target="#travailler-individuellement-avec-git">👤 Travailler individuellement avec Git</a>
+  <ul class="collapse">
+  <li><a href="#sauvegarder-ses-modifications" id="toc-sauvegarder-ses-modifications" class="nav-link" data-scroll-target="#sauvegarder-ses-modifications">1. Sauvegarder ses modifications</a></li>
+  <li><a href="#envoyer-sur-github-push" id="toc-envoyer-sur-github-push" class="nav-link" data-scroll-target="#envoyer-sur-github-push">2. Envoyer sur GitHub : <code>Push</code></a></li>
+  <li><a href="#récupérer-les-changements-pull" id="toc-récupérer-les-changements-pull" class="nav-link" data-scroll-target="#récupérer-les-changements-pull">3. Récupérer les changements : <code>Pull</code></a></li>
+  </ul></li>
+  <li><a href="#bonnes-pratiques-pour-le-travail-collaboratif" id="toc-bonnes-pratiques-pour-le-travail-collaboratif" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-le-travail-collaboratif">🤝 Bonnes pratiques pour le travail collaboratif</a>
+  <ul class="collapse">
+  <li><a href="#créer-une-organisation-github-facultatif" id="toc-créer-une-organisation-github-facultatif" class="nav-link" data-scroll-target="#créer-une-organisation-github-facultatif">1. Créer une organisation GitHub (facultatif)</a></li>
+  <li><a href="#créer-un-dépôt-partagé" id="toc-créer-un-dépôt-partagé" class="nav-link" data-scroll-target="#créer-un-dépôt-partagé">2. Créer un dépôt partagé</a></li>
+  <li><a href="#cloner-le-dépôt-avec-ssh" id="toc-cloner-le-dépôt-avec-ssh" class="nav-link" data-scroll-target="#cloner-le-dépôt-avec-ssh">3. Cloner le dépôt avec SSH</a></li>
+  <li><a href="#créer-une-branche-pour-travailler" id="toc-créer-une-branche-pour-travailler" class="nav-link" data-scroll-target="#créer-une-branche-pour-travailler">4. Créer une branche pour travailler</a></li>
+  <li><a href="#travailler-dans-la-branche" id="toc-travailler-dans-la-branche" class="nav-link" data-scroll-target="#travailler-dans-la-branche">5. Travailler dans la branche</a></li>
+  <li><a href="#créer-une-pull-request-pr" id="toc-créer-une-pull-request-pr" class="nav-link" data-scroll-target="#créer-une-pull-request-pr">6. Créer une Pull Request (PR)</a></li>
+  <li><a href="#revue-de-code-entre-coéquipiers" id="toc-revue-de-code-entre-coéquipiers" class="nav-link" data-scroll-target="#revue-de-code-entre-coéquipiers">7. Revue de code entre coéquipiers</a></li>
+  <li><a href="#fusionner-la-pr-dans-main" id="toc-fusionner-la-pr-dans-main" class="nav-link" data-scroll-target="#fusionner-la-pr-dans-main">8. Fusionner la PR dans <code>main</code></a></li>
+  <li><a href="#mettre-à-jour-sa-copie-locale" id="toc-mettre-à-jour-sa-copie-locale" class="nav-link" data-scroll-target="#mettre-à-jour-sa-copie-locale">9. Mettre à jour sa copie locale</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/edit/main/guide github et Rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/blob/main/guide github et Rstudio.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ressources pédagogiques pour l’enseignement en statistique et en sciences des données</h1>
+<h1 class="title">Guide GitHub et RStudio</h1>
 </div>
 
 
@@ -4035,35 +4091,125 @@ filter: brightness(0.9);
 </header>
 
 
-<section id="bienvenue" class="level1">
-<h1>Bienvenue</h1>
-<p>Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.</p>
-<section id="objectifs-du-site" class="level2">
-<h2 class="anchored" data-anchor-id="objectifs-du-site">Objectifs du site</h2>
+<section id="connexion-de-rstudio-à-github" class="level1">
+<h1>🔗 Connexion de RStudio à GitHub</h1>
+<section id="créer-un-compte-github" class="level2">
+<h2 class="anchored" data-anchor-id="créer-un-compte-github">1. Créer un compte GitHub</h2>
 <ul>
-<li>Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.</li>
-<li>Favoriser le partage entre enseignant·es du département.</li>
-<li>Illustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.</li>
+<li>Aller sur <a href="https://github.com/">https://github.com/</a></li>
+<li>Configurer votre nom complet et votre courriel</li>
 </ul>
 </section>
-<section id="structure-du-site" class="level2">
-<h2 class="anchored" data-anchor-id="structure-du-site">Structure du site</h2>
-<ul>
-<li><strong>Modèles</strong> : documents <code>.qmd</code>, présentations, devoirs, examens.</li>
-<li><strong>Outils</strong> : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.</li>
-<li><strong>Tutoriels</strong> : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.</li>
-</ul>
-<hr>
+<section id="configurer-git-dans-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="configurer-git-dans-rstudio">2. Configurer Git dans RStudio</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">&quot;Ton Nom&quot;</span>, <span class="at">user.email =</span> <span class="st">&quot;ton.email@ulaval.ca&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="démarrage-rapide" class="level2">
-<h2 class="anchored" data-anchor-id="démarrage-rapide">🚀 Démarrage rapide</h2>
-<ol type="1">
-<li>Explorez les modèles disponibles dans la section <a href="./templates/index.html">Modèles</a>.</li>
-<li>Consultez les outils proposés dans <a href="./outils.html">Outils</a>.</li>
-<li>Apprenez avec nos <a href="./tutoriels.html">Tutoriels</a>.</li>
-</ol>
-<hr>
-<p>Si vous souhaitez contribuer ou avez des questions, n’hésitez pas à <a href="https://github.com/ton-utilisateur/ton-repo/issues">ouvrir une issue sur GitHub</a>.</p>
+<section id="générer-une-clé-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="générer-une-clé-ssh">3. Générer une clé SSH</h2>
+<p>Dans l’onglet <strong>Terminal</strong> de RStudio :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">&quot;ton.email@ulaval.ca&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Appuyer sur Entrée aux questions. La clé est stockée dans <code>~/.ssh/</code></p>
+</section>
+<section id="ajouter-la-clé-publique-à-github" class="level2">
+<h2 class="anchored" data-anchor-id="ajouter-la-clé-publique-à-github">4. Ajouter la clé publique à GitHub</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Puis : GitHub &gt; ⚙️ Settings &gt; <strong>SSH and GPG keys</strong> &gt; <strong>New SSH key</strong> &gt; coller la clé</p>
+</section>
+<section id="cloner-un-projet-depuis-github-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="cloner-un-projet-depuis-github-ssh">5. Cloner un projet depuis GitHub (SSH)</h2>
+<ul>
+<li>Copier l’URL SSH depuis GitHub (<code>git@github.com:...</code>)</li>
+<li>Dans RStudio : <code>File &gt; New Project &gt; Version Control &gt; Git</code></li>
+</ul>
+</section>
+<section id="tester-la-connexion" class="level2">
+<h2 class="anchored" data-anchor-id="tester-la-connexion">6. Tester la connexion</h2>
+<p>Dans le terminal :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="travailler-individuellement-avec-git" class="level1">
+<h1>👤 Travailler individuellement avec Git</h1>
+<section id="sauvegarder-ses-modifications" class="level2">
+<h2 class="anchored" data-anchor-id="sauvegarder-ses-modifications">1. Sauvegarder ses modifications</h2>
+<ul>
+<li>Faire des changements dans les fichiers <code>.R</code>, <code>.Rmd</code>, <code>.qmd</code>, etc.</li>
+<li>Dans l’onglet <strong>Git</strong> :
+<ul>
+<li>Cocher les fichiers modifiés</li>
+<li>Ajouter un message de commit</li>
+<li>Cliquer sur <strong>Commit</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="envoyer-sur-github-push" class="level2">
+<h2 class="anchored" data-anchor-id="envoyer-sur-github-push">2. Envoyer sur GitHub : <code>Push</code></h2>
+<ul>
+<li>Après un commit, cliquer sur <strong>Push</strong> pour synchroniser avec GitHub</li>
+</ul>
+</section>
+<section id="récupérer-les-changements-pull" class="level2">
+<h2 class="anchored" data-anchor-id="récupérer-les-changements-pull">3. Récupérer les changements : <code>Pull</code></h2>
+<ul>
+<li>Cliquer sur <strong>Pull</strong> pour récupérer les dernières modifications (surtout si on travaille à plusieurs)</li>
+</ul>
+</section>
+</section>
+<section id="bonnes-pratiques-pour-le-travail-collaboratif" class="level1">
+<h1>🤝 Bonnes pratiques pour le travail collaboratif</h1>
+<section id="créer-une-organisation-github-facultatif" class="level2">
+<h2 class="anchored" data-anchor-id="créer-une-organisation-github-facultatif">1. Créer une organisation GitHub (facultatif)</h2>
+<ul>
+<li>Permet de regrouper les projets de cours ou de recherche</li>
+<li>Gérer les autorisations par équipe</li>
+</ul>
+</section>
+<section id="créer-un-dépôt-partagé" class="level2">
+<h2 class="anchored" data-anchor-id="créer-un-dépôt-partagé">2. Créer un dépôt partagé</h2>
+<ul>
+<li>Inclure un <code>README.md</code>, <code>.gitignore</code> (R), éventuellement une licence</li>
+<li>Ajouter les collaborateur·rices dans les paramètres du dépôt</li>
+</ul>
+</section>
+<section id="cloner-le-dépôt-avec-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="cloner-le-dépôt-avec-ssh">3. Cloner le dépôt avec SSH</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_from_github</span>(<span class="st">&quot;org/projet&quot;</span>, <span class="at">protocol =</span> <span class="st">&quot;ssh&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="créer-une-branche-pour-travailler" class="level2">
+<h2 class="anchored" data-anchor-id="créer-une-branche-pour-travailler">4. Créer une branche pour travailler</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">pr_init</span>(<span class="st">&quot;nom-branche&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="travailler-dans-la-branche" class="level2">
+<h2 class="anchored" data-anchor-id="travailler-dans-la-branche">5. Travailler dans la branche</h2>
+<ul>
+<li>Modifier, sauvegarder, <strong>commit</strong>, puis <strong>push</strong></li>
+</ul>
+</section>
+<section id="créer-une-pull-request-pr" class="level2">
+<h2 class="anchored" data-anchor-id="créer-une-pull-request-pr">6. Créer une Pull Request (PR)</h2>
+<ul>
+<li>Dans GitHub : Pull requests &gt; New pull request</li>
+<li>Comparer la branche à <code>main</code>, proposer les changements</li>
+</ul>
+</section>
+<section id="revue-de-code-entre-coéquipiers" class="level2">
+<h2 class="anchored" data-anchor-id="revue-de-code-entre-coéquipiers">7. Revue de code entre coéquipiers</h2>
+<ul>
+<li>Laisser des commentaires</li>
+<li>Approuver ou suggérer des modifications</li>
+</ul>
+</section>
+<section id="fusionner-la-pr-dans-main" class="level2">
+<h2 class="anchored" data-anchor-id="fusionner-la-pr-dans-main">8. Fusionner la PR dans <code>main</code></h2>
+<ul>
+<li>Cliquer sur <strong>Merge pull request</strong></li>
+<li>Supprimer la branche si elle n’est plus utile</li>
+</ul>
+</section>
+<section id="mettre-à-jour-sa-copie-locale" class="level2">
+<h2 class="anchored" data-anchor-id="mettre-à-jour-sa-copie-locale">9. Mettre à jour sa copie locale</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ou via RStudio : Git &gt; Pull</p>
 
 
 </section>
@@ -4156,11 +4302,6 @@ filter: brightness(0.9);
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -4479,4 +4620,4 @@ filter: brightness(0.9);
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/edit/main/guide github et Rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/blob/main/guide github et Rstudio.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

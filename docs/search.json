@@ -14,6 +14,34 @@
     "text": "🚀 Installation\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")"
   },
   {
+    "objectID": "outils.html#connexion-de-rstudio-à-github",
+    "href": "outils.html#connexion-de-rstudio-à-github",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "section": "🔗 Connexion de RStudio à GitHub",
+    "text": "🔗 Connexion de RStudio à GitHub\n\n1. Créer un compte GitHub\n\nAller sur https://github.com/\nConfigurer votre nom complet et votre courriel\n\n\n\n2. Configurer Git dans RStudio\nusethis::use_git_config(user.name = \"Ton Nom\", user.email = \"ton.email@ulaval.ca\")\n\n\n3. Générer une clé SSH\nDans l’onglet Terminal de RStudio :\nssh-keygen -t ed25519 -C \"ton.email@ulaval.ca\"\nAppuyer sur Entrée aux questions. La clé est stockée dans ~/.ssh/\n\n\n4. Ajouter la clé publique à GitHub\ncat ~/.ssh/id_ed25519.pub\nPuis : GitHub &gt; ⚙️ Settings &gt; SSH and GPG keys &gt; New SSH key &gt; coller la clé\n\n\n5. Cloner un projet depuis GitHub (SSH)\n\nCopier l’URL SSH depuis GitHub (git@github.com:...)\nDans RStudio : File &gt; New Project &gt; Version Control &gt; Git\n\n\n\n6. Tester la connexion\nDans le terminal :\nssh -T git@github.com"
+  },
+  {
+    "objectID": "outils.html#travailler-individuellement-avec-git",
+    "href": "outils.html#travailler-individuellement-avec-git",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "section": "👤 Travailler individuellement avec Git",
+    "text": "👤 Travailler individuellement avec Git\n\n1. Sauvegarder ses modifications\n\nFaire des changements dans les fichiers .R, .Rmd, .qmd, etc.\nDans l’onglet Git :\n\nCocher les fichiers modifiés\nAjouter un message de commit\nCliquer sur Commit\n\n\n\n\n2. Envoyer sur GitHub : Push\n\nAprès un commit, cliquer sur Push pour synchroniser avec GitHub\n\n\n\n3. Récupérer les changements : Pull\n\nCliquer sur Pull pour récupérer les dernières modifications (surtout si on travaille à plusieurs)"
+  },
+  {
+    "objectID": "outils.html#bonnes-pratiques-pour-le-travail-collaboratif",
+    "href": "outils.html#bonnes-pratiques-pour-le-travail-collaboratif",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "section": "🤝 Bonnes pratiques pour le travail collaboratif",
+    "text": "🤝 Bonnes pratiques pour le travail collaboratif\n\n1. Créer une organisation GitHub (facultatif)\n\nPermet de regrouper les projets de cours ou de recherche\nGérer les autorisations par équipe\n\n\n\n2. Créer un dépôt partagé\n\nInclure un README.md, .gitignore (R), éventuellement une licence\nAjouter les collaborateur·rices dans les paramètres du dépôt\n\n\n\n3. Cloner le dépôt avec SSH\nusethis::create_from_github(\"org/projet\", protocol = \"ssh\")\n\n\n4. Créer une branche pour travailler\nusethis::pr_init(\"nom-branche\")\n\n\n5. Travailler dans la branche\n\nModifier, sauvegarder, commit, puis push\n\n\n\n6. Créer une Pull Request (PR)\n\nDans GitHub : Pull requests &gt; New pull request\nComparer la branche à main, proposer les changements\n\n\n\n7. Revue de code entre coéquipiers\n\nLaisser des commentaires\nApprouver ou suggérer des modifications\n\n\n\n8. Fusionner la PR dans main\n\nCliquer sur Merge pull request\nSupprimer la branche si elle n’est plus utile\n\n\n\n9. Mettre à jour sa copie locale\ngit pull origin main\nOu via RStudio : Git &gt; Pull"
+  },
+  {
+    "objectID": "outils.html#utiliser-github-en-classe",
+    "href": "outils.html#utiliser-github-en-classe",
+    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "section": "🐙 Utiliser GitHub en classe",
+    "text": "🐙 Utiliser GitHub en classe\n\nPourquoi utiliser GitHub avec vos étudiant·es ?\n\nPour initier vos étudiant·es aux bonnes pratiques de collaboration en science des données.\nPour structurer le travail d’équipe dans un environnement réel.\nPour suivre facilement les livrables, le code et les contributions de chacun.\n\n\n\nCréer une organisation GitHub pour votre cours\nCréer une organisation permet de centraliser et sécuriser les dépôts étudiants.\nÉtapes :\n\nConnectez-vous à GitHub.\nAccédez à https://github.com/organizations/new\nChoisissez un nom d’organisation (ex : Cours-STT-XXXX).\nSélectionnez un plan gratuit pour les projets open source ou éducatifs.\nInvitez des collaborateurs (autres enseignants ou étudiant·es).\n\n🔗 Documentation officielle : Créer et gérer des organisations GitHub\n💡 Vous pouvez aussi demander l’accès au programme GitHub Education : education.github.com"
+  },
+  {
     "objectID": "outils.html#mini-cours-la-librairie-ghclass",
     "href": "outils.html#mini-cours-la-librairie-ghclass",
     "title": "Outils pour l’enseignement de la statistique et science des données",
@@ -49,11 +77,165 @@
     "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
   },
   {
+    "objectID": "guide github et Rstudio.html",
+    "href": "guide github et Rstudio.html",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "Aller sur https://github.com/\nConfigurer votre nom complet et votre courriel\n\n\n\n\nusethis::use_git_config(user.name = \"Ton Nom\", user.email = \"ton.email@ulaval.ca\")\n\n\n\nDans l’onglet Terminal de RStudio :\nssh-keygen -t ed25519 -C \"ton.email@ulaval.ca\"\nAppuyer sur Entrée aux questions. La clé est stockée dans ~/.ssh/\n\n\n\ncat ~/.ssh/id_ed25519.pub\nPuis : GitHub &gt; ⚙️ Settings &gt; SSH and GPG keys &gt; New SSH key &gt; coller la clé\n\n\n\n\nCopier l’URL SSH depuis GitHub (git@github.com:...)\nDans RStudio : File &gt; New Project &gt; Version Control &gt; Git\n\n\n\n\nDans le terminal :\nssh -T git@github.com"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#créer-un-compte-github",
+    "href": "guide github et Rstudio.html#créer-un-compte-github",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "Aller sur https://github.com/\nConfigurer votre nom complet et votre courriel"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#configurer-git-dans-rstudio",
+    "href": "guide github et Rstudio.html#configurer-git-dans-rstudio",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "usethis::use_git_config(user.name = \"Ton Nom\", user.email = \"ton.email@ulaval.ca\")"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#générer-une-clé-ssh",
+    "href": "guide github et Rstudio.html#générer-une-clé-ssh",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "Dans l’onglet Terminal de RStudio :\nssh-keygen -t ed25519 -C \"ton.email@ulaval.ca\"\nAppuyer sur Entrée aux questions. La clé est stockée dans ~/.ssh/"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#ajouter-la-clé-publique-à-github",
+    "href": "guide github et Rstudio.html#ajouter-la-clé-publique-à-github",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "cat ~/.ssh/id_ed25519.pub\nPuis : GitHub &gt; ⚙️ Settings &gt; SSH and GPG keys &gt; New SSH key &gt; coller la clé"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#cloner-un-projet-depuis-github-ssh",
+    "href": "guide github et Rstudio.html#cloner-un-projet-depuis-github-ssh",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "Copier l’URL SSH depuis GitHub (git@github.com:...)\nDans RStudio : File &gt; New Project &gt; Version Control &gt; Git"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#tester-la-connexion",
+    "href": "guide github et Rstudio.html#tester-la-connexion",
+    "title": "Guide GitHub et RStudio",
+    "section": "",
+    "text": "Dans le terminal :\nssh -T git@github.com"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#sauvegarder-ses-modifications",
+    "href": "guide github et Rstudio.html#sauvegarder-ses-modifications",
+    "title": "Guide GitHub et RStudio",
+    "section": "1. Sauvegarder ses modifications",
+    "text": "1. Sauvegarder ses modifications\n\nFaire des changements dans les fichiers .R, .Rmd, .qmd, etc.\nDans l’onglet Git :\n\nCocher les fichiers modifiés\nAjouter un message de commit\nCliquer sur Commit"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#envoyer-sur-github-push",
+    "href": "guide github et Rstudio.html#envoyer-sur-github-push",
+    "title": "Guide GitHub et RStudio",
+    "section": "2. Envoyer sur GitHub : Push",
+    "text": "2. Envoyer sur GitHub : Push\n\nAprès un commit, cliquer sur Push pour synchroniser avec GitHub"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#récupérer-les-changements-pull",
+    "href": "guide github et Rstudio.html#récupérer-les-changements-pull",
+    "title": "Guide GitHub et RStudio",
+    "section": "3. Récupérer les changements : Pull",
+    "text": "3. Récupérer les changements : Pull\n\nCliquer sur Pull pour récupérer les dernières modifications (surtout si on travaille à plusieurs)"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#créer-une-organisation-github-facultatif",
+    "href": "guide github et Rstudio.html#créer-une-organisation-github-facultatif",
+    "title": "Guide GitHub et RStudio",
+    "section": "1. Créer une organisation GitHub (facultatif)",
+    "text": "1. Créer une organisation GitHub (facultatif)\n\nPermet de regrouper les projets de cours ou de recherche\nGérer les autorisations par équipe"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#créer-un-dépôt-partagé",
+    "href": "guide github et Rstudio.html#créer-un-dépôt-partagé",
+    "title": "Guide GitHub et RStudio",
+    "section": "2. Créer un dépôt partagé",
+    "text": "2. Créer un dépôt partagé\n\nInclure un README.md, .gitignore (R), éventuellement une licence\nAjouter les collaborateur·rices dans les paramètres du dépôt"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#cloner-le-dépôt-avec-ssh",
+    "href": "guide github et Rstudio.html#cloner-le-dépôt-avec-ssh",
+    "title": "Guide GitHub et RStudio",
+    "section": "3. Cloner le dépôt avec SSH",
+    "text": "3. Cloner le dépôt avec SSH\nusethis::create_from_github(\"org/projet\", protocol = \"ssh\")"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#créer-une-branche-pour-travailler",
+    "href": "guide github et Rstudio.html#créer-une-branche-pour-travailler",
+    "title": "Guide GitHub et RStudio",
+    "section": "4. Créer une branche pour travailler",
+    "text": "4. Créer une branche pour travailler\nusethis::pr_init(\"nom-branche\")"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#travailler-dans-la-branche",
+    "href": "guide github et Rstudio.html#travailler-dans-la-branche",
+    "title": "Guide GitHub et RStudio",
+    "section": "5. Travailler dans la branche",
+    "text": "5. Travailler dans la branche\n\nModifier, sauvegarder, commit, puis push"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#créer-une-pull-request-pr",
+    "href": "guide github et Rstudio.html#créer-une-pull-request-pr",
+    "title": "Guide GitHub et RStudio",
+    "section": "6. Créer une Pull Request (PR)",
+    "text": "6. Créer une Pull Request (PR)\n\nDans GitHub : Pull requests &gt; New pull request\nComparer la branche à main, proposer les changements"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#revue-de-code-entre-coéquipiers",
+    "href": "guide github et Rstudio.html#revue-de-code-entre-coéquipiers",
+    "title": "Guide GitHub et RStudio",
+    "section": "7. Revue de code entre coéquipiers",
+    "text": "7. Revue de code entre coéquipiers\n\nLaisser des commentaires\nApprouver ou suggérer des modifications"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#fusionner-la-pr-dans-main",
+    "href": "guide github et Rstudio.html#fusionner-la-pr-dans-main",
+    "title": "Guide GitHub et RStudio",
+    "section": "8. Fusionner la PR dans main",
+    "text": "8. Fusionner la PR dans main\n\nCliquer sur Merge pull request\nSupprimer la branche si elle n’est plus utile"
+  },
+  {
+    "objectID": "guide github et Rstudio.html#mettre-à-jour-sa-copie-locale",
+    "href": "guide github et Rstudio.html#mettre-à-jour-sa-copie-locale",
+    "title": "Guide GitHub et RStudio",
+    "section": "9. Mettre à jour sa copie locale",
+    "text": "9. Mettre à jour sa copie locale\ngit pull origin main\nOu via RStudio : Git &gt; Pull"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/page1.html",
+    "href": "quarto-site-template/skeleton/page1.html",
+    "title": "Page 1",
+    "section": "",
+    "text": "Page d’exemple\nUtilisez cette page pour ajouter du contenu supplémentaire.\n\n# Exemple de graphique R\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/index.html",
+    "href": "quarto-site-template/skeleton/index.html",
+    "title": "Page d’accueil",
+    "section": "",
+    "text": "Bienvenue\nCe gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page index.qmd pour présenter votre projet ou vos ressources.\n\nAjoutez des sections avec du texte et du code.\nModifiez la navigation dans _quarto.yml selon vos besoins.\n\nConsultez about.qmd pour un exemple de page supplémentaire.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quarto-site-template/skeleton/about.html",
+    "href": "quarto-site-template/skeleton/about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "À propos\nCette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.\n\n# Exemples de code R\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
     "section": "",
-    "text": "Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.\n\n\n\nOffrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.\n\n\n\n\n\nModèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.\n\n\n\n\n\n\nExplorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+    "text": "Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.\n\n\n\nOffrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.\n\n\n\n\n\nModèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.\n\n\n\n\n\n\nExplorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
   },
   {
     "objectID": "index.html#objectifs-du-site",
@@ -67,7 +249,7 @@
     "href": "index.html#structure-du-site",
     "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
     "section": "",
-    "text": "Modèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utiles, extensions Quarto, automatisations.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc."
+    "text": "Modèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc."
   },
   {
     "objectID": "index.html#démarrage-rapide",
@@ -75,27 +257,6 @@
     "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
     "section": "",
     "text": "Explorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
-  },
-  {
-    "objectID": "quarto-site-template/skeleton/about.html",
-    "href": "quarto-site-template/skeleton/about.html",
-    "title": "À propos",
-    "section": "",
-    "text": "À propos\nCette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.\n\n# Exemples de code R\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "quarto-site-template/skeleton/index.html",
-    "href": "quarto-site-template/skeleton/index.html",
-    "title": "Page d’accueil",
-    "section": "",
-    "text": "Bienvenue\nCe gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page index.qmd pour présenter votre projet ou vos ressources.\n\nAjoutez des sections avec du texte et du code.\nModifiez la navigation dans _quarto.yml selon vos besoins.\n\nConsultez about.qmd pour un exemple de page supplémentaire.\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "quarto-site-template/skeleton/page1.html",
-    "href": "quarto-site-template/skeleton/page1.html",
-    "title": "Page 1",
-    "section": "",
-    "text": "Page d’exemple\nUtilisez cette page pour ajouter du contenu supplémentaire.\n\n# Exemple de graphique R\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",

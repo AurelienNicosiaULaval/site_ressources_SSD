@@ -32,7 +32,142 @@ remotes::install_github("AurelienNicosiaULaval/UlavalSSD")
 
 ---
 
-# 🐙 Utiliser GitHub en classe
+# Github
+
+### Qu'est-ce que GitHub ?
+
+GitHub est une plateforme de gestion de versions et de collaboration basée sur Git, permettant aux développeurs et aux équipes de travailler ensemble sur des projets de code source. Elle offre des fonctionnalités telles que le suivi des modifications, la gestion des problèmes (issues), les demandes de tirage (pull requests) et l'intégration continue.
+
+GitHub est largement utilisé dans le développement logiciel, mais il est également très utile pour l'enseignement et la collaboration en science des données.
+
+### Pourquoi utiliser GitHub ?
+
+GitHub est un outil puissant pour :
+
+- Gérer le code source de vos projets R et R Markdown.
+
+- Collaborer avec d'autres personnes sur des projets de science des données.
+
+- Suivre les modifications apportées à vos scripts et documents.
+
+- Partager facilement vos travaux avec d'autres, que ce soit pour des projets de recherche, des cours ou des présentations.
+
+
+## 🔗 Connexion de RStudio à GitHub
+
+### 1. Créer un compte GitHub
+
+-   Aller sur <https://github.com/>
+-   Configurer votre nom complet et votre courriel
+
+### 2. Configurer Git dans RStudio
+
+``` r
+usethis::use_git_config(user.name = "Ton Nom", user.email = "ton.email@ulaval.ca")
+```
+
+### 3. Générer une clé SSH
+
+Dans l'onglet **Terminal** de RStudio :
+
+``` bash
+ssh-keygen -t ed25519 -C "ton.email@ulaval.ca"
+```
+
+Appuyer sur Entrée aux questions. La clé est stockée dans `~/.ssh/`
+
+### 4. Ajouter la clé publique à GitHub
+
+``` bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Puis : GitHub \> ⚙️ Settings \> **SSH and GPG keys** \> **New SSH key** \> coller la clé
+
+### 5. Cloner un projet depuis GitHub (SSH)
+
+-   Copier l'URL SSH depuis GitHub (`git@github.com:...`)
+-   Dans RStudio : `File > New Project > Version Control > Git`
+
+### 6. Tester la connexion
+
+Dans le terminal :
+
+``` bash
+ssh -T git@github.com
+```
+
+## 👤 Travailler individuellement avec Git
+
+### 1. Sauvegarder ses modifications
+
+-   Faire des changements dans les fichiers `.R`, `.Rmd`, `.qmd`, etc.
+-   Dans l'onglet **Git** :
+    -   Cocher les fichiers modifiés
+    -   Ajouter un message de commit
+    -   Cliquer sur **Commit**
+
+### 2. Envoyer sur GitHub : `Push`
+
+-   Après un commit, cliquer sur **Push** pour synchroniser avec GitHub
+
+### 3. Récupérer les changements : `Pull`
+
+-   Cliquer sur **Pull** pour récupérer les dernières modifications (surtout si on travaille à plusieurs)
+
+## 🤝 Bonnes pratiques pour le travail collaboratif
+
+### 1. Créer une organisation GitHub (facultatif)
+
+-   Permet de regrouper les projets de cours ou de recherche
+-   Gérer les autorisations par équipe
+
+### 2. Créer un dépôt partagé
+
+-   Inclure un `README.md`, `.gitignore` (R), éventuellement une licence
+-   Ajouter les collaborateur·rices dans les paramètres du dépôt
+
+### 3. Cloner le dépôt avec SSH
+
+``` r
+usethis::create_from_github("org/projet", protocol = "ssh")
+```
+
+### 4. Créer une branche pour travailler
+
+``` r
+usethis::pr_init("nom-branche")
+```
+
+### 5. Travailler dans la branche
+
+-   Modifier, sauvegarder, **commit**, puis **push**
+
+### 6. Créer une Pull Request (PR)
+
+-   Dans GitHub : Pull requests \> New pull request
+-   Comparer la branche à `main`, proposer les changements
+
+### 7. Revue de code entre coéquipiers
+
+-   Laisser des commentaires
+-   Approuver ou suggérer des modifications
+
+### 8. Fusionner la PR dans `main`
+
+-   Cliquer sur **Merge pull request**
+-   Supprimer la branche si elle n’est plus utile
+
+### 9. Mettre à jour sa copie locale
+
+``` bash
+git pull origin main
+```
+
+Ou via RStudio : Git \> Pull
+
+
+## 🐙 Utiliser GitHub en classe
 
 ### Pourquoi utiliser GitHub avec vos étudiant·es ?
 
