@@ -1,6 +1,13 @@
 .Rproj.user
 .Rhistory
+# R files
 .RData
 .Ruserdata
+*.Rproj
+
 
 /.quarto/
+_site/
+
+# macOS files
+.DS_Store
