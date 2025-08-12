@@ -5,9 +5,9 @@
 .Ruserdata
 *.Rproj
 
-
 /.quarto/
 _site/
+docs/
 
 # macOS files
 .DS_Store
