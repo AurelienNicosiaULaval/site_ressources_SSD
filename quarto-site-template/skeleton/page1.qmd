@@ -1,13 +1,18 @@
 ---
-title: "Page 1"
+title: "Ressources du cours"
+format:
+  html:
+    embed-resources: true
 ---
 
-# Page d'exemple
+## Travailler cette semaine
 
-Utilisez cette page pour ajouter du contenu supplémentaire.
+Indiquez l’objectif de la séance, le support à consulter et l’activité à réaliser.
 
-```{r}
-# Exemple de graphique R
-plot(cars)
-```
+## Retrouver un support
 
+Ajoutez les liens vers vos notes de cours et vos documents.
+
+## Demander de l’aide
+
+Précisez le canal de questions et les informations utiles à fournir.

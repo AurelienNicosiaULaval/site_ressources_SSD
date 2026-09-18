@@ -1,0 +1,61 @@
+---
+title: "Préparer une activité d’exploration"
+lang: fr
+format:
+  html:
+    embed-resources: true
+    toc: true
+---
+
+## Intention pédagogique
+
+À compléter : à la fin de l’activité, les étudiants seront capables de…
+
+Préciser une action observable : comparer, interpréter, choisir, justifier.
+
+## Question de départ
+
+À compléter : quelle question pose-t-on aux données ?
+
+Avant de calculer, demander une prévision et sa justification.
+
+## Données et prérequis
+
+- Source des données et date de consultation :
+- Unité d’observation :
+- Variables retenues et leur signification :
+- Transformations déjà réalisées :
+- Notions et outils nécessaires :
+- Conditions d’accès et de réutilisation :
+
+## Consignes pour les étudiants
+
+1. Formulez une réponse attendue à la question, avant toute analyse.
+2. Examinez la structure des données et les valeurs manquantes.
+3. Choisissez une représentation ou un résumé adapté à la question.
+4. Expliquez votre résultat en une ou deux phrases.
+5. Nommez une limite et une information supplémentaire qui serait utile.
+
+## Déroulement à adapter
+
+- Première tentative individuelle.
+- Comparaison des choix en binôme.
+- Mise en commun d’un résultat et d’un point de désaccord.
+- Retour individuel : ce que je retiens, ce qui reste à clarifier.
+
+## Retour en groupe
+
+- Quelles décisions ont changé la lecture des résultats ?
+- Qu’est-ce qui relève d’une description, d’une association ou d’une explication ?
+- Que faudrait-il vérifier avant de généraliser ?
+
+## Vérification avant diffusion
+
+- Ouvrir les fichiers avec les accès d’un étudiant.
+- Exécuter le code depuis une session propre, s’il y en a.
+- Vérifier la lisibilité du document et des graphiques.
+- Prévoir un mode de travail si l’application ou la connexion est indisponible.
+
+## Notes de préparation
+
+Conserver les observations et les réponses attendues dans un document enseignant séparé avant de partager cette fiche.

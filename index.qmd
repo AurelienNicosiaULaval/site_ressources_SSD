@@ -1,67 +1,47 @@
 ---
-title: "Ressources pédagogiques pour l'enseignement en statistique et en sciences des données"
+title: "Des ressources pour vos prochains cours"
+description: "Supports, activités et données à adapter pour enseigner la statistique et la science des données au supérieur."
+page-layout: full
+toc: false
+anchor-sections: false
 format:
   html:
-#    theme: cosmo
-    toc: true
-    toc-title: "Contenu"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
-    css: styles.css
-site:
-  title: "Ressources en statistique"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Accueil
-      - href: templates/index.qmd
-        text: Modèles
-      - href: outils.qmd
-        text: Outils
-      - href: tutoriels.qmd
-        text: Tutoriels
-      - href: about.qmd
-        text: À propos
-      - icon: github
-        href: https://github.com/AurelienNicosiaULaval
-        aria-label: GitHub
-        css: styles.css
-        tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            href:  https://github.com/AurelienNicosiaULaval
-          - text: Report a Bug
-            href:  https://github.com/AurelienNicosiaULaval
-  page-navigation: true
-
+    include-in-header:
+      text: '<style>#title-block-header{display:none}</style>'
 ---
 
-# Bienvenue
-
-Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.
-
-## Objectifs du site
-
-- Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.
-- Favoriser le partage entre enseignant·es du département.
-- Illustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.
-
-## Structure du site
-
-- **Modèles** : documents `.qmd`, présentations, devoirs, examens.
-- **Outils** : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.
-- **Tutoriels** : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.
-
----
-
-## 🚀 Démarrage rapide
-
-1. Explorez les modèles disponibles dans la section [Modèles](templates/index.qmd).
-2. Consultez les outils proposés dans [Outils](outils.qmd).
-3. Apprenez avec nos [Tutoriels](tutoriels.qmd).
-
----
-
-Si vous souhaitez contribuer ou avez des questions, n’hésitez pas à [ouvrir une issue sur GitHub](https://github.com/ton-utilisateur/ton-repo/issues).
+```{=html}
+<div class="home-page">
+<section class="ssd-hero" aria-labelledby="home-title">
+  <div class="hero-copy">
+    <h1 id="home-title">Des ressources<br>pour vos<br><span>prochains cours.</span></h1>
+    <p class="hero-intro">Enseigner la statistique et la science des données, avec des supports à adapter et des activités à faire vivre.</p>
+    <div class="hero-actions">
+      <a class="ssd-button" href="ressources.html">Explorer les ressources</a>
+      <a class="text-link" href="parcours.html">Trouver mon point de départ <span class="arrow" aria-hidden="true"></span></a>
+    </div>
+  </div>
+  <div role="complementary" class="activity-feature" aria-labelledby="feature-title">
+    <p class="feature-label">À adapter pour votre cours</p>
+    <h2 id="feature-title">Une activité, de la question à la discussion.</h2>
+    <ul class="activity-steps">
+      <li><span class="check-icon" aria-hidden="true"></span>Poser une question</li>
+      <li><span class="check-icon" aria-hidden="true"></span>Faire explorer les données</li>
+      <li><span class="check-icon" aria-hidden="true"></span>Discuter les résultats</li>
+    </ul>
+    <a class="text-link" href="parcours.html#activite">Préparer une activité <span class="arrow" aria-hidden="true"></span></a>
+  </div>
+</section>
+<section class="needs-section" aria-labelledby="needs-title">
+  <h2 id="needs-title">Que voulez-vous préparer ?</h2>
+  <p class="section-intro">Partez de votre besoin pédagogique.</p>
+  <div class="needs-grid">
+    <article><span class="need-number">01</span><h3>Un support de cours</h3><p>Rapports et présentations Quarto.</p><a class="text-link" href="ressources.html?besoin=supports">Voir les ressources <span class="visually-hidden">pour un support de cours</span><span class="arrow" aria-hidden="true"></span></a></article>
+    <article><span class="need-number">02</span><h3>Une activité en classe</h3><p>Études de cas et tutoriels R.</p><a class="text-link" href="ressources.html?besoin=activites">Voir les ressources <span class="visually-hidden">pour une activité en classe</span><span class="arrow" aria-hidden="true"></span></a></article>
+    <article><span class="need-number">03</span><h3>Un jeu de données</h3><p>Des données à explorer avec R.</p><a class="text-link" href="ressources.html?besoin=donnees">Voir les ressources <span class="visually-hidden">pour un jeu de données</span><span class="arrow" aria-hidden="true"></span></a></article>
+    <article><span class="need-number">04</span><h3>Un site de cours</h3><p>Une porte d’entrée pour vos étudiants.</p><a class="text-link" href="ressources.html?besoin=diffusion">Voir les ressources <span class="visually-hidden">pour diffuser un cours</span><span class="arrow" aria-hidden="true"></span></a></article>
+  </div>
+</section>
+</div>
+```

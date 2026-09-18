@@ -1,0 +1,40 @@
+---
+title: "Trouvez votre prochaine ressource."
+subtitle: "Un support, des données ou une activité : choisissez ce qui vous sera utile en cours."
+page-layout: full
+toc: false
+anchor-sections: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{=html}
+<section class="catalogue" aria-label="Catalogue des ressources">
+<div id="catalogue-controls" hidden>
+  <label class="search-label" for="resource-search">Rechercher dans les ressources</label>
+  <input id="resource-search" type="search" placeholder="Ex. : ggplot2, rapport, météo…" autocomplete="off" aria-controls="resource-list">
+  <fieldset class="resource-filters"><legend>Votre besoin</legend>
+    <div class="filter-buttons">
+    <button type="button" data-filter="tout" aria-pressed="true">Tout</button>
+    <button type="button" data-filter="supports" aria-pressed="false">Supports</button>
+    <button type="button" data-filter="activites" aria-pressed="false">Activités</button>
+    <button type="button" data-filter="donnees" aria-pressed="false">Données</button>
+    <button type="button" data-filter="diffusion" aria-pressed="false">Diffusion</button>
+    </div>
+  </fieldset>
+</div>
+<div class="catalogue-status">
+  <p id="resource-count" role="status" aria-live="polite" aria-atomic="true">8 ressources</p>
+  <button id="resource-reset" type="button" class="reset-button" hidden>Réinitialiser</button>
+</div>
+<noscript><p>Les ressources sont toutes affichées ci-dessous. La recherche et les filtres nécessitent JavaScript.</p></noscript>
+```
+
+{{< include _includes/catalogue.html >}}
+
+```{=html}
+<p id="resource-empty" class="empty-state" hidden>Aucune ressource ne correspond à votre recherche. Essayez un autre mot ou réinitialisez les filtres.</p>
+</section>
+<script src="assets/catalogue.js"></script>
+```

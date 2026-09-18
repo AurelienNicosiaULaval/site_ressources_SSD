@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rapport",
+    "category": "supports",
+    "label": "Supports",
+    "title": "Rapport étudiant Quarto",
+    "description": "Une structure pour relier question, analyse et interprétation.",
+    "meta": "Fichier .qmd · R et Quarto",
+    "href": "templates/quarto.html#rapport",
+    "keywords": "rapport devoir projet redaction stt1100 analyse"
+  },
+  {
+    "id": "etude-cas",
+    "category": "activites",
+    "label": "Activités",
+    "title": "Étude de cas interactive",
+    "description": "Un canevas learnr pour guider le raisonnement et la pratique de R.",
+    "meta": "R Markdown · R et learnr",
+    "href": "tutoriels.html#etude-de-cas",
+    "keywords": "tutoriel exercices questions apprendre pratique"
+  },
+  {
+    "id": "ulavalssd",
+    "category": "donnees",
+    "label": "Données",
+    "title": "Données pédagogiques UlavalSSD",
+    "description": "Des jeux de données du Québec pour construire une analyse en cours.",
+    "meta": "Package R · R",
+    "href": "outils.html#ulavalssd",
+    "keywords": "meteo météo MeteoQuebec listecondamnation nettoyage valeurs manquantes"
+  },
+  {
+    "id": "diapositives",
+    "category": "supports",
+    "label": "Supports",
+    "title": "Diapositives pour vos cours",
+    "description": "Un modèle Reveal.js à adapter à vos explications et à vos graphiques.",
+    "meta": "Fichier .qmd · R et Quarto",
+    "href": "templates/quarto.html#diapositives",
+    "keywords": "presentation slides notes projection"
+  },
+  {
+    "id": "site",
+    "category": "diffusion",
+    "label": "Diffusion",
+    "title": "Site de cours Quarto",
+    "description": "Trois pages pour réunir les consignes, les supports et les ressources.",
+    "meta": "Archive .zip · Quarto",
+    "href": "templates/site-web.html",
+    "keywords": "site web publication partager cours github pages"
+  },
+  {
+    "id": "bixi",
+    "category": "activites",
+    "label": "Activités",
+    "title": "Explorer les déplacements BIXI",
+    "description": "Un exemple de tutoriel R autour des données de vélopartage.",
+    "meta": "Application web et sources · R pour adapter",
+    "href": "tutoriels.html#bixi",
+    "keywords": "velo mobilité montreal transports tutoriel learnr"
+  },
+  {
+    "id": "ggplot2",
+    "category": "activites",
+    "label": "Activités",
+    "title": "Construire un graphique avec ggplot2",
+    "description": "Un exemple pour discuter les choix de représentation des données.",
+    "meta": "Application web et sources · R pour adapter",
+    "href": "tutoriels.html#ggplot2",
+    "keywords": "visualisation graphique ggplot dataviz representation"
+  },
+  {
+    "id": "github",
+    "category": "diffusion",
+    "label": "Diffusion",
+    "title": "GitHub pour votre cours",
+    "description": "Des repères pour versionner les supports et organiser le travail en équipe.",
+    "meta": "Guide · Git et compte GitHub",
+    "href": "outils.html#github",
+    "keywords": "ghclass SSH collaboration depot organisation"
+  }
+]

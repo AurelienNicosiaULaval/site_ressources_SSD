@@ -1,77 +1,64 @@
 ---
-title: "Modèles Quarto pour l’enseignement"
+title: "Rapports et présentations Quarto"
+subtitle: "Deux points de départ pour des supports qui réunissent texte, code et résultats."
 format:
   html:
-    toc: true
-    toc-title: "Contenu de la page"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
 ---
 
-# 📦 Modèles disponibles
+Les modèles sont conservés dans le dépôt [ulaval-template](https://github.com/AurelienNicosiaULaval/ulaval-template). Ils contiennent chacun un fichier `template.qmd`, une feuille de style et une image.
 
-Voici une sélection de modèles Quarto développés pour l’enseignement de la statistique à l’Université Laval. Ces modèles sont conçus pour être faciles à adapter et intégrer dans vos cours.
+## Rapport étudiant {#rapport}
 
----
+::: {.resource-summary}
+Pour quoi ? Donner une structure commune à un rapport d’analyse.
 
-## 🎓 Modèle Quarto — Université Laval
+Prérequis : Quarto ; R et les packages utilisés par le document si vous conservez ses blocs R.
 
-**Dépôt GitHub** : [ulaval-template](https://github.com/AurelienNicosiaULaval/ulaval-template)
+À adapter : le titre, les consignes, les données et les critères d’évaluation.
+:::
 
-Ces modèles propose une structure de base professionnelle pour :
+[Ouvrir le dossier du modèle STT-1100](https://github.com/AurelienNicosiaULaval/ulaval-template/tree/main/stt1100)
 
-- des présentations (type *slides*) personnalisées aux couleurs de l’Université Laval ;
+### Récupérer les fichiers
 
-- des rapports de projets ou devoirs étudiants ;
+Dans le dépôt GitHub, utilisez « Code », puis « Download ZIP ». Décompressez l’archive et ouvrez le dossier `stt1100` dans RStudio. Conservez les fichiers de style et l’image à côté du document.
 
-Ce modèle est pensé pour fonctionner directement avec RStudio. Il inclut :
-
-- Un thème adapté au département de mathématiques et statistique ;
-
-- Un fichier `.css` pour l’uniformité visuelle ;
-
-- Une page de titre et une structure claire des sections.
-
-
-## 🎓 1. Rapport étudiant — STT-1100
-
-Un modèle de rapport HTML pour les travaux pratiques.
-
-### 🔧 Installation
+Dans le terminal, depuis ce dossier :
 
 ```bash
-quarto use template AurelienNicosiaULaval/ulaval-template/stt1100
+quarto render template.qmd
 ```
 
-### 🎨 Caractéristiques
+### L’utiliser dans un cours
 
-- Feuille de style Ulaval (`ulaval.css`)
-- Table des matières
-- Mise en page professionnelle
-- Entièrement personnalisable
+Proposez une trame explicite : question, description des données, analyse, interprétation, limites. Distinguez dans la consigne ce qui doit être calculé, représenté et expliqué. Ouvrez le fichier HTML produit avant de distribuer le modèle.
 
----
+## Diapositives Reveal.js {#diapositives}
 
-## 🖥️ 2. Notes de cours (Slides Reveal.js)
+::: {.resource-summary}
+Pour quoi ? Préparer des notes projetées avec du texte, du code et des graphiques.
 
-Un template de présentation pour les enseignants, basé sur **Reveal.js**, avec des couleurs et une typographie adaptées à la projection.
+Prérequis : Quarto ; R pour exécuter les exemples R.
 
-### 🔧 Installation
+À adapter : l’ordre des idées, la taille des graphiques et la densité de chaque diapositive.
+:::
+
+[Ouvrir le dossier des diapositives](https://github.com/AurelienNicosiaULaval/ulaval-template/tree/main/slides)
+
+Téléchargez le dépôt comme ci-dessus et ouvrez le dossier `slides`. Depuis ce dossier :
 
 ```bash
-quarto use template AurelienNicosiaULaval/ulaval-template/slides
+quarto render template.qmd
 ```
 
-### 🎨 Caractéristiques
+Le modèle comprend une configuration d’ardoise interactive. Vérifiez les fonctionnalités dont vous avez besoin dans le rendu et les dépendances déclarées par le modèle avant votre séance.
 
-- Thème Reveal.js personnalisé (`ulaval.css`)
-- Intégration du logo Ulaval
-- Support de l’ardoise interactive (`chalkboard: true`)
-- Police lisible, contrastes adaptés
+## Aller plus loin
 
+- [Parcours : préparer un support](../parcours.qmd#support)
+- [Documentation de Quarto : documents HTML](https://quarto.org/docs/output-formats/html-basics.html)
+- [Documentation de Quarto : présentations Reveal.js](https://quarto.org/docs/presentations/revealjs/)
+- [Signaler une difficulté sur les modèles](https://github.com/AurelienNicosiaULaval/ulaval-template/issues)
 
----
-
-## 💬 Besoin d’un nouveau modèle ?
-N’hésitez pas à [ouvrir une *issue*](https://github.com/AurelienNicosiaULaval/ulaval-template/issues) pour suggérer des améliorations ou proposer de nouveaux gabarits !
+Les commandes de rendu s’exécutent dans le terminal, et non dans la console R.

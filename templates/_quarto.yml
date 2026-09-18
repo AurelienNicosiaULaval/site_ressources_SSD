@@ -1,10 +1,1 @@
-website:
-  sidebar:
-    style: "floating"
-    contents:
-      - href: index.qmd
-        text: "Accueil des modèles"
-      - href: quarto.qmd
-        text: "Modèles Quarto"
-      - href: site-web.qmd
-        text: "Site web Quarto"
+# These pages inherit the main website navigation and visual style.

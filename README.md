@@ -1,56 +1,60 @@
-[![Voir le site](https://img.shields.io/badge/Site%20web-en%20ligne-success?style=for-the-badge&logo=github)](https://AurelienNicosiaULaval.github.io/site_ressources_SSD/)
+# Ressources SSD
 
-# 📚 Site — Ressources pédagogiques SSD
+Une porte d’entrée pour les enseignants du supérieur en statistique et science des données : des supports à adapter, des activités et des données pour les cours.
 
-Ce dépôt contient le site **Ressources SSD**, un site Quarto développé pour centraliser les modèles, tutoriels, outils et jeux de données pédagogiques utilisés dans les cours de **science des données** et de **statistiques** à l’Université Laval.
+[Consulter le site](https://aureliennicosiaulaval.github.io/site_ressources_SSD/)
 
-------------------------------------------------------------------------
+## Contenu
 
-## 🚀 Objectifs
+- Accueil : quatre entrées par besoin pédagogique.
+- Catalogue : recherche textuelle, filtres et liens partageables.
+- Parcours : préparer un support, une activité, choisir des données et diffuser un cours.
+- Fiches : modèles Quarto, site de cours, tutoriels learnr, UlavalSSD et GitHub.
+- Téléchargements : gabarit de site et fiche de préparation d’activité.
 
--   Offrir un point d’entrée commun pour les enseignant·es du DMS ;
--   Favoriser la reproductibilité et l’utilisation de gabarits standardisés ;
--   Soutenir la conception de matériel pédagogique en R, Quarto et GitHub.
+Les adresses des pages historiques sont conservées. Les fiches distinguent les prérequis de consultation, d’adaptation et d’hébergement.
 
-------------------------------------------------------------------------
+## Développement
 
-## 🌐 Accès au site
+Prérequis : Quarto 1.9.38 et Python 3. Les exemples R du site sont affichés sans exécution lors de sa construction. Node.js sert uniquement à vérifier la syntaxe du script du catalogue.
 
-👉 [Voir le site en ligne](https://AurelienNicosiaULaval.github.io/site_ressources_SSD/)
+```bash
+git clone git@github.com:AurelienNicosiaULaval/site_ressources_SSD.git
+cd site_ressources_SSD
+quarto preview
+```
 
-------------------------------------------------------------------------
+Pour produire et vérifier le site :
 
-## 📦 Structure
+```bash
+quarto render
+python3 scripts/check_site.py
+node --check assets/catalogue.js
+```
 
-Le site est structuré autour de plusieurs sections :
+Le rendu se trouve dans `docs/`. La compilation génère le catalogue et l’archive téléchargeable avec `scripts/prepare.py`. Le fragment `_includes/catalogue.html` est versionné pour permettre à Quarto de résoudre les inclusions dès l’inventaire initial.
 
--   `Accueil` — Présentation générale du projet
--   `Modèles` — Templates pour présentations, devoirs et site web.
--   `Outils` — Packages R, palettes, gabarits CSS
--   `Tutoriels` — Études de cas interactives en Quarto
--   `À propos` — Informations sur le projet et contact
+## Ajouter une ressource
 
-------------------------------------------------------------------------
+1. Ajouter sa fiche ou une section dans une fiche existante.
+2. Ajouter une entrée à `assets/ressources.json` : identifiant, catégorie, titre, description, prérequis, lien et mots-clés.
+3. Lancer `python3 scripts/prepare.py`, puis `quarto render`.
+4. Exécuter la vérification des liens et tester la recherche dans le navigateur.
 
-## 🛠️ Technologies utilisées
+Catégories : `supports`, `activites`, `donnees`, `diffusion`. Les accents ne sont pas nécessaires dans la recherche. Les paramètres `besoin` et `recherche` conservent la sélection dans l’URL. Sans JavaScript, toutes les ressources restent visibles.
 
--   [Quarto](https://quarto.org)
--   [RStudio](https://posit.co)
--   [GitHub Pages](https://pages.github.com)
--   CSS personnalisé aux couleurs de l’Université Laval
+Ne pas modifier directement les pages dans `docs/` ni le fragment de catalogue généré.
 
-------------------------------------------------------------------------
+## Publication
 
-## 🧑‍💻 Contribuer
+Le workflow GitHub Actions rend et vérifie le site. Les branches de refonte et les demandes de fusion produisent un artefact de prévisualisation. Seule la branche `main` déclenche le déploiement sur GitHub Pages.
 
-Les contributions sont bienvenues !
+Le dépôt doit utiliser « GitHub Actions » dans les paramètres Pages. Les fichiers générés restent aussi versionnés dans `docs/` pour faciliter la consultation du rendu.
 
--   Proposez un nouveau modèle ou outil
--   Ouvrez une *issue* pour suggérer une amélioration
--   Ou soumettez un *pull request* depuis un fork du dépôt
+## Réutilisation et contribution
 
-------------------------------------------------------------------------
+Vérifier les licences et les conditions d’accès dans chaque dépôt source. Le catalogue ne remplace pas ces conditions.
 
-## ✉️ Contact
+[Proposer une ressource ou signaler un problème](https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues) · [Contacter Aurélien Nicosia](mailto:aurelien.nicosia@mat.ulaval.ca)
 
-Pour toute question, contactez [Aurélien Nicosia](mailto:aurelien.nicosia@mat.ulaval.ca).
+Merci à Anne-Sophie Charest pour sa contribution à la création des ressources.

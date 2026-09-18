@@ -1,55 +1,65 @@
 ---
-title: "Tutoriels et études de cas"
+title: "Des activités pour faire pratiquer R."
+subtitle: "Un canevas à adapter et deux exemples pour préparer une séance."
 format:
   html:
-    toc: true
-    toc-title: "Contenu de la page"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
 ---
 
-# 📚 Tutoriels interactifs
+## Étude de cas interactive {#etude-de-cas}
 
-Les tutoriels interactifs reposent sur le package R `learnr` qui transforme un document Quarto ou R Markdown en application Shiny exécutable dans le navigateur. Ils combinent texte, blocs de code que l’étudiant·e peut exécuter, ainsi que des questions à choix multiple.
+::: {.resource-summary}
+Pour quoi ? Guider les étudiants à travers une question, du code à exécuter et des questions de compréhension.
 
-Un tutoriel `learnr` contient généralement :
+Format : R Markdown (`.Rmd`) avec `learnr`.
 
-- des exercices de code à modifier en ligne ;
-- des quiz ou zones de réponse ;
-- des messages de rétroaction automatiques.
+Prérequis pour adapter : R, RStudio, learnr et les packages du tutoriel.
+:::
 
-Ainsi, aucune installation n’est nécessaire pour les apprenant·es et les enseignant·es peuvent proposer des activités interactives clés en main.
+[Ouvrir le dépôt Modele_etude_de_cas](https://github.com/AurelienNicosiaULaval/Modele_etude_de_cas)
 
-Pour en savoir plus, consultez la [documentation de learnr](https://rstudio.github.io/learnr/) et le guide Quarto [Interactive Tutorials](https://quarto.org/docs/interactive-tutorials/).
+Le dossier `template` contient `template.Rmd`. Les dossiers `Exemples` fournissent un cas BIXI et un exemple de construction de graphique.
 
----
+### Première utilisation
 
-## 📁 Étude de cas — Gabarit interactif
+1. Téléchargez le dépôt avec « Code », puis « Download ZIP », ou clonez-le par SSH.
+2. Ouvrez `template/template.Rmd` dans RStudio.
+3. Installez les packages déclarés par le document, puis utilisez « Run Document ».
+4. Remplacez le contexte, les données et les questions par ceux de votre séance.
 
-**Dépôt GitHub** : [Modele_etude_de_cas](https://github.com/AurelienNicosiaULaval/Modele_etude_de_cas)
+Pour installer les composants de base dans R :
 
-Ce modèle propose une structure complète pour une étude de cas pédagogique incluant :
+```r
+install.packages(c("learnr", "rmarkdown", "shiny"))
+```
 
-- Mise en contexte ;
-- Analyse des données avec visualisations interactives ;
-- Questions de réflexion ;
-- Grille d’évaluation ;
-- Export HTML interactif.
+Un tutoriel hébergé s’utilise dans le navigateur des étudiants. Une exécution locale nécessite R et les packages correspondants. Un simple fichier HTML sur GitHub Pages ne fournit pas le serveur R nécessaire à `learnr`. [Posit, documentation learnr et modalités d’hébergement](https://rstudio.github.io/learnr/articles/publishing.html).
 
-👉 **Utilisation** : clonez ou téléchargez le dépôt, puis modifiez les sections `.qmd` pour votre propre cas.
+## Explorer les déplacements BIXI {#bixi}
 
-Ce modèle est parfait pour :
+Usage proposé : faire formuler une question sur les déplacements, explorer les variables puis interpréter une représentation.
 
-- des projets de session ;
-- des mini-cas interactifs en classe.
+[Ouvrir le tutoriel BIXI](https://aureliennicosia.shinyapps.io/bixi/) · [Récupérer les sources](https://github.com/AurelienNicosiaULaval/Modele_etude_de_cas/tree/main/Exemples/Bixi)
 
----
+Avant la séance : parcourir le tutoriel, sélectionner les étapes utiles et vérifier la disponibilité de l’application. Garder les sources comme solution de remplacement.
 
-Vous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques.
+## Discuter les choix d’un graphique {#ggplot2}
 
-# 📖 Exemples de tutoriels R interactifs
+Usage proposé : comparer les étapes de construction d’un graphique et justifier les choix qui facilitent son interprétation.
 
-- [Analyse des trajets Bixi](https://aureliennicosia.shinyapps.io/TutorielBixi/)
-- [Introduction à ggplot2](https://aureliennicosia.shinyapps.io/TutorielGGplot/)
+[Ouvrir le tutoriel ggplot2](https://aureliennicosia.shinyapps.io/TutorielGGplot/) · [Récupérer les exemples](https://github.com/AurelienNicosiaULaval/Modele_etude_de_cas/tree/main/Exemples)
 
+Consigne possible : « Quel changement rend la comparaison plus facile ? Justifiez votre réponse en nommant l’information que vous cherchez à lire. »
+
+## Préparer la séance {#preparer}
+
+Définissez ce que les étudiants doivent expliquer à la fin. Faites une première exécution avec les mêmes droits d’accès qu’eux. Une application hébergée peut être indisponible ; prévoyez une version projetée ou un travail local.
+
+[Utiliser la trame de préparation d’activité](parcours.qmd#activite).
+
+## Documentation
+
+- [Posit : learnr, tutoriels interactifs en R Markdown](https://rstudio.github.io/learnr/)
+- [Sources du canevas et des exemples, Aurélien Nicosia](https://github.com/AurelienNicosiaULaval/Modele_etude_de_cas)
+
+Références consultées le 18 septembre 2026.

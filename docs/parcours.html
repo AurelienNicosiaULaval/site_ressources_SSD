@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Des outils au service de votre cours. – Ressources SSD</title>
+<title>Partez de ce que vous voulez enseigner. – Ressources SSD</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -19,41 +19,6 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
-}
-
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -4088,7 +4053,7 @@ h1,h2,h3,h4{color:var(--ink);line-height:1.16;letter-spacing:-.025em}h1,h2,h3{fo
 <span class="menu-text">Catalogue</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./parcours.html"> 
+    <a class="nav-link active" href="./parcours.html" aria-current="page"> 
 <span class="menu-text">Parcours</span></a>
   </li>  
   <li class="nav-item">
@@ -4111,18 +4076,14 @@ h1,h2,h3,h4{color:var(--ink);line-height:1.16;letter-spacing:-.025em}h1,h2,h3{fo
     <h2 id="toc-title">Dans cette fiche</h2>
    
   <ul>
-  <li><a href="#ulavalssd" id="toc-ulavalssd" class="nav-link active" data-scroll-target="#ulavalssd">Données pédagogiques UlavalSSD</a>
+  <li><a href="#support" id="toc-support" class="nav-link active" data-scroll-target="#support">Préparer un support de cours</a></li>
+  <li><a href="#activite" id="toc-activite" class="nav-link" data-scroll-target="#activite">Faire travailler les étudiants sur une activité</a>
   <ul class="collapse">
-  <li><a href="#installer-le-package" id="toc-installer-le-package" class="nav-link" data-scroll-target="#installer-le-package">Installer le package</a></li>
-  <li><a href="#examiner-un-jeu-de-données" id="toc-examiner-un-jeu-de-données" class="nav-link" data-scroll-target="#examiner-un-jeu-de-données">Examiner un jeu de données</a></li>
+  <li><a href="#exemple-de-consigne-à-adapter" id="toc-exemple-de-consigne-à-adapter" class="nav-link" data-scroll-target="#exemple-de-consigne-à-adapter">Exemple de consigne à adapter</a></li>
   </ul></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub pour les supports et les projets</a>
-  <ul class="collapse">
-  <li><a href="#relier-rstudio-à-github" id="toc-relier-rstudio-à-github" class="nav-link" data-scroll-target="#relier-rstudio-à-github">Relier RStudio à GitHub</a></li>
-  <li><a href="#travailler-seul-ou-en-équipe" id="toc-travailler-seul-ou-en-équipe" class="nav-link" data-scroll-target="#travailler-seul-ou-en-équipe">Travailler seul ou en équipe</a></li>
-  </ul></li>
-  <li><a href="#ghclass" id="toc-ghclass" class="nav-link" data-scroll-target="#ghclass">Administrer un cours avec ghclass</a></li>
-  <li><a href="#sources-et-aide" id="toc-sources-et-aide" class="nav-link" data-scroll-target="#sources-et-aide">Sources et aide</a></li>
+  <li><a href="#donnees" id="toc-donnees" class="nav-link" data-scroll-target="#donnees">Choisir des données pour un cours</a></li>
+  <li><a href="#diffusion" id="toc-diffusion" class="nav-link" data-scroll-target="#diffusion">Mettre les ressources d’un cours à disposition</a></li>
+  <li><a href="#verifier" id="toc-verifier" class="nav-link" data-scroll-target="#verifier">Avant de partager</a></li>
   </ul>
 </nav>
     </div>
@@ -4132,8 +4093,8 @@ h1,h2,h3,h4{color:var(--ink);line-height:1.16;letter-spacing:-.025em}h1,h2,h3{fo
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Des outils au service de votre cours.</h1>
-<p class="subtitle lead">Explorer des données, organiser les fichiers et partager les supports.</p>
+<h1 class="title">Partez de ce que vous voulez enseigner.</h1>
+<p class="subtitle lead">Quatre parcours pour passer d’une intention pédagogique à une ressource utilisable.</p>
 </div>
 
 
@@ -4150,136 +4111,81 @@ h1,h2,h3,h4{color:var(--ink);line-height:1.16;letter-spacing:-.025em}h1,h2,h3{fo
 </header>
 
 
-<section id="ulavalssd" class="level2">
-<h2 class="anchored" data-anchor-id="ulavalssd">Données pédagogiques UlavalSSD</h2>
-<div class="resource-summary">
-<p>Pour quoi ? Préparer des exemples et des activités d’exploration avec R.</p>
-<p>Contenu documenté : notamment <code>MeteoQuebec</code> et <code>listecondamnation</code>.</p>
-<p>Prérequis : R ; une connexion Internet pour l’installation initiale depuis GitHub.</p>
-</div>
-<p><a href="https://github.com/AurelienNicosiaULaval/UlavalSSD">Ouvrir le dépôt UlavalSSD</a></p>
-<section id="installer-le-package" class="level3">
-<h3 class="anchored" data-anchor-id="installer-le-package">Installer le package</h3>
-<p>Dans la console R, une première fois :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;remotes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;AurelienNicosiaULaval/UlavalSSD&quot;</span>, <span class="at">upgrade =</span> <span class="st">&quot;never&quot;</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="examiner-un-jeu-de-données" class="level3">
-<h3 class="anchored" data-anchor-id="examiner-un-jeu-de-données">Examiner un jeu de données</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Charger le package</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(UlavalSSD)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Consulter la documentation et la structure avant de choisir une analyse</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;MeteoQuebec&quot;</span>, <span class="at">package =</span> <span class="st">&quot;UlavalSSD&quot;</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>meteo <span class="ot">&lt;-</span> UlavalSSD<span class="sc">::</span>MeteoQuebec</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(meteo)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(meteo)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(meteo)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(meteo)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Compter les valeurs manquantes dans chaque variable</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>valeurs_manquantes <span class="ot">&lt;-</span> <span class="fu">colSums</span>(<span class="fu">is.na</span>(meteo))</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>valeurs_manquantes</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pour <code>listecondamnation</code>, consultez de la même manière son aide avant d’utiliser les montants, les dates ou les catégories. Documentez toute conversion de type ou exclusion de lignes.</p>
-<p><a href="./parcours.html#donnees">Choisir des données pour une activité</a>.</p>
-</section>
-</section>
-<section id="github" class="level2">
-<h2 class="anchored" data-anchor-id="github">GitHub pour les supports et les projets</h2>
-<p>GitHub permet de conserver l’historique des fichiers et de travailler à plusieurs. Dans un cours, commencez par un usage délimité : distribuer un support, suivre un projet ou proposer une modification.</p>
-<section id="relier-rstudio-à-github" class="level3">
-<h3 class="anchored" data-anchor-id="relier-rstudio-à-github">Relier RStudio à GitHub</h3>
+<p>Il n’est pas nécessaire de tout adopter. Choisissez un besoin, ouvrez la ressource correspondante et préparez une première utilisation dans votre cours.</p>
+<section id="support" class="level2">
+<h2 class="anchored" data-anchor-id="support">Préparer un support de cours</h2>
+<p>Objectif : fournir un document dans lequel la question, le raisonnement et les résultats sont faciles à suivre.</p>
 <ol type="1">
-<li>Installez Git et créez votre compte GitHub.</li>
-<li>Configurez votre nom et votre courriel Git avec vos propres informations.</li>
-<li>Suivez le <a href="https://docs.github.com/fr/authentication/connecting-to-github-with-ssh">guide GitHub de connexion par SSH</a>. Vérifiez vos clés existantes avant d’en générer une.</li>
-<li>Dans RStudio : « File », « New Project », « Version Control », « Git ». Collez l’URL SSH du dépôt choisi.</li>
+<li>Choisissez le <a href="./templates/quarto.html#rapport">rapport étudiant</a> pour un travail écrit, ou les <a href="./templates/quarto.html#diapositives">diapositives</a> pour une séance.</li>
+<li>Remplacez d’abord le titre, les consignes et les exemples. Gardez une structure courte : question, données, méthode, résultats, limites.</li>
+<li>Produisez le document avec Quarto et ouvrez le fichier obtenu comme le ferait un étudiant.</li>
+<li>Vérifiez que les graphiques restent lisibles et que les consignes disent ce qui est attendu au-delà du code.</li>
 </ol>
-<p>Exemple pour récupérer les sources de cette vitrine, dans le terminal :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:AurelienNicosiaULaval/site_ressources_SSD.git</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>À préparer : R et Quarto pour les exemples exécutant du R, et un éditeur comme RStudio. <a href="./templates/index.html">Accéder aux modèles</a>.</p>
 </section>
-<section id="travailler-seul-ou-en-équipe" class="level3">
-<h3 class="anchored" data-anchor-id="travailler-seul-ou-en-équipe">Travailler seul ou en équipe</h3>
-<ul>
-<li>Avant de commencer, récupérez les changements avec « Pull ».</li>
-<li>Modifiez les fichiers, puis sélectionnez ceux à enregistrer dans l’onglet Git de RStudio.</li>
-<li>Faites un « Commit » avec un message décrivant le changement.</li>
-<li>Faites un « Push » pour envoyer ce commit.</li>
-<li>Pour une modification à relire en équipe, utilisez une branche et une demande de fusion (« pull request »).</li>
-</ul>
-<p>Pour un cours, une organisation peut regrouper des dépôts et des équipes. Choisissez la visibilité et les accès en fonction des travaux concernés : un dépôt public est consultable par tous. <a href="https://docs.github.com/fr/organizations/collaborating-with-groups-in-your-organization/about-organizations">Documentation GitHub sur les organisations</a>.</p>
-</section>
-</section>
-<section id="ghclass" class="level2">
-<h2 class="anchored" data-anchor-id="ghclass">Administrer un cours avec ghclass</h2>
-<p>Le package <code>ghclass</code> automatise des opérations sur les organisations, les équipes et les dépôts GitHub. Cette étape devient utile lorsque le nombre de dépôts à gérer le justifie.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ghclass&quot;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ghclass)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouvrir l&#39;aide du package avant de configurer les accès</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">&quot;ghclass&quot;</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>L’accès à l’API utilise un jeton GitHub. La connexion SSH sert aux opérations Git ; elle ne remplace pas ce jeton. Configurez-le selon la documentation du package, sans l’inscrire dans un script partagé.</p>
+<section id="activite" class="level2">
+<h2 class="anchored" data-anchor-id="activite">Faire travailler les étudiants sur une activité</h2>
+<p>Objectif : faire expliciter un raisonnement statistique, puis le confronter aux données.</p>
+<div class="resource-summary">
+<p>Une trame à adapter</p>
+<p><a href="downloads/fiche-activite.qmd" download="fiche-activite.qmd">Télécharger la fiche de préparation (.qmd)</a></p>
+<p>Ce canevas contient les consignes à compléter, un déroulement et des questions de retour. Il se rend en HTML avec Quarto, sans package R.</p>
+</div>
+<ol type="1">
+<li>Formulez une question à laquelle les étudiants peuvent proposer une réponse avant de calculer.</li>
+<li>Choisissez les <a href="./outils.html#ulavalssd">données</a> et limitez le travail à une décision : choisir un graphique, comparer deux distributions ou justifier un traitement des valeurs manquantes.</li>
+<li>Demandez une première tentative individuelle, puis une comparaison en binôme.</li>
+<li>Terminez par une phrase d’interprétation et une limite de l’analyse.</li>
+</ol>
+<p>Pour guider la pratique du code, le <a href="./tutoriels.html#etude-de-cas">canevas interactif</a> propose une autre forme de travail. Pour lancer une discussion sur un graphique, partez de l’<a href="./tutoriels.html#ggplot2">exemple ggplot2</a>.</p>
+<section id="exemple-de-consigne-à-adapter" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-consigne-à-adapter">Exemple de consigne à adapter</h3>
+<p>« Avant de tracer le graphique, quelle différence vous attendez-vous à observer ? Construisez une représentation qui permet de vérifier votre idée. Expliquez ensuite ce que le graphique permet de conclure et ce qu’il ne permet pas de conclure. »</p>
 <details>
 <summary>
-Retrouver les opérations courantes
+Pistes pour le retour en groupe
 </summary>
-<p>Consultez la signature et les permissions requises avant toute modification :</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Besoin</th>
-<th style="text-align: left;">Fonction documentée</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Vérifier l’identité connectée</td>
-<td style="text-align: left;"><code>github_whoami()</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Créer un dépôt</td>
-<td style="text-align: left;"><code>repo_create()</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cloner un dépôt localement</td>
-<td style="text-align: left;"><code>local_repo_clone()</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Inviter dans une organisation</td>
-<td style="text-align: left;"><code>org_invite()</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ajouter une personne à un dépôt</td>
-<td style="text-align: left;"><code>repo_add_user()</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Créer une équipe</td>
-<td style="text-align: left;"><code>team_create()</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Inviter dans une équipe</td>
-<td style="text-align: left;"><code>team_invite()</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Consulter l’activité</td>
-<td style="text-align: left;"><code>repo_commits()</code>, <code>repo_issues()</code></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://rundel.github.io/ghclass/reference/index.html">Index officiel des fonctions ghclass</a>.</p>
+<ul>
+<li>Comparer les choix d’axes, d’échelles et de regroupement.</li>
+<li>Distinguer une observation descriptive d’une explication causale.</li>
+<li>Demander quelle information supplémentaire changerait l’interprétation.</li>
+<li>Reprendre une difficulté observée dans les réponses pour préparer la séance suivante.</li>
+</ul>
 </details>
 </section>
-<section id="sources-et-aide" class="level2">
-<h2 class="anchored" data-anchor-id="sources-et-aide">Sources et aide</h2>
+</section>
+<section id="donnees" class="level2">
+<h2 class="anchored" data-anchor-id="donnees">Choisir des données pour un cours</h2>
+<p>Objectif : partir d’une question compréhensible et d’un jeu de données dont on connaît la structure.</p>
+<ol type="1">
+<li>Consultez les jeux de données du <a href="./outils.html#ulavalssd">package UlavalSSD</a>.</li>
+<li>Lisez leur documentation, repérez l’unité d’observation et examinez les variables.</li>
+<li>Décidez ce que vous donnez aux étudiants : données brutes, extrait documenté ou version préparée.</li>
+<li>Précisez les transformations réalisées et conservez la source des données.</li>
+</ol>
+<p>Pistes de travail : données météo pour explorer une série de mesures et les valeurs manquantes ; condamnations alimentaires pour discuter du nettoyage et de l’unité d’observation. Ces pistes sont des propositions d’activités, à ajuster après exploration du jeu choisi.</p>
+<p><a href="./outils.html#ulavalssd">Ouvrir la fiche des données et le code de démarrage</a>.</p>
+</section>
+<section id="diffusion" class="level2">
+<h2 class="anchored" data-anchor-id="diffusion">Mettre les ressources d’un cours à disposition</h2>
+<p>Objectif : donner aux étudiants un endroit où trouver les consignes, les supports et les activités.</p>
+<ol type="1">
+<li>Téléchargez le <a href="./templates/site-web.html">gabarit de site</a>.</li>
+<li>Préparez trois entrées simples : commencer, travailler cette semaine, retrouver une ressource.</li>
+<li>Rendez le site et vérifiez les liens, les fichiers à télécharger et l’affichage sur téléphone.</li>
+<li>Publiez les supports destinés à être publics. Gardez les copies, les résultats individuels et les corrigés réservés dans l’environnement privé du cours.</li>
+</ol>
+<p><a href="./templates/site-web.html">Créer le site</a> · <a href="./outils.html#github">Comprendre GitHub pour un cours</a></p>
+</section>
+<section id="verifier" class="level2">
+<h2 class="anchored" data-anchor-id="verifier">Avant de partager</h2>
 <ul>
-<li><a href="https://github.com/AurelienNicosiaULaval/UlavalSSD">UlavalSSD : description et sources du package, Aurélien Nicosia</a></li>
-<li><a href="https://rundel.github.io/ghclass/">ghclass : documentation, Colin Rundel et Mine Çetinkaya-Rundel</a></li>
-<li><a href="https://happygitwithr.com/">Happy Git and GitHub for the useR, Jenny Bryan et Jim Hester</a></li>
-<li><a href="mailto:aurelien.nicosia@mat.ulaval.ca">Contacter Aurélien Nicosia</a></li>
+<li>Le besoin pédagogique et les prérequis sont-ils explicites ?</li>
+<li>Le lien ouvre-t-il la bonne ressource avec un compte étudiant ?</li>
+<li>Les consignes demandent-elles une interprétation, et pas seulement une exécution ?</li>
+<li>La source des données et les conditions de réutilisation sont-elles indiquées ?</li>
+<li>Une solution de remplacement est-elle disponible si l’outil interactif ne répond pas ?</li>
 </ul>
-<p>Références consultées le 18 septembre 2026.</p>
 
 
 </section>

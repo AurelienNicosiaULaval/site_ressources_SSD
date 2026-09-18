@@ -1,0 +1,68 @@
+name: Verify and publish website
+
+on:
+  push:
+    branches: [main, 'amelioration/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.9.38'
+      - name: Render website
+        run: quarto render
+      - name: Check links, downloads and JavaScript
+        run: |
+          python3 scripts/check_site.py
+          node --check assets/catalogue.js
+          git diff --check -- . ':!docs'
+      - name: Render the downloadable materials in isolation
+        run: |
+          python3 -m zipfile -e downloads/site-cours-quarto.zip /tmp/ssd-downloads
+          cp downloads/fiche-activite.qmd /tmp/ssd-downloads/fiche-activite.qmd
+          quarto render /tmp/ssd-downloads/site-cours-quarto
+          quarto render /tmp/ssd-downloads/fiche-activite.qmd
+      - name: Save preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: docs
+      - name: Prepare Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
