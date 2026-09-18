@@ -1,44 +1,61 @@
 project:
   type: website
   output-dir: docs
-
+  render:
+    - index.qmd
+    - ressources.qmd
+    - parcours.qmd
+    - outils.qmd
+    - tutoriels.qmd
+    - about.qmd
+    - templates/index.qmd
+    - templates/quarto.qmd
+    - templates/site-web.qmd
+  pre-render: python3 scripts/prepare.py
+  resources:
+    - downloads/
+    - assets/catalogue.js
+lang: fr
 website:
-  title: ""  # On cache le titre textuel
+  title: "Ressources SSD"
+  description: "Des ressources à adapter pour enseigner la statistique et la science des données au supérieur."
+  site-url: https://aureliennicosiaulaval.github.io/site_ressources_SSD/
   navbar:
-    logo: img/logo-ulaval.png
-    tools:
-    - icon: github
-      href: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
-      aria-label: GitHub
-    - toggle-appearance: true
-    left:
-    - href: index.qmd
-      text: Accueil
-    - text: Modèles
-      menu:
-        - href: templates/index.qmd
-          text: Vue d’ensemble
-        - href: templates/quarto.qmd
-          text: Gabarits Quarto
-        - href: templates/site-web.qmd
-          text: Modèle de site web
-
-    - href: outils.qmd
-      text: Outils
-    - href: tutoriels.qmd
-      text: Tutoriels
-    - href: about.qmd
-      text: À propos
-  back-to-top-navigation: true
-  reader-mode: true
+    title: "Ressources SSD"
+    background: light
+    right:
+      - href: index.qmd
+        text: Accueil
+      - href: ressources.qmd
+        text: Catalogue
+      - href: parcours.qmd
+        text: Parcours
+      - href: about.qmd
+        text: À propos
+  search:
+    location: navbar
+    type: overlay
+  page-footer:
+    left: "Une initiative de partage en enseignement · Aurélien Nicosia"
+    right:
+      - href: about.qmd#contribuer
+        text: Contribuer
+      - href: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
+        text: GitHub
   repo-url: https://github.com/AurelienNicosiaULaval/site_ressources_SSD
-  repo-actions: [edit, source, issue]
-
-
+  back-to-top-navigation: true
 format:
   html:
     theme: cosmo
     css: styles.css
+    embed-resources: true
     toc: true
-
-editor: visual
+    toc-title: "Dans cette fiche"
+    code-copy: true
+    anchor-sections: true
+    smooth-scroll: false
+    link-external-newwindow: false
+    include-before-body: _includes/skip.html
+execute:
+  eval: false
+editor: source

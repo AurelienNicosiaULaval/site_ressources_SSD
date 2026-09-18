@@ -1,12 +1,18 @@
 ---
-title: "À propos"
+title: "À propos du cours"
+format:
+  html:
+    embed-resources: true
 ---
 
-# À propos
+## Présentation
 
-Cette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.
+Ajoutez le titre, le responsable du cours et les objectifs d’apprentissage.
 
-```{r}
-# Exemples de code R
-summary(cars)
-```
+## Organisation
+
+Précisez où trouver le calendrier, les modalités d’évaluation et les consignes.
+
+## Contact
+
+Indiquez votre canal de contact professionnel.

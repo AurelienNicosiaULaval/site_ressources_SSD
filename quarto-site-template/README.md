@@ -1,27 +1,14 @@
-# Gabarit de site web Quarto
+# Gabarit de site de cours
 
-Ce dossier contient un **template minimal** pour créer un site web Quarto inspiré du projet *Ressources SSD*.
+Les fichiers sources du gabarit sont dans `skeleton/`. Copiez le contenu de ce dossier dans un nouveau dossier de travail, ou utilisez l’archive `downloads/site-cours-quarto.zip` proposée sur le site.
 
-## Utilisation rapide
+Le dossier copié contient trois pages, une configuration Quarto et une feuille de style. Aucun package R ni logo institutionnel n’est nécessaire.
 
-1. Installez [Quarto](https://quarto.org).
-2. Dans un terminal, exécutez :
-   ```bash
-   quarto use template <chemin-vers-ce-repertoire>
-   ```
-3. Personnalisez les fichiers `index.qmd`, `about.qmd`, `page1.qmd` et `styles.css` selon vos besoins.
-4. Lancez l'aperçu du site :
-   ```bash
-   quarto preview
-   ```
-5. Une fois satisfait·e, publiez sur GitHub Pages ou toute autre plateforme.
+Depuis ce dossier :
 
-## Contenu du template
+```bash
+quarto preview
+quarto render
+```
 
-- `template.yaml` : métadonnées du modèle.
-- `skeleton/` : fichiers du projet à copier lors de la création.
-  - `_quarto.yml` définit la configuration du site.
-  - `index.qmd` page d'accueil.
-  - `about.qmd` page d'exemple.
-  - `page1.qmd` seconde page pour illustrer la navigation.
-  - `styles.css` feuille de style inspirée du site d'origine (sans logo).
+Le site produit se trouve dans `docs/`. Modifier les titres, les consignes et les liens avant diffusion.

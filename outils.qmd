@@ -1,275 +1,123 @@
 ---
-title: "Outils pour l'enseignement de la statistique et science des données"
+title: "Des outils au service de votre cours."
+subtitle: "Explorer des données, organiser les fichiers et partager les supports."
 format:
   html:
-    toc: true
-    toc-title: "Contenu de la page"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
 ---
 
-Cette section rassemble divers outils conçus ou présentés pour soutenir l’enseignement de la statistique et de la science des données, en particulier dans un contexte universitaire. Vous y trouverez des packages R développés localement, des ressources utiles ainsi que des suggestions pour intégrer GitHub efficacement dans vos cours.
+## Données pédagogiques UlavalSSD {#ulavalssd}
 
----
+::: {.resource-summary}
+Pour quoi ? Préparer des exemples et des activités d’exploration avec R.
 
-# 📦 Package `UlavalSSD`
+Contenu documenté : notamment `MeteoQuebec` et `listecondamnation`.
 
-**Dépôt GitHub** : [AurelienNicosiaULaval/UlavalSSD](https://github.com/AurelienNicosiaULaval/UlavalSSD)
+Prérequis : R ; une connexion Internet pour l’installation initiale depuis GitHub.
+:::
 
-Ce package a été conçu pour :
+[Ouvrir le dépôt UlavalSSD](https://github.com/AurelienNicosiaULaval/UlavalSSD)
 
-- Rassembler des jeux de données pédagogiques utilisés à l’Université Laval;
-- Proposer des fonctions R utiles pour les enseignants;
-- Faciliter l’adoption de bonnes pratiques de reproduction en enseignement avec R et Quarto.
+### Installer le package
 
-## 🚀 Installation
+Dans la console R, une première fois :
 
 ```r
-# installation depuis GitHub
-remotes::install_github("AurelienNicosiaULaval/UlavalSSD")
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+remotes::install_github("AurelienNicosiaULaval/UlavalSSD", upgrade = "never")
 ```
 
----
+### Examiner un jeu de données
 
-# Github
+```r
+# Charger le package
+library(UlavalSSD)
 
-### Qu'est-ce que GitHub ?
+# Consulter la documentation et la structure avant de choisir une analyse
+help("MeteoQuebec", package = "UlavalSSD")
+meteo <- UlavalSSD::MeteoQuebec
+dim(meteo)
+names(meteo)
+head(meteo)
+summary(meteo)
 
-GitHub est une plateforme de gestion de versions et de collaboration basée sur Git, permettant aux développeurs et aux équipes de travailler ensemble sur des projets de code source. Elle offre des fonctionnalités telles que le suivi des modifications, la gestion des problèmes (issues), les demandes de tirage (pull requests) et l'intégration continue.
-
-GitHub est largement utilisé dans le développement logiciel, mais il est également très utile pour l'enseignement et la collaboration en science des données.
-
-### Pourquoi utiliser GitHub ?
-
-GitHub est un outil puissant pour :
-
-- Gérer le code source de vos projets R et R Markdown.
-
-- Collaborer avec d'autres personnes sur des projets de science des données.
-
-- Suivre les modifications apportées à vos scripts et documents.
-
-- Partager facilement vos travaux avec d'autres, que ce soit pour des projets de recherche, des cours ou des présentations.
-
-
-## 🔗 Connexion de RStudio à GitHub
-
-### 1. Créer un compte GitHub
-
--   Aller sur <https://github.com/>
--   Configurer votre nom complet et votre courriel
-
-### 2. Configurer Git dans RStudio
-
-``` r
-usethis::use_git_config(user.name = "Ton Nom", user.email = "ton.email@ulaval.ca")
+# Compter les valeurs manquantes dans chaque variable
+valeurs_manquantes <- colSums(is.na(meteo))
+valeurs_manquantes
 ```
 
-### 3. Générer une clé SSH
+Pour `listecondamnation`, consultez de la même manière son aide avant d’utiliser les montants, les dates ou les catégories. Documentez toute conversion de type ou exclusion de lignes.
 
-Dans l'onglet **Terminal** de RStudio :
+[Choisir des données pour une activité](parcours.qmd#donnees).
 
-``` bash
-ssh-keygen -t ed25519 -C "ton.email@ulaval.ca"
+## GitHub pour les supports et les projets {#github}
+
+GitHub permet de conserver l’historique des fichiers et de travailler à plusieurs. Dans un cours, commencez par un usage délimité : distribuer un support, suivre un projet ou proposer une modification.
+
+### Relier RStudio à GitHub
+
+1. Installez Git et créez votre compte GitHub.
+2. Configurez votre nom et votre courriel Git avec vos propres informations.
+3. Suivez le [guide GitHub de connexion par SSH](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh). Vérifiez vos clés existantes avant d’en générer une.
+4. Dans RStudio : « File », « New Project », « Version Control », « Git ». Collez l’URL SSH du dépôt choisi.
+
+Exemple pour récupérer les sources de cette vitrine, dans le terminal :
+
+```bash
+git clone git@github.com:AurelienNicosiaULaval/site_ressources_SSD.git
 ```
 
-Appuyer sur Entrée aux questions. La clé est stockée dans `~/.ssh/`
+### Travailler seul ou en équipe
 
-### 4. Ajouter la clé publique à GitHub
+- Avant de commencer, récupérez les changements avec « Pull ».
+- Modifiez les fichiers, puis sélectionnez ceux à enregistrer dans l’onglet Git de RStudio.
+- Faites un « Commit » avec un message décrivant le changement.
+- Faites un « Push » pour envoyer ce commit.
+- Pour une modification à relire en équipe, utilisez une branche et une demande de fusion (« pull request »).
 
-``` bash
-cat ~/.ssh/id_ed25519.pub
-```
+Pour un cours, une organisation peut regrouper des dépôts et des équipes. Choisissez la visibilité et les accès en fonction des travaux concernés : un dépôt public est consultable par tous. [Documentation GitHub sur les organisations](https://docs.github.com/fr/organizations/collaborating-with-groups-in-your-organization/about-organizations).
 
-Puis : GitHub \> ⚙️ Settings \> **SSH and GPG keys** \> **New SSH key** \> coller la clé
+## Administrer un cours avec ghclass {#ghclass}
 
-### 5. Cloner un projet depuis GitHub (SSH)
-
--   Copier l'URL SSH depuis GitHub (`git@github.com:...`)
--   Dans RStudio : `File > New Project > Version Control > Git`
-
-### 6. Tester la connexion
-
-Dans le terminal :
-
-``` bash
-ssh -T git@github.com
-```
-
-## 👤 Travailler individuellement avec Git
-
-### 1. Sauvegarder ses modifications
-
--   Faire des changements dans les fichiers `.R`, `.Rmd`, `.qmd`, etc.
--   Dans l'onglet **Git** :
-    -   Cocher les fichiers modifiés
-    -   Ajouter un message de commit
-    -   Cliquer sur **Commit**
-
-### 2. Envoyer sur GitHub : `Push`
-
--   Après un commit, cliquer sur **Push** pour synchroniser avec GitHub
-
-### 3. Récupérer les changements : `Pull`
-
--   Cliquer sur **Pull** pour récupérer les dernières modifications (surtout si on travaille à plusieurs)
-
-## 🤝 Bonnes pratiques pour le travail collaboratif
-
-### 1. Créer une organisation GitHub (facultatif)
-
--   Permet de regrouper les projets de cours ou de recherche
--   Gérer les autorisations par équipe
-
-### 2. Créer un dépôt partagé
-
--   Inclure un `README.md`, `.gitignore` (R), éventuellement une licence
--   Ajouter les collaborateur·rices dans les paramètres du dépôt
-
-### 3. Cloner le dépôt avec SSH
-
-``` r
-usethis::create_from_github("org/projet", protocol = "ssh")
-```
-
-### 4. Créer une branche pour travailler
-
-``` r
-usethis::pr_init("nom-branche")
-```
-
-### 5. Travailler dans la branche
-
--   Modifier, sauvegarder, **commit**, puis **push**
-
-### 6. Créer une Pull Request (PR)
-
--   Dans GitHub : Pull requests \> New pull request
--   Comparer la branche à `main`, proposer les changements
-
-### 7. Revue de code entre coéquipiers
-
--   Laisser des commentaires
--   Approuver ou suggérer des modifications
-
-### 8. Fusionner la PR dans `main`
-
--   Cliquer sur **Merge pull request**
--   Supprimer la branche si elle n’est plus utile
-
-### 9. Mettre à jour sa copie locale
-
-``` bash
-git pull origin main
-```
-
-Ou via RStudio : Git \> Pull
-
-
-## 🐙 Utiliser GitHub en classe
-
-### Pourquoi utiliser GitHub avec vos étudiant·es ?
-
-- Pour initier vos étudiant·es aux bonnes pratiques de collaboration en science des données.
-- Pour structurer le travail d’équipe dans un environnement réel.
-- Pour suivre facilement les livrables, le code et les contributions de chacun.
-
-### Créer une organisation GitHub pour votre cours
-
-Créer une organisation permet de centraliser et sécuriser les dépôts étudiants.
-
-**Étapes** :
-
-1. Connectez-vous à GitHub.
-2. Accédez à [https://github.com/organizations/new](https://github.com/organizations/new)
-3. Choisissez un nom d’organisation (ex : `Cours-STT-XXXX`).
-4. Sélectionnez un plan gratuit pour les projets open source ou éducatifs.
-5. Invitez des collaborateurs (autres enseignants ou étudiant·es).
-
-🔗 Documentation officielle : [Créer et gérer des organisations GitHub](https://docs.github.com/fr/organizations/collaborating-with-groups-in-your-organization/about-organizations)
-
-💡 Vous pouvez aussi demander l’accès au programme GitHub Education : [education.github.com](https://education.github.com/)
-
----
-
-## 📚 Mini cours : la librairie `ghclass`
-
-La librairie `ghclass` en R permet de gérer efficacement une organisation GitHub, en particulier dans un contexte pédagogique.
-
-### 🔧 Installation
+Le package `ghclass` automatise des opérations sur les organisations, les équipes et les dépôts GitHub. Cette étape devient utile lorsque le nombre de dépôts à gérer le justifie.
 
 ```r
 install.packages("ghclass")
+library(ghclass)
+
+# Ouvrir l'aide du package avant de configurer les accès
+help(package = "ghclass")
 ```
 
-### 🔐 Authentification
+L’accès à l’API utilise un jeton GitHub. La connexion SSH sert aux opérations Git ; elle ne remplace pas ce jeton. Configurez-le selon la documentation du package, sans l’inscrire dans un script partagé.
 
-Il est recommandé d’utiliser une clé SSH ou un token GitHub avec les permissions appropriées. Pour cela :
+<details>
+<summary>Retrouver les opérations courantes</summary>
 
-- [Créer un token GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+Consultez la signature et les permissions requises avant toute modification :
 
-- L’authentifier avec `ghclass::gh_auth()` ou configurer votre clé SSH avec `usethis::use_git_config()` et `usethis::create_github_token()`
+| Besoin | Fonction documentée |
+|:--|:--|
+| Vérifier l’identité connectée | `github_whoami()` |
+| Créer un dépôt | `repo_create()` |
+| Cloner un dépôt localement | `local_repo_clone()` |
+| Inviter dans une organisation | `org_invite()` |
+| Ajouter une personne à un dépôt | `repo_add_user()` |
+| Créer une équipe | `team_create()` |
+| Inviter dans une équipe | `team_invite()` |
+| Consulter l’activité | `repo_commits()`, `repo_issues()` |
 
-### 📂 Fonctions essentielles de `ghclass`
+[Index officiel des fonctions ghclass](https://rundel.github.io/ghclass/reference/index.html).
 
-#### 🔹 Créer des dépôts pour les étudiant·es
+</details>
 
-```r
-ghclass::org_create_repo(
-  org = "Cours-STT-XXXX",
-  repo = "devoir1",
-  private = TRUE
-)
-```
+## Sources et aide
 
-#### 🔹 Cloner un dépôt dans l’organisation
+- [UlavalSSD : description et sources du package, Aurélien Nicosia](https://github.com/AurelienNicosiaULaval/UlavalSSD)
+- [ghclass : documentation, Colin Rundel et Mine Çetinkaya-Rundel](https://rundel.github.io/ghclass/)
+- [Happy Git and GitHub for the useR, Jenny Bryan et Jim Hester](https://happygitwithr.com/)
+- [Contacter Aurélien Nicosia](mailto:aurelien.nicosia@mat.ulaval.ca)
 
-```r
-ghclass::repo_clone("Cours-STT-XXXX/devoir1")
-```
-
-#### 🔹 Ajouter des membres
-
-```r
-ghclass::org_invite("Cours-STT-XXXX", users = c("etudiant1", "etudiant2"))
-```
-
-#### 🔹 Ajouter des collaborateurs à un dépôt
-
-```r
-ghclass::repo_add_collaborator("Cours-STT-XXXX/devoir1", user = "etudiant1")
-```
-
-#### 🔹 Gérer des équipes
-
-```r
-ghclass::org_create_team("cours-stt-XXXX", team = "groupe-A")
-ghclass::org_add_team_member("cours-stt-XXXX", team = "groupe-A", user = "etudiant1")
-```
-
-#### 🔹 Suivre l'activité des étudiant·es
-
-```r
-ghclass::repo_commits("Cours-STT-XXXX/devoir1")
-ghclass::repo_issues("Cours-STT-XXXX/devoir1")
-```
-
-### 📘 Ressources supplémentaires
-
-- [Documentation officielle ghclass](https://github.com/rundel/ghclass)
-- [Guide complet pour l’enseignement avec GitHub](https://happygitwithr.com/)
-- [Exemple d’organisation pédagogique avec RStudio](https://education.github.com/toolbox)
-
----
-
-# 👥 Besoin d’aide ou d’accompagnement ?
-
-Vous êtes enseignant·e et souhaitez intégrer GitHub dans votre cours ou utiliser les outils mentionnés ici ? N’hésitez pas à me contacter — je peux vous accompagner dans la mise en place ou proposer une formation rapide adaptée à vos besoins.
-
----
-
-# 🤝 Contribuer
-
-Vous souhaitez proposer un nouveau jeu de données ou une fonction utile ?
-N'hésitez pas à proposer une *issue* ou un *pull request* sur le dépôt GitHub !
+Références consultées le 18 septembre 2026.

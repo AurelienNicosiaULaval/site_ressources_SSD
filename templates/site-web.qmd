@@ -1,73 +1,71 @@
 ---
-title: "Gabarit de site web Quarto"
+title: "Votre site de cours, à partir d’un gabarit."
+subtitle: "Une base courte pour rassembler les consignes, les supports et les ressources."
 format:
   html:
-    toc: true
-    toc-title: "Contenu de la page"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
 ---
 
-# 🔸 Créer un site web Quarto
+::: {.resource-summary}
+Pour quoi ? Créer une porte d’entrée pour un cours ou un projet pédagogique.
 
-Ce modèle propose une base complète pour créer un site web Quarto. Il inclut les fichiers essentiels, un style aux couleurs de l’Université Laval, une navigation cohérente et un support du mode sombre.
+Prérequis : Quarto. Le gabarit fourni ne nécessite pas R.
 
-Le gabarit se trouve dans le dossier `quarto-site-template` du dépôt, et peut être utilisé avec :
+Livrable : un site HTML avec trois pages et une navigation.
+:::
 
-## 🔧 Installation du gabarit
+## Télécharger et ouvrir {#telecharger}
 
-```bash
-quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template
-```
+[Télécharger le gabarit de site (.zip)](../downloads/site-cours-quarto.zip){.ssd-button download="site-cours-quarto.zip"}
 
-Cette commande copie les fichiers de base dans un nouveau dossier local.
+Décompressez l’archive. Ouvrez le dossier `site-cours-quarto` dans votre éditeur. Les fichiers proviennent du dossier `quarto-site-template/skeleton` de ce dépôt.
 
-### 📂 Contenu du gabarit
+## Personnaliser trois éléments
 
-| Fichier                      | Rôle                                                                 |
-|-----------------------------|----------------------------------------------------------------------|
-| `_quarto.yml`               | Configuration principale du site (titre, thème, barre de navigation) |
-| `index.qmd`                 | Page d’accueil                                                       |
-| `about.qmd`                 | Page "À propos" du site                                              |
-| `page1.qmd`                 | Page "page1" du menu (vous pouvez ajoutez plusieurs pages)                                              |
-| `styles.css`                | Styles personnalisés ULaval, incluant support du mode sombre         |
-| `img/logo-ulaval.png`       | Logo utilisé dans la barre de navigation                             |
-| `docs/`                     | Répertoire de sortie pour GitHub Pages (généré automatiquement)      |
+1. Dans `_quarto.yml`, remplacez le titre du site et les libellés du menu.
+2. Dans `index.qmd`, indiquez par où commencer et ce qui est attendu.
+3. Adaptez `page1.qmd` et `about.qmd` aux ressources et aux informations de votre cours.
 
-## 🔨 Développement local
+| Fichier | Rôle |
+|:--|:--|
+| `_quarto.yml` | Titre, navigation et options de rendu |
+| `index.qmd` | Point de départ des étudiants |
+| `page1.qmd` | Exemple de page de ressources |
+| `about.qmd` | Informations sur le cours |
+| `styles.css` | Mise en page |
+| `docs/` | Site généré après le rendu |
 
-- Modifiez les fichiers `.qmd` selon vos besoins (contenu, titres, sections).
-- Adaptez le thème et les couleurs via le fichier `styles.css`.
-- Pour générer le site :
+Le gabarit ne contient pas de logo institutionnel. Ajoutez uniquement les images que vous êtes autorisé à utiliser.
 
-```bash
-quarto render
-```
+## Prévisualiser et produire le site
 
-- Pour voir votre site avec rechargement automatique :
+Dans le terminal, depuis le dossier décompressé :
 
 ```bash
 quarto preview
 ```
 
-## 💾 Publication automatique sur GitHub Pages
+Pour produire toutes les pages :
 
-1. Poussez votre projet sur GitHub.
-2. Allez dans **Settings → Pages** de votre dépôt.
-3. Choisissez **Deploy from a branch**.
-4. Branche : `main` / Dossier : `/docs`
-5. Activez la publication.
+```bash
+quarto render
+```
 
-À chaque `git push`, GitHub Pages publiera la dernière version de votre site.
+Ouvrez ensuite `docs/index.html`. Testez les liens et la navigation sur téléphone.
 
----
+## Publier sur GitHub Pages
 
-## 🙋‍♀️ Besoin d’aide ?
+Pour une publication depuis la branche principale :
 
-Ce gabarit peut être adapté pour créer :
-- un site de cours (STT-XXXX)
-- un site de documentation de projet ou laboratoire
-- une vitrine pour présenter du matériel pédagogique
+1. Créez un dépôt GitHub et ajoutez les sources ainsi que le dossier `docs` généré.
+2. Dans « Settings », puis « Pages », choisissez « Deploy from a branch ».
+3. Sélectionnez la branche `main` et le dossier `/docs`.
+4. Après chaque modification, refaites `quarto render` et envoyez aussi les fichiers produits dans `docs`.
 
-N’hésitez pas à [ouvrir une *issue*](https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues) pour proposer des améliorations.
+Un envoi des seuls fichiers `.qmd` ne reconstruit pas le site dans ce mode. La compilation automatique nécessite un workflow distinct. Consultez la [documentation officielle de Quarto pour GitHub Pages](https://quarto.org/docs/publishing/github-pages.html).
+
+## Avant de donner le lien aux étudiants
+
+Vérifiez l’URL publiée dans un navigateur. Les supports publics peuvent être diffusés sur le site ; les remises, les notes individuelles et les corrigés réservés doivent rester dans un espace privé.
+
+[Revenir au parcours de diffusion](../parcours.qmd#diffusion).

@@ -1,52 +1,38 @@
 ---
-title: "À propos"
+title: "Partager ce qui peut servir en cours."
+subtitle: "Une initiative de ressources pédagogiques en statistique et science des données."
 format:
   html:
-    toc: true
-    toc-title: "Contenu de la page"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
 ---
 
-# 👋 À propos de ce site
+## À qui s’adresse ce site ?
 
-Ce site regroupe les ressources pédagogiques, outils et modèles développés pour soutenir l’enseignement de la **science des données et des statistiques** au **département de mathématiques et de statistique de l’Université Laval**.
+Aux enseignants du supérieur en statistique et science des données, ainsi qu’aux auxiliaires qui préparent des laboratoires et des activités. Les ressources réunies ici sont issues du contexte d’enseignement du département de mathématiques et de statistique de l’Université Laval.
 
-## 🎯 Objectifs
+L’objectif est de faciliter un premier pas concret : trouver un modèle, adapter une activité ou examiner des données pour un cours.
 
-- Centraliser les ressources pour les enseignant·es du département ;
-- Favoriser l’adoption de bonnes pratiques (reproductibilité, versionnage, documentation) ;
-- Faciliter le démarrage d’un nouveau cours, projet ou devoir avec des modèles et des jeux de données prêts à l’emploi.
+## Comment utiliser les ressources ?
 
-## 👨‍🏫 Pour qui ?
+Le [catalogue](ressources.qmd) rassemble les ressources par besoin. Les [parcours](parcours.qmd) proposent des étapes pour les intégrer à une séance ou à un support.
 
-Ce site s’adresse principalement :
+Chaque ressource peut avoir ses propres dépendances, conditions d’accès et conditions de réutilisation. Un dépôt public n’accorde pas à lui seul une licence de redistribution. Consultez les indications du dépôt source, notamment pour les données, images et éléments institutionnels.
 
-- aux chargé·es de cours et d’enseignement et professeur·es du DMS ;
+## Proposer une ressource ou signaler un problème {#contribuer}
 
-- aux auxiliaires d'enseignements (dépannages, laboratoires) ;
+[Ouvrir une demande sur GitHub](https://github.com/AurelienNicosiaULaval/site_ressources_SSD/issues/new){.ssd-button}
 
-- aux étudiant·es qui souhaitent réutiliser ou explorer les ressources proposées.
+Pour rendre votre proposition facile à examiner, indiquez :
 
-## 🧑‍💻 Développement
+- le besoin pédagogique et le public visé ;
+- le lien vers la ressource et, si possible, ses sources ;
+- les prérequis, les conditions d’accès et la licence indiquée ;
+- un exemple d’utilisation en cours.
 
-Le site a été conçu avec **[Quarto](https://quarto.org)** et les ressources sont hébergées sur **[GitHub](https://github.com/AurelienNicosiaULaval)**. 
+Pour un problème, précisez la page, le lien concerné et ce qui se passe. Vous pouvez aussi écrire directement à [Aurélien Nicosia](mailto:aurelien.nicosia@mat.ulaval.ca), sans compte GitHub.
 
-Les outils, templates et jeux de données sont développés dans une logique de **collaboration ouverte** et peuvent évoluer au fil du temps.
+## Développement et remerciements
 
-## 📬 Contact
+Le site est construit avec [Quarto](https://quarto.org/) et ses sources sont disponibles sur [GitHub](https://github.com/AurelienNicosiaULaval/site_ressources_SSD).
 
-Pour toute question, contribution ou demande, vous pouvez :
-
-- Écrire à Aurélien Nicosia (<aurelien.nicosia@mat.ulaval.ca>) ;
-
-- Ouvrir une *issue* sur l’un des dépôts GitHub ;
-
-- Proposer une nouvelle ressource via un *pull request*.
-
-Merci de faire vivre cette initiative !
-
-## Remerciements
-
-Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources.
+Merci à Anne-Sophie Charest, du département de mathématiques et de statistique, pour sa contribution à la création de ces ressources.

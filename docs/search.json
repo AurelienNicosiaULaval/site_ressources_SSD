@@ -1,240 +1,261 @@
 [
   {
-    "objectID": "outils.html",
-    "href": "outils.html",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
+    "objectID": "templates/site-web.html",
+    "href": "templates/site-web.html",
+    "title": "Votre site de cours, à partir d’un gabarit.",
     "section": "",
-    "text": "Cette section rassemble divers outils conçus ou présentés pour soutenir l’enseignement de la statistique et de la science des données, en particulier dans un contexte universitaire. Vous y trouverez des packages R développés localement, des ressources utiles ainsi que des suggestions pour intégrer GitHub efficacement dans vos cours."
+    "text": "Aller au contenu"
   },
   {
-    "objectID": "outils.html#installation",
-    "href": "outils.html#installation",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
-    "section": "🚀 Installation",
-    "text": "🚀 Installation\n# installation depuis GitHub\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\")"
+    "objectID": "templates/site-web.html#telecharger",
+    "href": "templates/site-web.html#telecharger",
+    "title": "Votre site de cours, à partir d’un gabarit.",
+    "section": "Télécharger et ouvrir",
+    "text": "Télécharger et ouvrir\nTélécharger le gabarit de site (.zip)\nDécompressez l’archive. Ouvrez le dossier site-cours-quarto dans votre éditeur. Les fichiers proviennent du dossier quarto-site-template/skeleton de ce dépôt."
   },
   {
-    "objectID": "outils.html#connexion-de-rstudio-à-github",
-    "href": "outils.html#connexion-de-rstudio-à-github",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
-    "section": "🔗 Connexion de RStudio à GitHub",
-    "text": "🔗 Connexion de RStudio à GitHub\n\n1. Créer un compte GitHub\n\nAller sur https://github.com/\nConfigurer votre nom complet et votre courriel\n\n\n\n2. Configurer Git dans RStudio\nusethis::use_git_config(user.name = \"Ton Nom\", user.email = \"ton.email@ulaval.ca\")\n\n\n3. Générer une clé SSH\nDans l’onglet Terminal de RStudio :\nssh-keygen -t ed25519 -C \"ton.email@ulaval.ca\"\nAppuyer sur Entrée aux questions. La clé est stockée dans ~/.ssh/\n\n\n4. Ajouter la clé publique à GitHub\ncat ~/.ssh/id_ed25519.pub\nPuis : GitHub &gt; ⚙️ Settings &gt; SSH and GPG keys &gt; New SSH key &gt; coller la clé\n\n\n5. Cloner un projet depuis GitHub (SSH)\n\nCopier l’URL SSH depuis GitHub (git@github.com:...)\nDans RStudio : File &gt; New Project &gt; Version Control &gt; Git\n\n\n\n6. Tester la connexion\nDans le terminal :\nssh -T git@github.com"
+    "objectID": "templates/site-web.html#personnaliser-trois-éléments",
+    "href": "templates/site-web.html#personnaliser-trois-éléments",
+    "title": "Votre site de cours, à partir d’un gabarit.",
+    "section": "Personnaliser trois éléments",
+    "text": "Personnaliser trois éléments\n\nDans _quarto.yml, remplacez le titre du site et les libellés du menu.\nDans index.qmd, indiquez par où commencer et ce qui est attendu.\nAdaptez page1.qmd et about.qmd aux ressources et aux informations de votre cours.\n\n\n\n\nFichier\nRôle\n\n\n\n\n_quarto.yml\nTitre, navigation et options de rendu\n\n\nindex.qmd\nPoint de départ des étudiants\n\n\npage1.qmd\nExemple de page de ressources\n\n\nabout.qmd\nInformations sur le cours\n\n\nstyles.css\nMise en page\n\n\ndocs/\nSite généré après le rendu\n\n\n\nLe gabarit ne contient pas de logo institutionnel. Ajoutez uniquement les images que vous êtes autorisé à utiliser."
   },
   {
-    "objectID": "outils.html#travailler-individuellement-avec-git",
-    "href": "outils.html#travailler-individuellement-avec-git",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
-    "section": "👤 Travailler individuellement avec Git",
-    "text": "👤 Travailler individuellement avec Git\n\n1. Sauvegarder ses modifications\n\nFaire des changements dans les fichiers .R, .Rmd, .qmd, etc.\nDans l’onglet Git :\n\nCocher les fichiers modifiés\nAjouter un message de commit\nCliquer sur Commit\n\n\n\n\n2. Envoyer sur GitHub : Push\n\nAprès un commit, cliquer sur Push pour synchroniser avec GitHub\n\n\n\n3. Récupérer les changements : Pull\n\nCliquer sur Pull pour récupérer les dernières modifications (surtout si on travaille à plusieurs)"
+    "objectID": "templates/site-web.html#prévisualiser-et-produire-le-site",
+    "href": "templates/site-web.html#prévisualiser-et-produire-le-site",
+    "title": "Votre site de cours, à partir d’un gabarit.",
+    "section": "Prévisualiser et produire le site",
+    "text": "Prévisualiser et produire le site\nDans le terminal, depuis le dossier décompressé :\nquarto preview\nPour produire toutes les pages :\nquarto render\nOuvrez ensuite docs/index.html. Testez les liens et la navigation sur téléphone."
   },
   {
-    "objectID": "outils.html#bonnes-pratiques-pour-le-travail-collaboratif",
-    "href": "outils.html#bonnes-pratiques-pour-le-travail-collaboratif",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
-    "section": "🤝 Bonnes pratiques pour le travail collaboratif",
-    "text": "🤝 Bonnes pratiques pour le travail collaboratif\n\n1. Créer une organisation GitHub (facultatif)\n\nPermet de regrouper les projets de cours ou de recherche\nGérer les autorisations par équipe\n\n\n\n2. Créer un dépôt partagé\n\nInclure un README.md, .gitignore (R), éventuellement une licence\nAjouter les collaborateur·rices dans les paramètres du dépôt\n\n\n\n3. Cloner le dépôt avec SSH\nusethis::create_from_github(\"org/projet\", protocol = \"ssh\")\n\n\n4. Créer une branche pour travailler\nusethis::pr_init(\"nom-branche\")\n\n\n5. Travailler dans la branche\n\nModifier, sauvegarder, commit, puis push\n\n\n\n6. Créer une Pull Request (PR)\n\nDans GitHub : Pull requests &gt; New pull request\nComparer la branche à main, proposer les changements\n\n\n\n7. Revue de code entre coéquipiers\n\nLaisser des commentaires\nApprouver ou suggérer des modifications\n\n\n\n8. Fusionner la PR dans main\n\nCliquer sur Merge pull request\nSupprimer la branche si elle n’est plus utile\n\n\n\n9. Mettre à jour sa copie locale\ngit pull origin main\nOu via RStudio : Git &gt; Pull"
+    "objectID": "templates/site-web.html#publier-sur-github-pages",
+    "href": "templates/site-web.html#publier-sur-github-pages",
+    "title": "Votre site de cours, à partir d’un gabarit.",
+    "section": "Publier sur GitHub Pages",
+    "text": "Publier sur GitHub Pages\nPour une publication depuis la branche principale :\n\nCréez un dépôt GitHub et ajoutez les sources ainsi que le dossier docs généré.\nDans « Settings », puis « Pages », choisissez « Deploy from a branch ».\nSélectionnez la branche main et le dossier /docs.\nAprès chaque modification, refaites quarto render et envoyez aussi les fichiers produits dans docs.\n\nUn envoi des seuls fichiers .qmd ne reconstruit pas le site dans ce mode. La compilation automatique nécessite un workflow distinct. Consultez la documentation officielle de Quarto pour GitHub Pages."
   },
   {
-    "objectID": "outils.html#utiliser-github-en-classe",
-    "href": "outils.html#utiliser-github-en-classe",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
-    "section": "🐙 Utiliser GitHub en classe",
-    "text": "🐙 Utiliser GitHub en classe\n\nPourquoi utiliser GitHub avec vos étudiant·es ?\n\nPour initier vos étudiant·es aux bonnes pratiques de collaboration en science des données.\nPour structurer le travail d’équipe dans un environnement réel.\nPour suivre facilement les livrables, le code et les contributions de chacun.\n\n\n\nCréer une organisation GitHub pour votre cours\nCréer une organisation permet de centraliser et sécuriser les dépôts étudiants.\nÉtapes :\n\nConnectez-vous à GitHub.\nAccédez à https://github.com/organizations/new\nChoisissez un nom d’organisation (ex : Cours-STT-XXXX).\nSélectionnez un plan gratuit pour les projets open source ou éducatifs.\nInvitez des collaborateurs (autres enseignants ou étudiant·es).\n\n🔗 Documentation officielle : Créer et gérer des organisations GitHub\n💡 Vous pouvez aussi demander l’accès au programme GitHub Education : education.github.com"
-  },
-  {
-    "objectID": "outils.html#mini-cours-la-librairie-ghclass",
-    "href": "outils.html#mini-cours-la-librairie-ghclass",
-    "title": "Outils pour l’enseignement de la statistique et science des données",
-    "section": "📚 Mini cours : la librairie ghclass",
-    "text": "📚 Mini cours : la librairie ghclass\nLa librairie ghclass en R permet de gérer efficacement une organisation GitHub, en particulier dans un contexte pédagogique.\n\n🔧 Installation\ninstall.packages(\"ghclass\")\n\n\n🔐 Authentification\nIl est recommandé d’utiliser une clé SSH ou un token GitHub avec les permissions appropriées. Pour cela :\n\nCréer un token GitHub\nL’authentifier avec ghclass::gh_auth() ou configurer votre clé SSH avec usethis::use_git_config() et usethis::create_github_token()\n\n\n\n📂 Fonctions essentielles de ghclass\n\n🔹 Créer des dépôts pour les étudiant·es\nghclass::org_create_repo(\n  org = \"Cours-STT-XXXX\",\n  repo = \"devoir1\",\n  private = TRUE\n)\n\n\n🔹 Cloner un dépôt dans l’organisation\nghclass::repo_clone(\"Cours-STT-XXXX/devoir1\")\n\n\n🔹 Ajouter des membres\nghclass::org_invite(\"Cours-STT-XXXX\", users = c(\"etudiant1\", \"etudiant2\"))\n\n\n🔹 Ajouter des collaborateurs à un dépôt\nghclass::repo_add_collaborator(\"Cours-STT-XXXX/devoir1\", user = \"etudiant1\")\n\n\n🔹 Gérer des équipes\nghclass::org_create_team(\"cours-stt-XXXX\", team = \"groupe-A\")\nghclass::org_add_team_member(\"cours-stt-XXXX\", team = \"groupe-A\", user = \"etudiant1\")\n\n\n🔹 Suivre l’activité des étudiant·es\nghclass::repo_commits(\"Cours-STT-XXXX/devoir1\")\nghclass::repo_issues(\"Cours-STT-XXXX/devoir1\")\n\n\n\n📘 Ressources supplémentaires\n\nDocumentation officielle ghclass\nGuide complet pour l’enseignement avec GitHub\nExemple d’organisation pédagogique avec RStudio"
+    "objectID": "templates/site-web.html#avant-de-donner-le-lien-aux-étudiants",
+    "href": "templates/site-web.html#avant-de-donner-le-lien-aux-étudiants",
+    "title": "Votre site de cours, à partir d’un gabarit.",
+    "section": "Avant de donner le lien aux étudiants",
+    "text": "Avant de donner le lien aux étudiants\nVérifiez l’URL publiée dans un navigateur. Les supports publics peuvent être diffusés sur le site ; les remises, les notes individuelles et les corrigés réservés doivent rester dans un espace privé.\nRevenir au parcours de diffusion."
   },
   {
     "objectID": "templates/index.html",
     "href": "templates/index.html",
-    "title": "Accueil des modèles",
+    "title": "Des modèles pour démarrer.",
     "section": "",
-    "text": "Cette section du site regroupe plusieurs gabarits prêts à l’emploi. Utilisez le menu déroulant Modèles en haut de la page pour accéder rapidement aux différentes catégories.\n\nGabarits Quarto : présentations, rapports, devoirs ou examens.\nSite web Quarto : structure de base pour créer votre propre site.\n\n\n\n\nDans RStudio, ouvrez l’onglet Terminal (et non la console R).\nExécutez la commande correspondant au modèle souhaité :\nquarto use template &lt;utilisateur&gt;/&lt;repo&gt;/&lt;modele&gt;\nUn nouveau dossier est créé avec tous les fichiers nécessaires (*.qmd, css, images…).\nOuvrez ce dossier comme projet et personnalisez les fichiers selon vos besoins.\n\nAinsi, chaque modèle peut être cloné localement en quelques secondes puis adapté à vos cours."
+    "text": "Aller au contenu"
   },
   {
-    "objectID": "templates/index.html#comment-dupliquer-un-modèle",
-    "href": "templates/index.html#comment-dupliquer-un-modèle",
-    "title": "Accueil des modèles",
-    "section": "",
-    "text": "Dans RStudio, ouvrez l’onglet Terminal (et non la console R).\nExécutez la commande correspondant au modèle souhaité :\nquarto use template &lt;utilisateur&gt;/&lt;repo&gt;/&lt;modele&gt;\nUn nouveau dossier est créé avec tous les fichiers nécessaires (*.qmd, css, images…).\nOuvrez ce dossier comme projet et personnalisez les fichiers selon vos besoins.\n\nAinsi, chaque modèle peut être cloné localement en quelques secondes puis adapté à vos cours."
+    "objectID": "templates/index.html#quel-modèle-choisir",
+    "href": "templates/index.html#quel-modèle-choisir",
+    "title": "Des modèles pour démarrer.",
+    "section": "Quel modèle choisir ?",
+    "text": "Quel modèle choisir ?\n\n\n\nVotre besoin\nPoint de départ\nÀ prévoir\n\n\n\n\nFaire rédiger une analyse\nRapport étudiant Quarto\nR et Quarto\n\n\nPréparer une présentation\nDiapositives Reveal.js\nR et Quarto pour les exemples R\n\n\nRassembler les ressources d’un cours\nGabarit de site web\nQuarto\n\n\nFaire pratiquer R avec des questions\nÉtude de cas interactive\nR, R Markdown et learnr"
+  },
+  {
+    "objectID": "templates/index.html#adapter-sans-tout-reconstruire",
+    "href": "templates/index.html#adapter-sans-tout-reconstruire",
+    "title": "Des modèles pour démarrer.",
+    "section": "Adapter sans tout reconstruire",
+    "text": "Adapter sans tout reconstruire\nCommencez par une copie du modèle. Modifiez les consignes et les exemples avant de personnaliser la mise en page. Produisez ensuite un premier rendu et ouvrez le fichier destiné aux étudiants.\nLes ressources proviennent de dépôts distincts. Pour la redistribution, consultez la licence et les indications de chaque dépôt, ainsi que celles des images et des données utilisées.\nVoir tous les supports dans le catalogue."
   },
   {
     "objectID": "tutoriels.html",
     "href": "tutoriels.html",
-    "title": "Tutoriels et études de cas",
+    "title": "Des activités pour faire pratiquer R.",
     "section": "",
-    "text": "Les tutoriels interactifs reposent sur le package R learnr qui transforme un document Quarto ou R Markdown en application Shiny exécutable dans le navigateur. Ils combinent texte, blocs de code que l’étudiant·e peut exécuter, ainsi que des questions à choix multiple.\nUn tutoriel learnr contient généralement :\n\ndes exercices de code à modifier en ligne ;\ndes quiz ou zones de réponse ;\ndes messages de rétroaction automatiques.\n\nAinsi, aucune installation n’est nécessaire pour les apprenant·es et les enseignant·es peuvent proposer des activités interactives clés en main.\nPour en savoir plus, consultez la documentation de learnr et le guide Quarto Interactive Tutorials.\n\n\n\nDépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+    "text": "Aller au contenu"
   },
   {
-    "objectID": "tutoriels.html#étude-de-cas-gabarit-interactif",
-    "href": "tutoriels.html#étude-de-cas-gabarit-interactif",
-    "title": "Tutoriels et études de cas",
+    "objectID": "tutoriels.html#etude-de-cas",
+    "href": "tutoriels.html#etude-de-cas",
+    "title": "Des activités pour faire pratiquer R.",
+    "section": "Étude de cas interactive",
+    "text": "Étude de cas interactive\n\nPour quoi ? Guider les étudiants à travers une question, du code à exécuter et des questions de compréhension.\nFormat : R Markdown (.Rmd) avec learnr.\nPrérequis pour adapter : R, RStudio, learnr et les packages du tutoriel.\n\nOuvrir le dépôt Modele_etude_de_cas\nLe dossier template contient template.Rmd. Les dossiers Exemples fournissent un cas BIXI et un exemple de construction de graphique.\n\nPremière utilisation\n\nTéléchargez le dépôt avec « Code », puis « Download ZIP », ou clonez-le par SSH.\nOuvrez template/template.Rmd dans RStudio.\nInstallez les packages déclarés par le document, puis utilisez « Run Document ».\nRemplacez le contexte, les données et les questions par ceux de votre séance.\n\nPour installer les composants de base dans R :\ninstall.packages(c(\"learnr\", \"rmarkdown\", \"shiny\"))\nUn tutoriel hébergé s’utilise dans le navigateur des étudiants. Une exécution locale nécessite R et les packages correspondants. Un simple fichier HTML sur GitHub Pages ne fournit pas le serveur R nécessaire à learnr. Posit, documentation learnr et modalités d’hébergement."
+  },
+  {
+    "objectID": "tutoriels.html#bixi",
+    "href": "tutoriels.html#bixi",
+    "title": "Des activités pour faire pratiquer R.",
+    "section": "Explorer les déplacements BIXI",
+    "text": "Explorer les déplacements BIXI\nUsage proposé : faire formuler une question sur les déplacements, explorer les variables puis interpréter une représentation.\nOuvrir le tutoriel BIXI · Récupérer les sources\nAvant la séance : parcourir le tutoriel, sélectionner les étapes utiles et vérifier la disponibilité de l’application. Garder les sources comme solution de remplacement."
+  },
+  {
+    "objectID": "tutoriels.html#ggplot2",
+    "href": "tutoriels.html#ggplot2",
+    "title": "Des activités pour faire pratiquer R.",
+    "section": "Discuter les choix d’un graphique",
+    "text": "Discuter les choix d’un graphique\nUsage proposé : comparer les étapes de construction d’un graphique et justifier les choix qui facilitent son interprétation.\nOuvrir le tutoriel ggplot2 · Récupérer les exemples\nConsigne possible : « Quel changement rend la comparaison plus facile ? Justifiez votre réponse en nommant l’information que vous cherchez à lire. »"
+  },
+  {
+    "objectID": "tutoriels.html#preparer",
+    "href": "tutoriels.html#preparer",
+    "title": "Des activités pour faire pratiquer R.",
+    "section": "Préparer la séance",
+    "text": "Préparer la séance\nDéfinissez ce que les étudiants doivent expliquer à la fin. Faites une première exécution avec les mêmes droits d’accès qu’eux. Une application hébergée peut être indisponible ; prévoyez une version projetée ou un travail local.\nUtiliser la trame de préparation d’activité."
+  },
+  {
+    "objectID": "tutoriels.html#documentation",
+    "href": "tutoriels.html#documentation",
+    "title": "Des activités pour faire pratiquer R.",
+    "section": "Documentation",
+    "text": "Documentation\n\nPosit : learnr, tutoriels interactifs en R Markdown\nSources du canevas et des exemples, Aurélien Nicosia\n\nRéférences consultées le 18 septembre 2026."
+  },
+  {
+    "objectID": "parcours.html",
+    "href": "parcours.html",
+    "title": "Partez de ce que vous voulez enseigner.",
     "section": "",
-    "text": "Dépôt GitHub : Modele_etude_de_cas\nCe modèle propose une structure complète pour une étude de cas pédagogique incluant :\n\nMise en contexte ;\nAnalyse des données avec visualisations interactives ;\nQuestions de réflexion ;\nGrille d’évaluation ;\nExport HTML interactif.\n\n👉 Utilisation : clonez ou téléchargez le dépôt, puis modifiez les sections .qmd pour votre propre cas.\nCe modèle est parfait pour :\n\ndes projets de session ;\ndes mini-cas interactifs en classe.\n\n\nVous pouvez utiliser ce gabarit comme point de départ pour créer vos propres cas. Il est conçu pour être facilement adaptable à vos cours et vos objectifs pédagogiques."
+    "text": "Aller au contenu\nIl n’est pas nécessaire de tout adopter. Choisissez un besoin, ouvrez la ressource correspondante et préparez une première utilisation dans votre cours."
+  },
+  {
+    "objectID": "parcours.html#support",
+    "href": "parcours.html#support",
+    "title": "Partez de ce que vous voulez enseigner.",
+    "section": "Préparer un support de cours",
+    "text": "Préparer un support de cours\nObjectif : fournir un document dans lequel la question, le raisonnement et les résultats sont faciles à suivre.\n\nChoisissez le rapport étudiant pour un travail écrit, ou les diapositives pour une séance.\nRemplacez d’abord le titre, les consignes et les exemples. Gardez une structure courte : question, données, méthode, résultats, limites.\nProduisez le document avec Quarto et ouvrez le fichier obtenu comme le ferait un étudiant.\nVérifiez que les graphiques restent lisibles et que les consignes disent ce qui est attendu au-delà du code.\n\nÀ préparer : R et Quarto pour les exemples exécutant du R, et un éditeur comme RStudio. Accéder aux modèles."
+  },
+  {
+    "objectID": "parcours.html#activite",
+    "href": "parcours.html#activite",
+    "title": "Partez de ce que vous voulez enseigner.",
+    "section": "Faire travailler les étudiants sur une activité",
+    "text": "Faire travailler les étudiants sur une activité\nObjectif : faire expliciter un raisonnement statistique, puis le confronter aux données.\n\nUne trame à adapter\nTélécharger la fiche de préparation (.qmd)\nCe canevas contient les consignes à compléter, un déroulement et des questions de retour. Il se rend en HTML avec Quarto, sans package R.\n\n\nFormulez une question à laquelle les étudiants peuvent proposer une réponse avant de calculer.\nChoisissez les données et limitez le travail à une décision : choisir un graphique, comparer deux distributions ou justifier un traitement des valeurs manquantes.\nDemandez une première tentative individuelle, puis une comparaison en binôme.\nTerminez par une phrase d’interprétation et une limite de l’analyse.\n\nPour guider la pratique du code, le canevas interactif propose une autre forme de travail. Pour lancer une discussion sur un graphique, partez de l’exemple ggplot2.\n\nExemple de consigne à adapter\n« Avant de tracer le graphique, quelle différence vous attendez-vous à observer ? Construisez une représentation qui permet de vérifier votre idée. Expliquez ensuite ce que le graphique permet de conclure et ce qu’il ne permet pas de conclure. »\n\n\nPistes pour le retour en groupe\n\n\nComparer les choix d’axes, d’échelles et de regroupement.\nDistinguer une observation descriptive d’une explication causale.\nDemander quelle information supplémentaire changerait l’interprétation.\nReprendre une difficulté observée dans les réponses pour préparer la séance suivante."
+  },
+  {
+    "objectID": "parcours.html#donnees",
+    "href": "parcours.html#donnees",
+    "title": "Partez de ce que vous voulez enseigner.",
+    "section": "Choisir des données pour un cours",
+    "text": "Choisir des données pour un cours\nObjectif : partir d’une question compréhensible et d’un jeu de données dont on connaît la structure.\n\nConsultez les jeux de données du package UlavalSSD.\nLisez leur documentation, repérez l’unité d’observation et examinez les variables.\nDécidez ce que vous donnez aux étudiants : données brutes, extrait documenté ou version préparée.\nPrécisez les transformations réalisées et conservez la source des données.\n\nPistes de travail : données météo pour explorer une série de mesures et les valeurs manquantes ; condamnations alimentaires pour discuter du nettoyage et de l’unité d’observation. Ces pistes sont des propositions d’activités, à ajuster après exploration du jeu choisi.\nOuvrir la fiche des données et le code de démarrage."
+  },
+  {
+    "objectID": "parcours.html#diffusion",
+    "href": "parcours.html#diffusion",
+    "title": "Partez de ce que vous voulez enseigner.",
+    "section": "Mettre les ressources d’un cours à disposition",
+    "text": "Mettre les ressources d’un cours à disposition\nObjectif : donner aux étudiants un endroit où trouver les consignes, les supports et les activités.\n\nTéléchargez le gabarit de site.\nPréparez trois entrées simples : commencer, travailler cette semaine, retrouver une ressource.\nRendez le site et vérifiez les liens, les fichiers à télécharger et l’affichage sur téléphone.\nPubliez les supports destinés à être publics. Gardez les copies, les résultats individuels et les corrigés réservés dans l’environnement privé du cours.\n\nCréer le site · Comprendre GitHub pour un cours"
+  },
+  {
+    "objectID": "parcours.html#verifier",
+    "href": "parcours.html#verifier",
+    "title": "Partez de ce que vous voulez enseigner.",
+    "section": "Avant de partager",
+    "text": "Avant de partager\n\nLe besoin pédagogique et les prérequis sont-ils explicites ?\nLe lien ouvre-t-il la bonne ressource avec un compte étudiant ?\nLes consignes demandent-elles une interprétation, et pas seulement une exécution ?\nLa source des données et les conditions de réutilisation sont-elles indiquées ?\nUne solution de remplacement est-elle disponible si l’outil interactif ne répond pas ?"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "title": "Des ressources pour vos prochains cours",
     "section": "",
-    "text": "Ce site rassemble divers matériels pédagogiques, modèles Quarto, gabarits GitHub et ressources pour l’enseignement des statistiques au département de mathématiques et statistique de l’Université Laval.\n\n\n\nOffrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique.\n\n\n\n\n\nModèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc.\n\n\n\n\n\n\nExplorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+    "text": "Aller au contenu\n\n\n\n\n\n\n  \n    Des ressourcespour vosprochains cours.\n    Enseigner la statistique et la science des données, avec des supports à adapter et des activités à faire vivre.\n    \n      Explorer les ressources\n      Trouver mon point de départ \n    \n  \n  \n    À adapter pour votre cours\n    Une activité, de la question à la discussion.\n    \n      Poser une question\n      Faire explorer les données\n      Discuter les résultats\n    \n    Préparer une activité \n  \n\n\n  Que voulez-vous préparer ?\n  Partez de votre besoin pédagogique.\n  \n    01Un support de coursRapports et présentations Quarto.Voir les ressources pour un support de cours\n    02Une activité en classeÉtudes de cas et tutoriels R.Voir les ressources pour une activité en classe\n    03Un jeu de donnéesDes données à explorer avec R.Voir les ressources pour un jeu de données\n    04Un site de coursUne porte d’entrée pour vos étudiants.Voir les ressources pour diffuser un cours\n  \n\n\n\n\n\n Retour au sommet"
   },
   {
-    "objectID": "index.html#objectifs-du-site",
-    "href": "index.html#objectifs-du-site",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "objectID": "ressources.html",
+    "href": "ressources.html",
+    "title": "Trouvez votre prochaine ressource.",
     "section": "",
-    "text": "Offrir un point d’entrée simple pour accéder aux différents gabarits et ressources.\nFavoriser le partage entre enseignant·es du département.\nIllustrer les bonnes pratiques en matière de reproductibilité et de partage de contenu pédagogique."
+    "text": "Aller au contenu\n\n\n\n\n\n\n  Rechercher dans les ressources\n  \n  Votre besoin\n    \n    Tout\n    Supports\n    Activités\n    Données\n    Diffusion\n    \n  \n\n\n  8 ressources\n  Réinitialiser\n\nLes ressources sont toutes affichées ci-dessous. La recherche et les filtres nécessitent JavaScript.\n\n\n\nSupports\n\n\n\nRapport étudiant Quarto\n\n\nUne structure pour relier question, analyse et interprétation.\n\n\nFichier .qmd · R et Quarto\n\n\nVoir la fiche : Rapport étudiant Quarto\n\n\n\nActivités\n\n\n\nÉtude de cas interactive\n\n\nUn canevas learnr pour guider le raisonnement et la pratique de R.\n\n\nR Markdown · R et learnr\n\n\nVoir la fiche : Étude de cas interactive\n\n\n\nDonnées\n\n\n\nDonnées pédagogiques UlavalSSD\n\n\nDes jeux de données du Québec pour construire une analyse en cours.\n\n\nPackage R · R\n\n\nVoir la fiche : Données pédagogiques UlavalSSD\n\n\n\nSupports\n\n\n\nDiapositives pour vos cours\n\n\nUn modèle Reveal.js à adapter à vos explications et à vos graphiques.\n\n\nFichier .qmd · R et Quarto\n\n\nVoir la fiche : Diapositives pour vos cours\n\n\n\nDiffusion\n\n\n\nSite de cours Quarto\n\n\nTrois pages pour réunir les consignes, les supports et les ressources.\n\n\nArchive .zip · Quarto\n\n\nVoir la fiche : Site de cours Quarto\n\n\n\nActivités\n\n\n\nExplorer les déplacements BIXI\n\n\nUn exemple de tutoriel R autour des données de vélopartage.\n\n\nApplication web et sources · R pour adapter\n\n\nVoir la fiche : Explorer les déplacements BIXI\n\n\n\nActivités\n\n\n\nConstruire un graphique avec ggplot2\n\n\nUn exemple pour discuter les choix de représentation des données.\n\n\nApplication web et sources · R pour adapter\n\n\nVoir la fiche : Construire un graphique avec ggplot2\n\n\n\nDiffusion\n\n\n\nGitHub pour votre cours\n\n\nDes repères pour versionner les supports et organiser le travail en équipe.\n\n\nGuide · Git et compte GitHub\n\n\nVoir la fiche : GitHub pour votre cours\n\n\nAucune ressource ne correspond à votre recherche. Essayez un autre mot ou réinitialisez les filtres.\n\n\n\n\n\n Retour au sommet"
   },
   {
-    "objectID": "index.html#structure-du-site",
-    "href": "index.html#structure-du-site",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
+    "objectID": "outils.html",
+    "href": "outils.html",
+    "title": "Des outils au service de votre cours.",
     "section": "",
-    "text": "Modèles : documents .qmd, présentations, devoirs, examens.\nOutils : bibliothèques R utile et comment utiliser Github dans vos cours ou projets.\nTutoriels : guides pas-à-pas pour utiliser R, GitHub, Quarto, etc."
+    "text": "Aller au contenu"
   },
   {
-    "objectID": "index.html#démarrage-rapide",
-    "href": "index.html#démarrage-rapide",
-    "title": "Ressources pédagogiques pour l’enseignement en statistique et en sciences des données",
-    "section": "",
-    "text": "Explorez les modèles disponibles dans la section Modèles.\nConsultez les outils proposés dans Outils.\nApprenez avec nos Tutoriels.\n\n\nSi vous souhaitez contribuer ou avez des questions, n’hésitez pas à ouvrir une issue sur GitHub."
+    "objectID": "outils.html#ulavalssd",
+    "href": "outils.html#ulavalssd",
+    "title": "Des outils au service de votre cours.",
+    "section": "Données pédagogiques UlavalSSD",
+    "text": "Données pédagogiques UlavalSSD\n\nPour quoi ? Préparer des exemples et des activités d’exploration avec R.\nContenu documenté : notamment MeteoQuebec et listecondamnation.\nPrérequis : R ; une connexion Internet pour l’installation initiale depuis GitHub.\n\nOuvrir le dépôt UlavalSSD\n\nInstaller le package\nDans la console R, une première fois :\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_github(\"AurelienNicosiaULaval/UlavalSSD\", upgrade = \"never\")\n\n\nExaminer un jeu de données\n# Charger le package\nlibrary(UlavalSSD)\n\n# Consulter la documentation et la structure avant de choisir une analyse\nhelp(\"MeteoQuebec\", package = \"UlavalSSD\")\nmeteo &lt;- UlavalSSD::MeteoQuebec\ndim(meteo)\nnames(meteo)\nhead(meteo)\nsummary(meteo)\n\n# Compter les valeurs manquantes dans chaque variable\nvaleurs_manquantes &lt;- colSums(is.na(meteo))\nvaleurs_manquantes\nPour listecondamnation, consultez de la même manière son aide avant d’utiliser les montants, les dates ou les catégories. Documentez toute conversion de type ou exclusion de lignes.\nChoisir des données pour une activité."
   },
   {
-    "objectID": "quarto-site-template/skeleton/about.html",
-    "href": "quarto-site-template/skeleton/about.html",
-    "title": "À propos",
-    "section": "",
-    "text": "À propos\nCette page peut contenir des informations sur les auteurs, la licence ou toute autre ressource utile.\n\n# Exemples de code R\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\n\n\n\n\n Back to top"
+    "objectID": "outils.html#github",
+    "href": "outils.html#github",
+    "title": "Des outils au service de votre cours.",
+    "section": "GitHub pour les supports et les projets",
+    "text": "GitHub pour les supports et les projets\nGitHub permet de conserver l’historique des fichiers et de travailler à plusieurs. Dans un cours, commencez par un usage délimité : distribuer un support, suivre un projet ou proposer une modification.\n\nRelier RStudio à GitHub\n\nInstallez Git et créez votre compte GitHub.\nConfigurez votre nom et votre courriel Git avec vos propres informations.\nSuivez le guide GitHub de connexion par SSH. Vérifiez vos clés existantes avant d’en générer une.\nDans RStudio : « File », « New Project », « Version Control », « Git ». Collez l’URL SSH du dépôt choisi.\n\nExemple pour récupérer les sources de cette vitrine, dans le terminal :\ngit clone git@github.com:AurelienNicosiaULaval/site_ressources_SSD.git\n\n\nTravailler seul ou en équipe\n\nAvant de commencer, récupérez les changements avec « Pull ».\nModifiez les fichiers, puis sélectionnez ceux à enregistrer dans l’onglet Git de RStudio.\nFaites un « Commit » avec un message décrivant le changement.\nFaites un « Push » pour envoyer ce commit.\nPour une modification à relire en équipe, utilisez une branche et une demande de fusion (« pull request »).\n\nPour un cours, une organisation peut regrouper des dépôts et des équipes. Choisissez la visibilité et les accès en fonction des travaux concernés : un dépôt public est consultable par tous. Documentation GitHub sur les organisations."
   },
   {
-    "objectID": "quarto-site-template/skeleton/index.html",
-    "href": "quarto-site-template/skeleton/index.html",
-    "title": "Page d’accueil",
-    "section": "",
-    "text": "Bienvenue\nCe gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page index.qmd pour présenter votre projet ou vos ressources.\n\nAjoutez des sections avec du texte et du code.\nModifiez la navigation dans _quarto.yml selon vos besoins.\n\nConsultez about.qmd pour un exemple de page supplémentaire.\n\n\n\n\n Back to top"
+    "objectID": "outils.html#ghclass",
+    "href": "outils.html#ghclass",
+    "title": "Des outils au service de votre cours.",
+    "section": "Administrer un cours avec ghclass",
+    "text": "Administrer un cours avec ghclass\nLe package ghclass automatise des opérations sur les organisations, les équipes et les dépôts GitHub. Cette étape devient utile lorsque le nombre de dépôts à gérer le justifie.\ninstall.packages(\"ghclass\")\nlibrary(ghclass)\n\n# Ouvrir l'aide du package avant de configurer les accès\nhelp(package = \"ghclass\")\nL’accès à l’API utilise un jeton GitHub. La connexion SSH sert aux opérations Git ; elle ne remplace pas ce jeton. Configurez-le selon la documentation du package, sans l’inscrire dans un script partagé.\n\n\nRetrouver les opérations courantes\n\nConsultez la signature et les permissions requises avant toute modification :\n\n\n\nBesoin\nFonction documentée\n\n\n\n\nVérifier l’identité connectée\ngithub_whoami()\n\n\nCréer un dépôt\nrepo_create()\n\n\nCloner un dépôt localement\nlocal_repo_clone()\n\n\nInviter dans une organisation\norg_invite()\n\n\nAjouter une personne à un dépôt\nrepo_add_user()\n\n\nCréer une équipe\nteam_create()\n\n\nInviter dans une équipe\nteam_invite()\n\n\nConsulter l’activité\nrepo_commits(), repo_issues()\n\n\n\nIndex officiel des fonctions ghclass."
   },
   {
-    "objectID": "quarto-site-template/skeleton/page1.html",
-    "href": "quarto-site-template/skeleton/page1.html",
-    "title": "Page 1",
-    "section": "",
-    "text": "Page d’exemple\nUtilisez cette page pour ajouter du contenu supplémentaire.\n\n# Exemple de graphique R\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+    "objectID": "outils.html#sources-et-aide",
+    "href": "outils.html#sources-et-aide",
+    "title": "Des outils au service de votre cours.",
+    "section": "Sources et aide",
+    "text": "Sources et aide\n\nUlavalSSD : description et sources du package, Aurélien Nicosia\nghclass : documentation, Colin Rundel et Mine Çetinkaya-Rundel\nHappy Git and GitHub for the useR, Jenny Bryan et Jim Hester\nContacter Aurélien Nicosia\n\nRéférences consultées le 18 septembre 2026."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "À propos",
+    "title": "Partager ce qui peut servir en cours.",
     "section": "",
-    "text": "Ce site regroupe les ressources pédagogiques, outils et modèles développés pour soutenir l’enseignement de la science des données et des statistiques au département de mathématiques et de statistique de l’Université Laval.\n\n\n\nCentraliser les ressources pour les enseignant·es du département ;\nFavoriser l’adoption de bonnes pratiques (reproductibilité, versionnage, documentation) ;\nFaciliter le démarrage d’un nouveau cours, projet ou devoir avec des modèles et des jeux de données prêts à l’emploi.\n\n\n\n\nCe site s’adresse principalement :\n\naux chargé·es de cours et d’enseignement et professeur·es du DMS ;\naux auxiliaires d’enseignements (dépannages, laboratoires) ;\naux étudiant·es qui souhaitent réutiliser ou explorer les ressources proposées.\n\n\n\n\nLe site a été conçu avec Quarto et les ressources sont hébergées sur GitHub.\nLes outils, templates et jeux de données sont développés dans une logique de collaboration ouverte et peuvent évoluer au fil du temps.\n\n\n\nPour toute question, contribution ou demande, vous pouvez :\n\nÉcrire à Aurélien Nicosia (aurelien.nicosia@mat.ulaval.ca) ;\nOuvrir une issue sur l’un des dépôts GitHub ;\nProposer une nouvelle ressource via un pull request.\n\nMerci de faire vivre cette initiative !\n\n\n\nUn grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources."
+    "text": "Aller au contenu"
   },
   {
-    "objectID": "about.html#objectifs",
-    "href": "about.html#objectifs",
-    "title": "À propos",
-    "section": "",
-    "text": "Centraliser les ressources pour les enseignant·es du département ;\nFavoriser l’adoption de bonnes pratiques (reproductibilité, versionnage, documentation) ;\nFaciliter le démarrage d’un nouveau cours, projet ou devoir avec des modèles et des jeux de données prêts à l’emploi."
+    "objectID": "about.html#à-qui-sadresse-ce-site",
+    "href": "about.html#à-qui-sadresse-ce-site",
+    "title": "Partager ce qui peut servir en cours.",
+    "section": "À qui s’adresse ce site ?",
+    "text": "À qui s’adresse ce site ?\nAux enseignants du supérieur en statistique et science des données, ainsi qu’aux auxiliaires qui préparent des laboratoires et des activités. Les ressources réunies ici sont issues du contexte d’enseignement du département de mathématiques et de statistique de l’Université Laval.\nL’objectif est de faciliter un premier pas concret : trouver un modèle, adapter une activité ou examiner des données pour un cours."
   },
   {
-    "objectID": "about.html#pour-qui",
-    "href": "about.html#pour-qui",
-    "title": "À propos",
-    "section": "",
-    "text": "Ce site s’adresse principalement :\n\naux chargé·es de cours et d’enseignement et professeur·es du DMS ;\naux auxiliaires d’enseignements (dépannages, laboratoires) ;\naux étudiant·es qui souhaitent réutiliser ou explorer les ressources proposées."
+    "objectID": "about.html#comment-utiliser-les-ressources",
+    "href": "about.html#comment-utiliser-les-ressources",
+    "title": "Partager ce qui peut servir en cours.",
+    "section": "Comment utiliser les ressources ?",
+    "text": "Comment utiliser les ressources ?\nLe catalogue rassemble les ressources par besoin. Les parcours proposent des étapes pour les intégrer à une séance ou à un support.\nChaque ressource peut avoir ses propres dépendances, conditions d’accès et conditions de réutilisation. Un dépôt public n’accorde pas à lui seul une licence de redistribution. Consultez les indications du dépôt source, notamment pour les données, images et éléments institutionnels."
   },
   {
-    "objectID": "about.html#développement",
-    "href": "about.html#développement",
-    "title": "À propos",
-    "section": "",
-    "text": "Le site a été conçu avec Quarto et les ressources sont hébergées sur GitHub.\nLes outils, templates et jeux de données sont développés dans une logique de collaboration ouverte et peuvent évoluer au fil du temps."
+    "objectID": "about.html#contribuer",
+    "href": "about.html#contribuer",
+    "title": "Partager ce qui peut servir en cours.",
+    "section": "Proposer une ressource ou signaler un problème",
+    "text": "Proposer une ressource ou signaler un problème\nOuvrir une demande sur GitHub\nPour rendre votre proposition facile à examiner, indiquez :\n\nle besoin pédagogique et le public visé ;\nle lien vers la ressource et, si possible, ses sources ;\nles prérequis, les conditions d’accès et la licence indiquée ;\nun exemple d’utilisation en cours.\n\nPour un problème, précisez la page, le lien concerné et ce qui se passe. Vous pouvez aussi écrire directement à Aurélien Nicosia, sans compte GitHub."
   },
   {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "À propos",
-    "section": "",
-    "text": "Pour toute question, contribution ou demande, vous pouvez :\n\nÉcrire à Aurélien Nicosia (aurelien.nicosia@mat.ulaval.ca) ;\nOuvrir une issue sur l’un des dépôts GitHub ;\nProposer une nouvelle ressource via un pull request.\n\nMerci de faire vivre cette initiative !"
-  },
-  {
-    "objectID": "about.html#remerciements",
-    "href": "about.html#remerciements",
-    "title": "À propos",
-    "section": "",
-    "text": "Un grand merci à ma collègue, Anne-Sophie Charest, du département de mathématiques et statistique qui a contribué à la création de ces ressources."
-  },
-  {
-    "objectID": "templates/site-web.html",
-    "href": "templates/site-web.html",
-    "title": "Gabarit de site web Quarto",
-    "section": "",
-    "text": "Ce modèle propose une base complète pour créer un site web Quarto. Il inclut les fichiers essentiels, un style aux couleurs de l’Université Laval, une navigation cohérente et un support du mode sombre.\nLe gabarit se trouve dans le dossier quarto-site-template du dépôt, et peut être utilisé avec :\n\n\nquarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base dans un nouveau dossier local.\n\n\n\n\n\n\n\n\n\nFichier\nRôle\n\n\n\n\n_quarto.yml\nConfiguration principale du site (titre, thème, barre de navigation)\n\n\nindex.qmd\nPage d’accueil\n\n\nabout.qmd\nPage “À propos” du site\n\n\npage1.qmd\nPage “page1” du menu (vous pouvez ajoutez plusieurs pages)\n\n\nstyles.css\nStyles personnalisés ULaval, incluant support du mode sombre\n\n\nimg/logo-ulaval.png\nLogo utilisé dans la barre de navigation\n\n\ndocs/\nRépertoire de sortie pour GitHub Pages (généré automatiquement)\n\n\n\n\n\n\n\n\nModifiez les fichiers .qmd selon vos besoins (contenu, titres, sections).\nAdaptez le thème et les couleurs via le fichier styles.css.\nPour générer le site :\n\nquarto render\n\nPour voir votre site avec rechargement automatique :\n\nquarto preview\n\n\n\n\nPoussez votre projet sur GitHub.\nAllez dans Settings → Pages de votre dépôt.\nChoisissez Deploy from a branch.\nBranche : main / Dossier : /docs\nActivez la publication.\n\nÀ chaque git push, GitHub Pages publiera la dernière version de votre site.\n\n\n\n\nCe gabarit peut être adapté pour créer : - un site de cours (STT-XXXX) - un site de documentation de projet ou laboratoire - une vitrine pour présenter du matériel pédagogique\nN’hésitez pas à ouvrir une issue pour proposer des améliorations."
-  },
-  {
-    "objectID": "templates/site-web.html#installation-du-gabarit",
-    "href": "templates/site-web.html#installation-du-gabarit",
-    "title": "Gabarit de site web Quarto",
-    "section": "",
-    "text": "quarto use template AurelienNicosiaULaval/site_ressources_SSD/quarto-site-template\nCette commande copie les fichiers de base dans un nouveau dossier local.\n\n\n\n\n\n\n\n\n\nFichier\nRôle\n\n\n\n\n_quarto.yml\nConfiguration principale du site (titre, thème, barre de navigation)\n\n\nindex.qmd\nPage d’accueil\n\n\nabout.qmd\nPage “À propos” du site\n\n\npage1.qmd\nPage “page1” du menu (vous pouvez ajoutez plusieurs pages)\n\n\nstyles.css\nStyles personnalisés ULaval, incluant support du mode sombre\n\n\nimg/logo-ulaval.png\nLogo utilisé dans la barre de navigation\n\n\ndocs/\nRépertoire de sortie pour GitHub Pages (généré automatiquement)"
-  },
-  {
-    "objectID": "templates/site-web.html#développement-local",
-    "href": "templates/site-web.html#développement-local",
-    "title": "Gabarit de site web Quarto",
-    "section": "",
-    "text": "Modifiez les fichiers .qmd selon vos besoins (contenu, titres, sections).\nAdaptez le thème et les couleurs via le fichier styles.css.\nPour générer le site :\n\nquarto render\n\nPour voir votre site avec rechargement automatique :\n\nquarto preview"
-  },
-  {
-    "objectID": "templates/site-web.html#publication-automatique-sur-github-pages",
-    "href": "templates/site-web.html#publication-automatique-sur-github-pages",
-    "title": "Gabarit de site web Quarto",
-    "section": "",
-    "text": "Poussez votre projet sur GitHub.\nAllez dans Settings → Pages de votre dépôt.\nChoisissez Deploy from a branch.\nBranche : main / Dossier : /docs\nActivez la publication.\n\nÀ chaque git push, GitHub Pages publiera la dernière version de votre site."
-  },
-  {
-    "objectID": "templates/site-web.html#besoin-daide",
-    "href": "templates/site-web.html#besoin-daide",
-    "title": "Gabarit de site web Quarto",
-    "section": "",
-    "text": "Ce gabarit peut être adapté pour créer : - un site de cours (STT-XXXX) - un site de documentation de projet ou laboratoire - une vitrine pour présenter du matériel pédagogique\nN’hésitez pas à ouvrir une issue pour proposer des améliorations."
+    "objectID": "about.html#développement-et-remerciements",
+    "href": "about.html#développement-et-remerciements",
+    "title": "Partager ce qui peut servir en cours.",
+    "section": "Développement et remerciements",
+    "text": "Développement et remerciements\nLe site est construit avec Quarto et ses sources sont disponibles sur GitHub.\nMerci à Anne-Sophie Charest, du département de mathématiques et de statistique, pour sa contribution à la création de ces ressources."
   },
   {
     "objectID": "templates/quarto.html",
     "href": "templates/quarto.html",
-    "title": "Modèles Quarto pour l’enseignement",
+    "title": "Rapports et présentations Quarto",
     "section": "",
-    "text": "Voici une sélection de modèles Quarto développés pour l’enseignement de la statistique à l’Université Laval. Ces modèles sont conçus pour être faciles à adapter et intégrer dans vos cours.\n\n\n\nDépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections.\n\n\n\n\nUn modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable\n\n\n\n\n\n\nUn template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés\n\n\n\n\n\n\nN’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
+    "text": "Aller au contenu\nLes modèles sont conservés dans le dépôt ulaval-template. Ils contiennent chacun un fichier template.qmd, une feuille de style et une image."
   },
   {
-    "objectID": "templates/quarto.html#modèle-quarto-université-laval",
-    "href": "templates/quarto.html#modèle-quarto-université-laval",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Dépôt GitHub : ulaval-template\nCes modèles propose une structure de base professionnelle pour :\n\ndes présentations (type slides) personnalisées aux couleurs de l’Université Laval ;\ndes rapports de projets ou devoirs étudiants ;\n\nCe modèle est pensé pour fonctionner directement avec RStudio. Il inclut :\n\nUn thème adapté au département de mathématiques et statistique ;\nUn fichier .css pour l’uniformité visuelle ;\nUne page de titre et une structure claire des sections."
+    "objectID": "templates/quarto.html#rapport",
+    "href": "templates/quarto.html#rapport",
+    "title": "Rapports et présentations Quarto",
+    "section": "Rapport étudiant",
+    "text": "Rapport étudiant\n\nPour quoi ? Donner une structure commune à un rapport d’analyse.\nPrérequis : Quarto ; R et les packages utilisés par le document si vous conservez ses blocs R.\nÀ adapter : le titre, les consignes, les données et les critères d’évaluation.\n\nOuvrir le dossier du modèle STT-1100\n\nRécupérer les fichiers\nDans le dépôt GitHub, utilisez « Code », puis « Download ZIP ». Décompressez l’archive et ouvrez le dossier stt1100 dans RStudio. Conservez les fichiers de style et l’image à côté du document.\nDans le terminal, depuis ce dossier :\nquarto render template.qmd\n\n\nL’utiliser dans un cours\nProposez une trame explicite : question, description des données, analyse, interprétation, limites. Distinguez dans la consigne ce qui doit être calculé, représenté et expliqué. Ouvrez le fichier HTML produit avant de distribuer le modèle."
   },
   {
-    "objectID": "templates/quarto.html#rapport-étudiant-stt-1100",
-    "href": "templates/quarto.html#rapport-étudiant-stt-1100",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Un modèle de rapport HTML pour les travaux pratiques.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/stt1100\n\n\n\n\nFeuille de style Ulaval (ulaval.css)\nTable des matières\nMise en page professionnelle\nEntièrement personnalisable"
+    "objectID": "templates/quarto.html#diapositives",
+    "href": "templates/quarto.html#diapositives",
+    "title": "Rapports et présentations Quarto",
+    "section": "Diapositives Reveal.js",
+    "text": "Diapositives Reveal.js\n\nPour quoi ? Préparer des notes projetées avec du texte, du code et des graphiques.\nPrérequis : Quarto ; R pour exécuter les exemples R.\nÀ adapter : l’ordre des idées, la taille des graphiques et la densité de chaque diapositive.\n\nOuvrir le dossier des diapositives\nTéléchargez le dépôt comme ci-dessus et ouvrez le dossier slides. Depuis ce dossier :\nquarto render template.qmd\nLe modèle comprend une configuration d’ardoise interactive. Vérifiez les fonctionnalités dont vous avez besoin dans le rendu et les dépendances déclarées par le modèle avant votre séance."
   },
   {
-    "objectID": "templates/quarto.html#notes-de-cours-slides-reveal.js",
-    "href": "templates/quarto.html#notes-de-cours-slides-reveal.js",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "Un template de présentation pour les enseignants, basé sur Reveal.js, avec des couleurs et une typographie adaptées à la projection.\n\n\nquarto use template AurelienNicosiaULaval/ulaval-template/slides\n\n\n\n\nThème Reveal.js personnalisé (ulaval.css)\nIntégration du logo Ulaval\nSupport de l’ardoise interactive (chalkboard: true)\nPolice lisible, contrastes adaptés"
-  },
-  {
-    "objectID": "templates/quarto.html#besoin-dun-nouveau-modèle",
-    "href": "templates/quarto.html#besoin-dun-nouveau-modèle",
-    "title": "Modèles Quarto pour l’enseignement",
-    "section": "",
-    "text": "N’hésitez pas à ouvrir une issue pour suggérer des améliorations ou proposer de nouveaux gabarits !"
+    "objectID": "templates/quarto.html#aller-plus-loin",
+    "href": "templates/quarto.html#aller-plus-loin",
+    "title": "Rapports et présentations Quarto",
+    "section": "Aller plus loin",
+    "text": "Aller plus loin\n\nParcours : préparer un support\nDocumentation de Quarto : documents HTML\nDocumentation de Quarto : présentations Reveal.js\nSignaler une difficulté sur les modèles\n\nLes commandes de rendu s’exécutent dans le terminal, et non dans la console R."
   }
 ]

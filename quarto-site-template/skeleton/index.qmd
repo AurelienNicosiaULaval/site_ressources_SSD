@@ -1,12 +1,16 @@
 ---
-title: "Page d'accueil"
+title: "Bienvenue dans le cours"
+format:
+  html:
+    embed-resources: true
 ---
 
-# Bienvenue
+## Par où commencer ?
 
-Ce gabarit fournit une structure minimale pour un site web Quarto. Utilisez la page `index.qmd` pour présenter votre projet ou vos ressources.
+Présentez ici l’objectif du cours et la première action attendue des étudiants.
 
-- Ajoutez des sections avec du texte et du code.
-- Modifiez la navigation dans `_quarto.yml` selon vos besoins.
+1. Consulter le plan de cours et les prérequis.
+2. Repérer les supports et les activités de la semaine.
+3. Vérifier que les fichiers et les outils nécessaires sont accessibles.
 
-Consultez `about.qmd` pour un exemple de page supplémentaire.
+[Accéder aux ressources](page1.qmd)

@@ -1,29 +1,24 @@
 ---
-title: "Accueil des modèles"
+title: "Des modèles pour démarrer."
+subtitle: "Choisissez le livrable dont vous avez besoin, puis adaptez le contenu à votre cours."
 format:
   html:
-    toc: true
-    toc-title: "Contenu de la page"
     embed-resources: true
-    link-external-newwindow: true
-    code-link: true
 ---
 
-# 🧰 Nos modèles disponibles
+## Quel modèle choisir ?
 
-Cette section du site regroupe plusieurs gabarits prêts à l'emploi. Utilisez le menu déroulant **Modèles** en haut de la page pour accéder rapidement aux différentes catégories.
+| Votre besoin | Point de départ | À prévoir |
+|:--|:--|:--|
+| Faire rédiger une analyse | [Rapport étudiant Quarto](quarto.qmd#rapport) | R et Quarto |
+| Préparer une présentation | [Diapositives Reveal.js](quarto.qmd#diapositives) | R et Quarto pour les exemples R |
+| Rassembler les ressources d’un cours | [Gabarit de site web](site-web.qmd) | Quarto |
+| Faire pratiquer R avec des questions | [Étude de cas interactive](../tutoriels.qmd#etude-de-cas) | R, R Markdown et learnr |
 
-- [Gabarits Quarto](quarto.qmd) : présentations, rapports, devoirs ou examens.
-- [Site web Quarto](site-web.qmd) : structure de base pour créer votre propre site.
+## Adapter sans tout reconstruire
 
-## 📥 Comment dupliquer un modèle
+Commencez par une copie du modèle. Modifiez les consignes et les exemples avant de personnaliser la mise en page. Produisez ensuite un premier rendu et ouvrez le fichier destiné aux étudiants.
 
-1. Dans RStudio, ouvrez l'onglet **Terminal** (et non la console R).
-2. Exécutez la commande correspondant au modèle souhaité :
-   ```bash
-   quarto use template <utilisateur>/<repo>/<modele>
-   ```
-3. Un nouveau dossier est créé avec tous les fichiers nécessaires (\*.qmd, css, images…).
-4. Ouvrez ce dossier comme projet et personnalisez les fichiers selon vos besoins.
+Les ressources proviennent de dépôts distincts. Pour la redistribution, consultez la licence et les indications de chaque dépôt, ainsi que celles des images et des données utilisées.
 
-Ainsi, chaque modèle peut être cloné localement en quelques secondes puis adapté à vos cours.
+[Voir tous les supports dans le catalogue](../ressources.html?besoin=supports).

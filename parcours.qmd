@@ -1,0 +1,85 @@
+---
+title: "Partez de ce que vous voulez enseigner."
+subtitle: "Quatre parcours pour passer d’une intention pédagogique à une ressource utilisable."
+format:
+  html:
+    embed-resources: true
+---
+
+Il n’est pas nécessaire de tout adopter. Choisissez un besoin, ouvrez la ressource correspondante et préparez une première utilisation dans votre cours.
+
+## Préparer un support de cours {#support}
+
+Objectif : fournir un document dans lequel la question, le raisonnement et les résultats sont faciles à suivre.
+
+1. Choisissez le [rapport étudiant](templates/quarto.qmd#rapport) pour un travail écrit, ou les [diapositives](templates/quarto.qmd#diapositives) pour une séance.
+2. Remplacez d’abord le titre, les consignes et les exemples. Gardez une structure courte : question, données, méthode, résultats, limites.
+3. Produisez le document avec Quarto et ouvrez le fichier obtenu comme le ferait un étudiant.
+4. Vérifiez que les graphiques restent lisibles et que les consignes disent ce qui est attendu au-delà du code.
+
+À préparer : R et Quarto pour les exemples exécutant du R, et un éditeur comme RStudio. [Accéder aux modèles](templates/index.qmd).
+
+## Faire travailler les étudiants sur une activité {#activite}
+
+Objectif : faire expliciter un raisonnement statistique, puis le confronter aux données.
+
+::: {.resource-summary}
+Une trame à adapter
+
+[ Télécharger la fiche de préparation (.qmd)](downloads/fiche-activite.qmd){download="fiche-activite.qmd"}
+
+Ce canevas contient les consignes à compléter, un déroulement et des questions de retour. Il se rend en HTML avec Quarto, sans package R.
+:::
+
+1. Formulez une question à laquelle les étudiants peuvent proposer une réponse avant de calculer.
+2. Choisissez les [données](outils.qmd#ulavalssd) et limitez le travail à une décision : choisir un graphique, comparer deux distributions ou justifier un traitement des valeurs manquantes.
+3. Demandez une première tentative individuelle, puis une comparaison en binôme.
+4. Terminez par une phrase d’interprétation et une limite de l’analyse.
+
+Pour guider la pratique du code, le [canevas interactif](tutoriels.qmd#etude-de-cas) propose une autre forme de travail. Pour lancer une discussion sur un graphique, partez de l’[exemple ggplot2](tutoriels.qmd#ggplot2).
+
+### Exemple de consigne à adapter
+
+« Avant de tracer le graphique, quelle différence vous attendez-vous à observer ? Construisez une représentation qui permet de vérifier votre idée. Expliquez ensuite ce que le graphique permet de conclure et ce qu’il ne permet pas de conclure. »
+
+<details>
+<summary>Pistes pour le retour en groupe</summary>
+
+- Comparer les choix d’axes, d’échelles et de regroupement.
+- Distinguer une observation descriptive d’une explication causale.
+- Demander quelle information supplémentaire changerait l’interprétation.
+- Reprendre une difficulté observée dans les réponses pour préparer la séance suivante.
+
+</details>
+
+## Choisir des données pour un cours {#donnees}
+
+Objectif : partir d’une question compréhensible et d’un jeu de données dont on connaît la structure.
+
+1. Consultez les jeux de données du [package UlavalSSD](outils.qmd#ulavalssd).
+2. Lisez leur documentation, repérez l’unité d’observation et examinez les variables.
+3. Décidez ce que vous donnez aux étudiants : données brutes, extrait documenté ou version préparée.
+4. Précisez les transformations réalisées et conservez la source des données.
+
+Pistes de travail : données météo pour explorer une série de mesures et les valeurs manquantes ; condamnations alimentaires pour discuter du nettoyage et de l’unité d’observation. Ces pistes sont des propositions d’activités, à ajuster après exploration du jeu choisi.
+
+[Ouvrir la fiche des données et le code de démarrage](outils.qmd#ulavalssd).
+
+## Mettre les ressources d’un cours à disposition {#diffusion}
+
+Objectif : donner aux étudiants un endroit où trouver les consignes, les supports et les activités.
+
+1. Téléchargez le [gabarit de site](templates/site-web.qmd).
+2. Préparez trois entrées simples : commencer, travailler cette semaine, retrouver une ressource.
+3. Rendez le site et vérifiez les liens, les fichiers à télécharger et l’affichage sur téléphone.
+4. Publiez les supports destinés à être publics. Gardez les copies, les résultats individuels et les corrigés réservés dans l’environnement privé du cours.
+
+[Créer le site](templates/site-web.qmd) · [Comprendre GitHub pour un cours](outils.qmd#github)
+
+## Avant de partager {#verifier}
+
+- Le besoin pédagogique et les prérequis sont-ils explicites ?
+- Le lien ouvre-t-il la bonne ressource avec un compte étudiant ?
+- Les consignes demandent-elles une interprétation, et pas seulement une exécution ?
+- La source des données et les conditions de réutilisation sont-elles indiquées ?
+- Une solution de remplacement est-elle disponible si l’outil interactif ne répond pas ?
